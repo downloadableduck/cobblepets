@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "com.jeff.pets.nyancat.client.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "CentralMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  },
+  "mixins": [
+    "ConfigScreenMixin"
+  ]
+}
