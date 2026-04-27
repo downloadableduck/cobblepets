@@ -1,1 +1,0 @@
-This file is reserved for when PetsMod updates, and addon developers will have to add a couple of features. Right now, PetsMod is version `0.8.0`, the initial release of addons. No updating is required right now.

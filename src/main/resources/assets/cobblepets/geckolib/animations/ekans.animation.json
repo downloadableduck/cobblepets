@@ -1,0 +1,44 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ekans.ground_idle": {
+			"loop": true,
+			"animation_length": 5.25,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": [-5, 0, 0]
+					},
+					"position": {
+						"vector": [0, "(math.sin(q.anim_time*90*2+90)*1-1)*0.15", 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": ["5-(math.sin(q.anim_time*90*2+90)*1-0.5)*0.5", 0, 0]
+					}
+				},
+				"tail": {
+					"rotation": {
+						"vector": ["-2.5-(math.sin(q.anim_time*90*2+90)*1-1)*1", 0, 0]
+					}
+				},
+				"tail2": {
+					"rotation": {
+						"vector": ["5+(math.sin(q.anim_time*90*2+90)*1-1)*1", 0, 0]
+					}
+				},
+				"tail3": {
+					"rotation": {
+						"vector": [2.5, 0, 0]
+					}
+				},
+				"jaw": {
+					"rotation": {
+						"vector": ["5-(math.sin(q.anim_time*90*2+90)*1-0.5)*1", 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

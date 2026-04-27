@@ -1,0 +1,161 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pidgeotto.ground_idle": {
+			"loop": true,
+			"bones": {
+				"toe_inner_left": {
+					"rotation": {
+						"vector": [0, 5, 0]
+					}
+				},
+				"toe_outer_left": {
+					"rotation": {
+						"vector": [0, -5, 0]
+					}
+				},
+				"hairstrand": {
+					"rotation": {
+						"vector": [7.5, 0, 12.5]
+					}
+				},
+				"hairstrand2": {
+					"rotation": {
+						"vector": [-17.5, 0, 0]
+					}
+				},
+				"tail": {
+					"rotation": {
+						"vector": [45, 0, 0]
+					}
+				},
+				"torso": {
+					"rotation": {
+						"vector": [-7.5, 0, 0]
+					}
+				},
+				"neck": {
+					"rotation": {
+						"vector": [15, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [-10, 0, 0]
+					}
+				},
+				"leg_left": {
+					"rotation": {
+						"vector": [0, -20, 0]
+					}
+				},
+				"leg_right": {
+					"rotation": {
+						"vector": [0, 20, 0]
+					}
+				},
+				"tail_left": {
+					"rotation": {
+						"vector": [0, -2.5, 5]
+					}
+				},
+				"tail_right": {
+					"rotation": {
+						"vector": [0, 2.5, -5]
+					}
+				},
+				"tail_left2": {
+					"rotation": {
+						"vector": [0, -7.5, 7.5]
+					}
+				},
+				"tail_right2": {
+					"rotation": {
+						"vector": [0, 7.5, -7.5]
+					}
+				},
+				"wing_open_left": {
+					"rotation": {
+						"vector": [0, 10, 90]
+					},
+					"position": {
+						"vector": [0, 1.25, 0]
+					}
+				},
+				"wing_open_left2": {
+					"rotation": {
+						"vector": [0, -75, 0]
+					}
+				},
+				"wing_open_left3": {
+					"rotation": {
+						"vector": [0, -30, 0]
+					}
+				},
+				"wing_open_left4": {
+					"rotation": {
+						"vector": [0, -17.5, 12.5]
+					}
+				},
+				"wing_closed_right": {
+					"rotation": {
+						"vector": [-22.5547, -4.82922, 1.29717]
+					}
+				},
+				"wing_closed_right2": {
+					"rotation": {
+						"vector": [22.58957, 4.43385, 2.31336]
+					}
+				},
+				"wing_closed_right3": {
+					"rotation": {
+						"vector": [17.64168, 7.15102, 2.26708]
+					}
+				},
+				"wing_closed_left": {
+					"rotation": {
+						"vector": [-22.5547, 4.82922, -1.29717]
+					}
+				},
+				"wing_closed_left2": {
+					"rotation": {
+						"vector": [22.58957, -4.43385, -2.31336]
+					}
+				},
+				"wing_closed_left3": {
+					"rotation": {
+						"vector": [17.64168, -7.15102, -2.26708]
+					}
+				},
+				"wing_open_right": {
+					"rotation": {
+						"vector": [0, -10, -90]
+					},
+					"position": {
+						"vector": [0, 1.25, 0]
+					}
+				},
+				"wing_open_right2": {
+					"rotation": {
+						"vector": [0, 75, 0]
+					}
+				},
+				"wing_open_right3": {
+					"rotation": {
+						"vector": [0, 30, 0]
+					}
+				},
+				"wing_open_right4": {
+					"rotation": {
+						"vector": [0, 17.5, -12.5]
+					}
+				},
+				"torso2": {
+					"rotation": {
+						"vector": [-4, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

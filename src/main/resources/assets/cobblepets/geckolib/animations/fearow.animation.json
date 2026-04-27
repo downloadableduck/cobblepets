@@ -1,0 +1,103 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.fearow.ground_idle": {
+			"loop": true,
+			"bones": {
+				"hairstrand": {
+					"rotation": {
+						"vector": [7.5, 0, 12.5]
+					}
+				},
+				"hairstrand2": {
+					"rotation": {
+						"vector": [-17.5, 0, 0]
+					}
+				},
+				"body": {
+					"position": {
+						"vector": [0, -0.4, 0]
+					}
+				},
+				"torso": {
+					"rotation": {
+						"vector": [-5, 0, 0]
+					}
+				},
+				"neck": {
+					"rotation": {
+						"vector": [-5, 0, 0]
+					}
+				},
+				"neck3": {
+					"rotation": {
+						"vector": [7.5, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [-10, 0, 0]
+					}
+				},
+				"leg_left": {
+					"rotation": {
+						"vector": [0, -10, -5]
+					}
+				},
+				"leg_left2": {
+					"rotation": {
+						"vector": [-12.5, 0, 0]
+					}
+				},
+				"chest": {
+					"rotation": {
+						"vector": [-5, 0, 0]
+					}
+				},
+				"wing_closed_left": {
+					"rotation": {
+						"vector": [5, 0, 0]
+					}
+				},
+				"wings_open": {
+					"scale": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"leg_right": {
+					"rotation": {
+						"vector": [0, 10, 5]
+					}
+				},
+				"leg_right2": {
+					"rotation": {
+						"vector": [-12.5, 0, 0]
+					}
+				},
+				"foot_right": {
+					"rotation": {
+						"vector": [13.55559, 4.18156, -3.75666]
+					},
+					"position": {
+						"vector": [0.09932, 0.00412, -0.01092]
+					}
+				},
+				"neck_2": {
+					"rotation": {
+						"vector": [17.5, 0, 0]
+					}
+				},
+				"wing_closed_right": {
+					"rotation": {
+						"vector": [5, 0, 0]
+					}
+				},
+				"scruff_chest4": {
+					"rotation": {
+						"vector": [47.5, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

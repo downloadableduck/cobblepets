@@ -1,0 +1,282 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.beedrill.air_idle": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2)*2+22.5", 0, 0]
+					},
+					"position": {
+						"vector": [
+							"math.clamp(math.sin(q.anim_time*90*4)*0.6,-0.5,0)+math.clamp(math.sin(q.anim_time*90*4)*0.6,0,0.5)",
+							"(math.clamp(math.sin(q.anim_time*90*4)*2,-1.5,0)+math.clamp(math.sin(q.anim_time*90*4)*2,0,1.5)+math.sin(q.anim_time*90*4)*10)*0.1",
+							"math.sin(q.anim_time*90*2)*1"
+						]
+					}
+				},
+				"antenna_right": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2)*5+5", 0, 0]
+					}
+				},
+				"antenna_right2": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2+45)*5+5", 0, 0]
+					}
+				},
+				"antenna_left": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2)*5+5", 0, 0]
+					}
+				},
+				"antenna_left2": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2+45)*5+5", 0, 0]
+					}
+				},
+				"wing_right": {
+					"rotation": {
+						"vector": [0, "45-30*(math.sin(q.anim_time*90*4*6)*1+1)", 0]
+					}
+				},
+				"wing_right2": {
+					"rotation": {
+						"vector": [0, "-4*(math.sin(q.anim_time*90*4*6-22.5)*1)+5", 0]
+					}
+				},
+				"wing_left": {
+					"rotation": {
+						"vector": [0, "-45+30*(math.sin(q.anim_time*90*4*6)*1+1)", 0]
+					}
+				},
+				"wing_left2": {
+					"rotation": {
+						"vector": [0, "4*(math.sin(q.anim_time*90*4*6-22.5)*1)-5", 0]
+					}
+				},
+				"abdomen": {
+					"rotation": {
+						"vector": [-22.5, 0, 0]
+					}
+				},
+				"arm_right": {
+					"rotation": {
+						"vector": [-30, -10, "-22.5-math.sin(q.anim_time*90*4)*2-math.clamp(math.sin(q.anim_time*90*4)*1,0,5)"]
+					}
+				},
+				"arm_left": {
+					"rotation": {
+						"vector": [-30, 10, "22.5+math.sin(q.anim_time*90*4)*2+math.clamp(math.sin(q.anim_time*90*4)*1,0,5)"]
+					}
+				},
+				"leg_right": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2-45)*5+62", -55, 7.5]
+					}
+				},
+				"leg_right2": {
+					"rotation": {
+						"vector": ["-4.3395+math.sin(q.anim_time*90*2-45)*5", -25, -62]
+					}
+				},
+				"leg_left": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2-45)*5+62", 55, -7.5]
+					}
+				},
+				"leg_left2": {
+					"rotation": {
+						"vector": ["-4.3395+math.sin(q.anim_time*90*2-45)*5", 25, 62]
+					}
+				},
+				"head_AI": {
+					"rotation": {
+						"vector": [-22.5, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [7.5, 0, 0]
+					}
+				},
+				"arm_right2": {
+					"rotation": {
+						"vector": [45, -60, -60]
+					}
+				},
+				"arm_left2": {
+					"rotation": {
+						"vector": [45, 60, 60]
+					}
+				},
+				"foot_right": {
+					"rotation": {
+						"vector": ["-math.sin(q.anim_time*90*2-45)*5", 0, 0]
+					}
+				},
+				"foot_left": {
+					"rotation": {
+						"vector": ["-math.sin(q.anim_time*90*2-45)*5", 0, 0]
+					}
+				}
+			},
+			"timeline": {
+				"0.0": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"0.1667": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"0.3333": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"0.5": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"0.6667": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"0.8333": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"1.0": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"1.1667": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"1.3333": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"1.5": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"1.6667": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"1.8333": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };"
+			}
+		},
+		"animation.beedrill.air_fly": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2)*2+45", 0, 0]
+					},
+					"position": {
+						"vector": [
+							"math.clamp(math.sin(q.anim_time*90*4*0.5)*0.6,-0.5,0)+math.clamp(math.sin(q.anim_time*90*4*0.5)*0.6,0,0.5)",
+							"(math.clamp(math.sin(q.anim_time*90*4*2)*2,-1.5,0)+math.clamp(math.sin(q.anim_time*90*4*2)*2,0,1.5)+math.sin(q.anim_time*90*4*2)*2)*0.1",
+							"math.sin(q.anim_time*90*2)*1"
+						]
+					}
+				},
+				"antenna_right": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*4)*5+22.5", 0, 0]
+					}
+				},
+				"antenna_right2": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2+45)*5+5", 0, 0]
+					}
+				},
+				"antenna_left": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*4)*5+22.5", 0, 0]
+					}
+				},
+				"antenna_left2": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2+45)*5+5", 0, 0]
+					}
+				},
+				"wing_right": {
+					"rotation": {
+						"vector": [0, "40-30*(math.sin(q.anim_time*90*4*6)*1+1)", 0]
+					}
+				},
+				"wing_right2": {
+					"rotation": {
+						"vector": [0, "-4*(math.sin(q.anim_time*90*4*6-22.5)*1)+5", 0]
+					}
+				},
+				"wing_left": {
+					"rotation": {
+						"vector": [0, "-40+30*(math.sin(q.anim_time*90*4*6)*1+1)", 0]
+					}
+				},
+				"wing_left2": {
+					"rotation": {
+						"vector": [0, "4*(math.sin(q.anim_time*90*4*6-22.5)*1)-5", 0]
+					}
+				},
+				"abdomen": {
+					"rotation": {
+						"vector": [25, 0, 0]
+					}
+				},
+				"arm_right": {
+					"rotation": {
+						"vector": [-35, -30, "-44-math.sin(q.anim_time*90*4)*2-math.clamp(math.sin(q.anim_time*90*4)*1,0,5)"]
+					}
+				},
+				"arm_left": {
+					"rotation": {
+						"vector": [-35, 30, "44+math.sin(q.anim_time*90*4)*2+math.clamp(math.sin(q.anim_time*90*4)*1,0,5)"]
+					}
+				},
+				"leg_right": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2-45)*5+70", -16, -17]
+					}
+				},
+				"leg_right2": {
+					"rotation": {
+						"vector": ["-4.3395+math.sin(q.anim_time*90*2-45)*5", -5, -62]
+					}
+				},
+				"leg_left": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2-45)*5+70", 16, 17]
+					}
+				},
+				"leg_left2": {
+					"rotation": {
+						"vector": ["-4.3395+math.sin(q.anim_time*90*2-45)*5", 5, 62]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": ["-math.sin(q.anim_time*90*2)*2-15", 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, -1]
+					}
+				},
+				"head_AI": {
+					"rotation": {
+						"vector": [-22.5, 0, 0]
+					}
+				},
+				"arm_right2": {
+					"rotation": {
+						"vector": [45, -60, -60]
+					}
+				},
+				"arm_left2": {
+					"rotation": {
+						"vector": [45, 60, 60]
+					}
+				},
+				"foot_right": {
+					"rotation": {
+						"vector": ["15-math.sin(q.anim_time*90*2-45)*5", 0, 0]
+					}
+				},
+				"foot_left": {
+					"rotation": {
+						"vector": ["15-math.sin(q.anim_time*90*2-45)*5", 0, 0]
+					}
+				}
+			},
+			"timeline": {
+				"0.0": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"0.1667": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"0.3333": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"0.5": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"0.6667": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"0.8333": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"1.0": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"1.1667": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"1.3333": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"1.5": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"1.6667": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };",
+				"1.8333": "q.has_entity ? { q.sound('animation.chitin.wing_flap.small'); };"
+			}
+		}
+	}
+}
