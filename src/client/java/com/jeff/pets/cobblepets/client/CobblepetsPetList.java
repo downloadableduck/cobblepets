@@ -4,6 +4,10 @@ import dev.isxander.yacl3.api.NameableEnum;
 import net.minecraft.network.chat.Component;
 
 public enum CobblepetsPetList implements NameableEnum {
+    sandshrew,
+    sandslash,
+    pikachu,
+    raichu,
     ekans,
     arbok,
     fearow,

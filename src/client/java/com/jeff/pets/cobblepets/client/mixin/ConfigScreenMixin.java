@@ -2,9 +2,11 @@ package com.jeff.pets.cobblepets.client.mixin;
 
 import com.jeff.pets.PetsConfig;
 import com.jeff.pets.PetsConfigScreen;
+import com.jeff.pets.cobblepets.client.CobblepetsConfig;
 import com.jeff.pets.cobblepets.client.CobblepetsPetList;
 import com.jeff.pets.cobblepets.client.Vals;
 import com.jeff.pets.cobblepets.client.enums.ButterfreeSkins;
+import me.shedaniel.autoconfig.AutoConfig;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -67,6 +69,10 @@ public class ConfigScreenMixin {
             case FEAROW -> cir.setReturnValue(COBBLE_CONFIG.fearowName);
             case EKANS -> cir.setReturnValue(COBBLE_CONFIG.ekansName);
             case ARBOK -> cir.setReturnValue(COBBLE_CONFIG.arbokName);
+            case PIKACHU -> cir.setReturnValue(COBBLE_CONFIG.pikachuName);
+            case RAICHU -> cir.setReturnValue(COBBLE_CONFIG.raichuName);
+            case SANDSHREW -> cir.setReturnValue(COBBLE_CONFIG.sandshrewName);
+            case SANDSLASH -> cir.setReturnValue(COBBLE_CONFIG.sandslashName);
         }
     }
 
@@ -100,6 +106,11 @@ public class ConfigScreenMixin {
             case FEAROW -> COBBLE_CONFIG.fearowName = name;
             case EKANS -> COBBLE_CONFIG.ekansName = name;
             case ARBOK -> COBBLE_CONFIG.arbokName = name;
+            case PIKACHU -> COBBLE_CONFIG.pikachuName = name;
+            case RAICHU -> COBBLE_CONFIG.raichuName = name;
+            case SANDSHREW -> COBBLE_CONFIG.sandshrewName = name;
+            case SANDSLASH -> COBBLE_CONFIG.sandslashName = name;
         }
+        AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
     }
 }

@@ -3,39 +3,41 @@ package com.jeff.pets.cobblepets.client;
 import com.jeff.pets.Central;
 import com.jeff.pets.PetsClientInitializer;
 import com.jeff.pets.Utils;
-import com.jeff.pets.cobblepets.client.rendering.CobbleRenderer;
-import com.jeff.pets.cobblepets.client.rendering.bulbasaur_tree.bulbasaur.BulbasaurRenderer;
-import com.jeff.pets.cobblepets.client.rendering.bulbasaur_tree.bulbasaur.ivysaur.IvysaurRenderer;
-import com.jeff.pets.cobblepets.client.rendering.bulbasaur_tree.venusaur.VenusaurRenderer;
-import com.jeff.pets.cobblepets.client.rendering.caterpie_tree.butterfree.ButterfreeRenderer;
-import com.jeff.pets.cobblepets.client.rendering.caterpie_tree.caterpie.CaterpieRenderer;
-import com.jeff.pets.cobblepets.client.rendering.caterpie_tree.metapod.MetapodRenderer;
-import com.jeff.pets.cobblepets.client.rendering.charmander_tree.charizard.CharizardRenderer;
-import com.jeff.pets.cobblepets.client.rendering.charmander_tree.charmander.CharmanderRenderer;
-import com.jeff.pets.cobblepets.client.rendering.charmander_tree.charmeleon.CharmeleonRenderer;
-import com.jeff.pets.cobblepets.client.rendering.ditto.DittoRenderer;
-import com.jeff.pets.cobblepets.client.rendering.ekans_tree.arbok.ArbokRenderer;
-import com.jeff.pets.cobblepets.client.rendering.ekans_tree.ekans.EkansRenderer;
-import com.jeff.pets.cobblepets.client.rendering.mew_tree.mew.MewRenderer;
-import com.jeff.pets.cobblepets.client.rendering.mew_tree.mewtwo.MewtwoRenderer;
-import com.jeff.pets.cobblepets.client.rendering.pidgey_tree.pidgeot.PidgeotRenderer;
-import com.jeff.pets.cobblepets.client.rendering.pidgey_tree.pidgeotto.PidgeottoRenderer;
-import com.jeff.pets.cobblepets.client.rendering.pidgey_tree.pidgey.PidgeyRenderer;
-import com.jeff.pets.cobblepets.client.rendering.rattata_tree.raticate.RaticateRenderer;
-import com.jeff.pets.cobblepets.client.rendering.rattata_tree.rattata.RattataRenderer;
-import com.jeff.pets.cobblepets.client.rendering.spearow_tree.fearow.FearowRenderer;
-import com.jeff.pets.cobblepets.client.rendering.spearow_tree.spearow.SpearowRenderer;
-import com.jeff.pets.cobblepets.client.rendering.squirtle_tree.blastoise.BlastoiseRenderer;
-import com.jeff.pets.cobblepets.client.rendering.squirtle_tree.squirtle.SquirtleRenderer;
-import com.jeff.pets.cobblepets.client.rendering.squirtle_tree.wartortle.WartortleRenderer;
-import com.jeff.pets.cobblepets.client.rendering.weedle_tree.beedrill.BeedrillRenderer;
-import com.jeff.pets.cobblepets.client.rendering.weedle_tree.kakuna.KakunaRenderer;
-import com.jeff.pets.cobblepets.client.rendering.weedle_tree.weedle.WeedleRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.ekans_tree.bulbasaur_tree.bulbasaur.BulbasaurRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.ekans_tree.bulbasaur_tree.ivysaur.IvysaurRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.ekans_tree.bulbasaur_tree.venusaur.VenusaurRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.caterpie_tree.butterfree.ButterfreeRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.caterpie_tree.caterpie.CaterpieRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.caterpie_tree.metapod.MetapodRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.charmander_tree.charizard.CharizardRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.charmander_tree.charmander.CharmanderRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.charmander_tree.charmeleon.CharmeleonRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.ditto.DittoRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.ekans_tree.arbok.ArbokRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.ekans_tree.ekans.EkansRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.mew_tree.mew.MewRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.mew_tree.mewtwo.MewtwoRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.pidgey_tree.pidgeot.PidgeotRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.pidgey_tree.pidgeotto.PidgeottoRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.pidgey_tree.pidgey.PidgeyRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.pikachu_tree.pikachu.PikachuRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.pikachu_tree.raichu.RaichuRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.rattata_tree.raticate.RaticateRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.rattata_tree.rattata.RattataRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.sandshrew_tree.sandshrew.SandshrewRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.sandshrew_tree.sandslash.SandslashRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.spearow_tree.fearow.FearowRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.spearow_tree.spearow.SpearowRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.squirtle_tree.blastoise.BlastoiseRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.squirtle_tree.squirtle.SquirtleRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.squirtle_tree.wartortle.WartortleRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.weedle_tree.beedrill.BeedrillRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.weedle_tree.kakuna.KakunaRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.weedle_tree.weedle.WeedleRenderer;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.minecraft.world.entity.EntityType;
 
 import java.util.Arrays;
 
@@ -91,6 +93,11 @@ public class CobblepetsClient implements ClientModInitializer {
         COBBLE_CONFIG.fearowName = Utils.checkNullString(COBBLE_CONFIG.spearowName);
         COBBLE_CONFIG.ekansName = Utils.checkNullString(COBBLE_CONFIG.ekansName);
         COBBLE_CONFIG.arbokName = Utils.checkNullString(COBBLE_CONFIG.arbokName);
+        COBBLE_CONFIG.pikachuName = Utils.checkNullString(COBBLE_CONFIG.pikachuName);
+        COBBLE_CONFIG.raichuName = Utils.checkNullString(COBBLE_CONFIG.raichuName);
+        COBBLE_CONFIG.sandshrewName = Utils.checkNullString(COBBLE_CONFIG.sandshrewName);
+        COBBLE_CONFIG.sandslashName = Utils.checkNullString(COBBLE_CONFIG.sandslashName);
+        AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
     }
 
     private void setUpRendering() {
@@ -121,6 +128,10 @@ public class CobblepetsClient implements ClientModInitializer {
         EntityRendererRegistry.register(FEAROW, FearowRenderer::new);
         EntityRendererRegistry.register(EKANS, EkansRenderer::new);
         EntityRendererRegistry.register(ARBOK, ArbokRenderer::new);
+        EntityRendererRegistry.register(PIKACHU, PikachuRenderer::new);
+        EntityRendererRegistry.register(RAICHU, RaichuRenderer::new);
+        EntityRendererRegistry.register(SANDSHREW, SandshrewRenderer::new);
+        EntityRendererRegistry.register(SANDSLASH, SandslashRenderer::new);
     }
 
     private void addAllToPetList(String ... s) {

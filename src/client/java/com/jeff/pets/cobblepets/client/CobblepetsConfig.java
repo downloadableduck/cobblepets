@@ -34,4 +34,8 @@ public class CobblepetsConfig implements ConfigData {
     public String fearowName;
     public String ekansName;
     public String arbokName;
+    public String pikachuName;
+    public String raichuName;
+    public String sandshrewName;
+    public String sandslashName;
 }

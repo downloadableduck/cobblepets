@@ -32,7 +32,10 @@ public class Vals {
     public static final String FEAROW = "fearow";
     public static final String EKANS = "ekans";
     public static final String ARBOK = "arbok";
-
+    public static final String PIKACHU = "pikachu";
+    public static final String RAICHU = "raichu";
+    public static final String SANDSHREW = "sandshrew";
+    public static final String SANDSLASH = "sandslash";
 
     public static String[] getVals() {
         List<String> vals = new ArrayList<>();

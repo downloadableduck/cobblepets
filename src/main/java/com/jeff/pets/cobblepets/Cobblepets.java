@@ -1,33 +1,37 @@
 package com.jeff.pets.cobblepets;
 
-import com.jeff.pets.cobblepets.pets.bulbasaur.Bulbasaur;
+import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.Bulbasaur;
 import com.jeff.pets.cobblepets.pets.GroundCobblemon;
-import com.jeff.pets.cobblepets.pets.bulbasaur.Ivysaur;
-import com.jeff.pets.cobblepets.pets.bulbasaur.Venusaur;
-import com.jeff.pets.cobblepets.pets.caterpie.Butterfree;
-import com.jeff.pets.cobblepets.pets.caterpie.Caterpie;
-import com.jeff.pets.cobblepets.pets.caterpie.Metapod;
-import com.jeff.pets.cobblepets.pets.charmander.Charizard;
-import com.jeff.pets.cobblepets.pets.charmander.Charmander;
-import com.jeff.pets.cobblepets.pets.charmander.Charmeleon;
-import com.jeff.pets.cobblepets.pets.ditto.Ditto;
-import com.jeff.pets.cobblepets.pets.ekans.Arbok;
-import com.jeff.pets.cobblepets.pets.ekans.Ekans;
-import com.jeff.pets.cobblepets.pets.mew.Mew;
-import com.jeff.pets.cobblepets.pets.mew.Mewtwo;
-import com.jeff.pets.cobblepets.pets.pidgey.Pidgeot;
-import com.jeff.pets.cobblepets.pets.pidgey.Pidgeotto;
-import com.jeff.pets.cobblepets.pets.pidgey.Pidgey;
-import com.jeff.pets.cobblepets.pets.rattata.Raticate;
-import com.jeff.pets.cobblepets.pets.rattata.Rattata;
-import com.jeff.pets.cobblepets.pets.spearow.Fearow;
-import com.jeff.pets.cobblepets.pets.spearow.Spearow;
-import com.jeff.pets.cobblepets.pets.squirtle.Blastoise;
-import com.jeff.pets.cobblepets.pets.squirtle.Squirtle;
-import com.jeff.pets.cobblepets.pets.squirtle.Wartortle;
-import com.jeff.pets.cobblepets.pets.weedle.Beedrill;
-import com.jeff.pets.cobblepets.pets.weedle.Kakuna;
-import com.jeff.pets.cobblepets.pets.weedle.Weedle;
+import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.Ivysaur;
+import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.Venusaur;
+import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.caterpie.Butterfree;
+import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.caterpie.Caterpie;
+import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.caterpie.Metapod;
+import com.jeff.pets.cobblepets.pets.gen1.charmander.Charizard;
+import com.jeff.pets.cobblepets.pets.gen1.charmander.Charmander;
+import com.jeff.pets.cobblepets.pets.gen1.charmander.Charmeleon;
+import com.jeff.pets.cobblepets.pets.gen1.ditto.Ditto;
+import com.jeff.pets.cobblepets.pets.gen1.ekans.Arbok;
+import com.jeff.pets.cobblepets.pets.gen1.ekans.Ekans;
+import com.jeff.pets.cobblepets.pets.gen1.mew.Mew;
+import com.jeff.pets.cobblepets.pets.gen1.mew.Mewtwo;
+import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgeot;
+import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgeotto;
+import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgey;
+import com.jeff.pets.cobblepets.pets.gen1.pikachu.Pikachu;
+import com.jeff.pets.cobblepets.pets.gen1.pikachu.Raichu;
+import com.jeff.pets.cobblepets.pets.gen1.rattata.Raticate;
+import com.jeff.pets.cobblepets.pets.gen1.rattata.Rattata;
+import com.jeff.pets.cobblepets.pets.gen1.sandshrew.Sandshrew;
+import com.jeff.pets.cobblepets.pets.gen1.sandshrew.Sandslash;
+import com.jeff.pets.cobblepets.pets.gen1.spearow.Fearow;
+import com.jeff.pets.cobblepets.pets.gen1.spearow.Spearow;
+import com.jeff.pets.cobblepets.pets.gen1.squirtle.Blastoise;
+import com.jeff.pets.cobblepets.pets.gen1.squirtle.Squirtle;
+import com.jeff.pets.cobblepets.pets.gen1.squirtle.Wartortle;
+import com.jeff.pets.cobblepets.pets.gen1.weedle.Beedrill;
+import com.jeff.pets.cobblepets.pets.gen1.weedle.Kakuna;
+import com.jeff.pets.cobblepets.pets.gen1.weedle.Weedle;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.core.Registry;
@@ -41,8 +45,6 @@ import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.ref.WeakReference;
-
 public class Cobblepets implements ModInitializer {
     public static final String MOD_ID = "cobblepets";
 
@@ -54,6 +56,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "bulbasaur"),
             EntityType.Builder.of(Bulbasaur::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1f)
                     .eyeHeight(1f)
                     .build(BULBASAUR_KEY)
@@ -65,6 +68,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "ivysaur"),
             EntityType.Builder.of(Ivysaur::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1f)
                     .eyeHeight(1f)
                     .build(IVYSAUR_KEY)
@@ -76,6 +80,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "venusaur"),
             EntityType.Builder.of(Venusaur::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(2f, 2f)
                     .eyeHeight(2f)
                     .build(VENUSAUR_KEY)
@@ -87,6 +92,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "charmander"),
             EntityType.Builder.of(Charmander::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1.5f)
                     .eyeHeight(1.5f)
                     .build(CHARMANDER_KEY)
@@ -98,6 +104,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "charmeleon"),
             EntityType.Builder.of(Charmeleon::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(2f, 2f)
                     .eyeHeight(2f)
                     .build(CHARMELEON_KEY)
@@ -109,6 +116,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "charizard"),
             EntityType.Builder.of(Charizard::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(2f, 2f)
                     .eyeHeight(2f)
                     .build(CHARIZARD_KEY)
@@ -120,6 +128,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "squirtle"),
             EntityType.Builder.of(Squirtle::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1.5f)
                     .eyeHeight(1.5f)
                     .build(SQUIRTLE_KEY)
@@ -131,6 +140,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "wartortle"),
             EntityType.Builder.of(Wartortle::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1.5f)
                     .eyeHeight(1.5f)
                     .build(WARTORTLE_KEY)
@@ -142,6 +152,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "blastoise"),
             EntityType.Builder.of(Blastoise::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(2f, 3f)
                     .eyeHeight(2f)
                     .build(BLASTOISE_KEY)
@@ -153,6 +164,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "caterpie"),
             EntityType.Builder.of(Caterpie::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1f)
                     .eyeHeight(1f)
                     .build(CATERPIE_KEY)
@@ -164,6 +176,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "metapod"),
             EntityType.Builder.of(Metapod::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1f)
                     .eyeHeight(1f)
                     .build(METAPOD_KEY)
@@ -175,6 +188,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "butterfree"),
             EntityType.Builder.of(Butterfree::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1f)
                     .eyeHeight(1f)
                     .build(BUTTERFREE_KEY)
@@ -186,6 +200,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "weedle"),
             EntityType.Builder.of(Weedle::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1f)
                     .eyeHeight(1f)
                     .build(WEEDLE_KEY)
@@ -197,6 +212,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "kakuna"),
             EntityType.Builder.of(Kakuna::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1f)
                     .eyeHeight(1f)
                     .build(KAKUNA_KEY)
@@ -208,6 +224,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "beedrill"),
             EntityType.Builder.of(Beedrill::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(2f, 2f)
                     .eyeHeight(2f)
                     .build(BEEDRILL_KEY)
@@ -219,6 +236,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "pidgeot"),
             EntityType.Builder.of(Pidgeot::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 2f)
                     .eyeHeight(2f)
                     .build(PIDGEOT_KEY)
@@ -230,6 +248,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "pidgeotto"),
             EntityType.Builder.of(Pidgeotto::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1f)
                     .eyeHeight(1f)
                     .build(PIDGEOTTO_KEY)
@@ -241,6 +260,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "pidgey"),
             EntityType.Builder.of(Pidgey::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1f)
                     .eyeHeight(1f)
                     .build(PIDGEY_KEY)
@@ -252,6 +272,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "mew"),
             EntityType.Builder.of(Mew::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 2f)
                     .eyeHeight(2f)
                     .build(MEW_KEY)
@@ -263,6 +284,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "mewtwo"),
             EntityType.Builder.of(Mewtwo::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(2f, 3f)
                     .eyeHeight(3f)
                     .build(MEWTWO_KEY)
@@ -274,6 +296,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "ditto"),
             EntityType.Builder.of(Ditto::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1f)
                     .eyeHeight(1f)
                     .build(DITTO_KEY)
@@ -285,6 +308,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "rattata"),
             EntityType.Builder.of(Rattata::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1f)
                     .eyeHeight(1f)
                     .build(RATTATA_KEY)
@@ -296,6 +320,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "raticate"),
             EntityType.Builder.of(Raticate::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1f)
                     .eyeHeight(1f)
                     .build(RATICATE_KEY)
@@ -307,6 +332,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "spearow"),
             EntityType.Builder.of(Spearow::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(1f, 1f)
                     .eyeHeight(1f)
                     .build(SPEAROW_KEY)
@@ -318,6 +344,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "fearow"),
             EntityType.Builder.of(Fearow::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(2f, 2f)
                     .eyeHeight(2f)
                     .build(FEAROW_KEY)
@@ -329,6 +356,7 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "ekans"),
             EntityType.Builder.of(Ekans::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(3f, 0.5f)
                     .eyeHeight(0.5f)
                     .build(EKANS_KEY)
@@ -340,10 +368,61 @@ public class Cobblepets implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(MOD_ID, "arbok"),
             EntityType.Builder.of(Arbok::new, MobCategory.AMBIENT)
+                    .noSummon()
                     .sized(3f, 1.5f)
                     .eyeHeight(1.5f)
                     .build(ARBOK_KEY)
     );
+
+    private static final ResourceKey<@NotNull EntityType<?>> PIKACHU_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "pikachu"));
+    public static final EntityType<@NotNull Pikachu> PIKACHU = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "pikachu"),
+            EntityType.Builder.of(Pikachu::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(PIKACHU_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> RAICHU_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "raichu"));
+    public static final EntityType<@NotNull Raichu> RAICHU = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "raichu"),
+            EntityType.Builder.of(Raichu::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(RAICHU_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> SANDSHREW_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "sandshrew"));
+    public static final EntityType<@NotNull Sandshrew> SANDSHREW = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "sandshrew"),
+            EntityType.Builder.of(Sandshrew::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(SANDSHREW_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> SANDSLASH_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "sandslash"));
+    public static final EntityType<@NotNull Sandslash> SANDSLASH = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "sandslash"),
+            EntityType.Builder.of(Sandslash::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(SANDSLASH_KEY)
+    );
+
+
 
     @Override
     public void onInitialize() {
@@ -374,5 +453,9 @@ public class Cobblepets implements ModInitializer {
         FabricDefaultAttributeRegistry.register(FEAROW, GroundCobblemon.createAttributes().build());
         FabricDefaultAttributeRegistry.register(EKANS, GroundCobblemon.createAttributes().build());
         FabricDefaultAttributeRegistry.register(ARBOK, GroundCobblemon.createAttributes().build());
+        FabricDefaultAttributeRegistry.register(PIKACHU, GroundCobblemon.createAttributes().build());
+        FabricDefaultAttributeRegistry.register(RAICHU, GroundCobblemon.createAttributes().build());
+        FabricDefaultAttributeRegistry.register(SANDSHREW, GroundCobblemon.createAttributes().build());
+        FabricDefaultAttributeRegistry.register(SANDSLASH, GroundCobblemon.createAttributes().build());
     }
 }

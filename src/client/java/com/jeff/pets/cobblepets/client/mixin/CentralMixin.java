@@ -3,36 +3,39 @@ package com.jeff.pets.cobblepets.client.mixin;
 import com.jeff.pets.Central;
 import com.jeff.pets.PetsConfig;
 import com.jeff.pets.Utils;
-import com.jeff.pets.cobblepets.client.Vals;
-import com.jeff.pets.cobblepets.pets.bulbasaur.Bulbasaur;
+import com.jeff.pets.cobblepets.client.CobblepetsConfig;
+import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.Bulbasaur;
 import com.jeff.pets.cobblepets.Cobblepets;
-import com.jeff.pets.cobblepets.pets.bulbasaur.Ivysaur;
-import com.jeff.pets.cobblepets.pets.bulbasaur.Venusaur;
-import com.jeff.pets.cobblepets.pets.caterpie.Butterfree;
-import com.jeff.pets.cobblepets.pets.caterpie.Caterpie;
-import com.jeff.pets.cobblepets.pets.caterpie.Metapod;
-import com.jeff.pets.cobblepets.pets.charmander.Charizard;
-import com.jeff.pets.cobblepets.pets.charmander.Charmander;
-import com.jeff.pets.cobblepets.pets.charmander.Charmeleon;
-import com.jeff.pets.cobblepets.pets.ditto.Ditto;
-import com.jeff.pets.cobblepets.pets.ekans.Arbok;
-import com.jeff.pets.cobblepets.pets.ekans.Ekans;
-import com.jeff.pets.cobblepets.pets.mew.Mew;
-import com.jeff.pets.cobblepets.pets.mew.Mewtwo;
-import com.jeff.pets.cobblepets.pets.pidgey.Pidgeot;
-import com.jeff.pets.cobblepets.pets.pidgey.Pidgeotto;
-import com.jeff.pets.cobblepets.pets.pidgey.Pidgey;
-import com.jeff.pets.cobblepets.pets.rattata.Raticate;
-import com.jeff.pets.cobblepets.pets.rattata.Rattata;
-import com.jeff.pets.cobblepets.pets.spearow.Fearow;
-import com.jeff.pets.cobblepets.pets.spearow.Spearow;
-import com.jeff.pets.cobblepets.pets.squirtle.Blastoise;
-import com.jeff.pets.cobblepets.pets.squirtle.Squirtle;
-import com.jeff.pets.cobblepets.pets.squirtle.Wartortle;
-import com.jeff.pets.cobblepets.pets.weedle.Beedrill;
-import com.jeff.pets.cobblepets.pets.weedle.Kakuna;
-import com.jeff.pets.cobblepets.pets.weedle.Weedle;
-import com.jeff.pets.mob.vanilla.neutral.ClientBee;
+import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.Ivysaur;
+import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.Venusaur;
+import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.caterpie.Butterfree;
+import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.caterpie.Caterpie;
+import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.caterpie.Metapod;
+import com.jeff.pets.cobblepets.pets.gen1.charmander.Charizard;
+import com.jeff.pets.cobblepets.pets.gen1.charmander.Charmander;
+import com.jeff.pets.cobblepets.pets.gen1.charmander.Charmeleon;
+import com.jeff.pets.cobblepets.pets.gen1.ditto.Ditto;
+import com.jeff.pets.cobblepets.pets.gen1.ekans.Arbok;
+import com.jeff.pets.cobblepets.pets.gen1.ekans.Ekans;
+import com.jeff.pets.cobblepets.pets.gen1.mew.Mew;
+import com.jeff.pets.cobblepets.pets.gen1.mew.Mewtwo;
+import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgeot;
+import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgeotto;
+import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgey;
+import com.jeff.pets.cobblepets.pets.gen1.pikachu.Pikachu;
+import com.jeff.pets.cobblepets.pets.gen1.pikachu.Raichu;
+import com.jeff.pets.cobblepets.pets.gen1.rattata.Raticate;
+import com.jeff.pets.cobblepets.pets.gen1.rattata.Rattata;
+import com.jeff.pets.cobblepets.pets.gen1.sandshrew.Sandshrew;
+import com.jeff.pets.cobblepets.pets.gen1.sandshrew.Sandslash;
+import com.jeff.pets.cobblepets.pets.gen1.spearow.Fearow;
+import com.jeff.pets.cobblepets.pets.gen1.spearow.Spearow;
+import com.jeff.pets.cobblepets.pets.gen1.squirtle.Blastoise;
+import com.jeff.pets.cobblepets.pets.gen1.squirtle.Squirtle;
+import com.jeff.pets.cobblepets.pets.gen1.squirtle.Wartortle;
+import com.jeff.pets.cobblepets.pets.gen1.weedle.Beedrill;
+import com.jeff.pets.cobblepets.pets.gen1.weedle.Kakuna;
+import com.jeff.pets.cobblepets.pets.gen1.weedle.Weedle;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
@@ -63,14 +66,6 @@ import static com.jeff.pets.cobblepets.client.Vals.*;
 
 @Mixin(Central.class)
 public abstract class CentralMixin {
-
-    @Shadow
-    @Final
-    public static CopyOnWriteArrayList<String> currentSuggestions;
-
-    @Shadow
-    public static void refreshChatSuggestor(Minecraft client) {
-    }
 
     @Unique
     private static final List<String> BUTTERFREE_SKINS = List.of("butterfree", "valencian");
@@ -114,6 +109,10 @@ public abstract class CentralMixin {
     private static Fearow fearow;
     private static Ekans ekans;
     private static Arbok arbok;
+    private static Pikachu pikachu;
+    private static Raichu raichu;
+    private static Sandshrew sandshrew;
+    private static Sandslash sandslash;
 
     @Unique
     private static void spawnCustomEntity(CommandContext<FabricClientCommandSource> context, Entity entity, String activePet) {
@@ -155,10 +154,15 @@ public abstract class CentralMixin {
             case FEAROW -> spawnCustomEntity(context, fearow, FEAROW);
             case EKANS -> spawnCustomEntity(context, ekans, EKANS);
             case ARBOK -> spawnCustomEntity(context, arbok, ARBOK);
+            case PIKACHU -> spawnCustomEntity(context, pikachu, PIKACHU);
+            case RAICHU -> spawnCustomEntity(context, raichu, RAICHU);
+            case SANDSHREW -> spawnCustomEntity(context, sandshrew, SANDSHREW);
+            case SANDSLASH -> spawnCustomEntity(context, sandslash, SANDSLASH);
 
             case null, default -> {
             }
         }
+        AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
         if (Arrays.stream(getVals()).anyMatch(Predicate.isEqual(species))) {
             cir.setReturnValue(1);
         }
@@ -194,6 +198,10 @@ public abstract class CentralMixin {
         fearow = new Fearow(Cobblepets.FEAROW, level);
         ekans = new Ekans(Cobblepets.EKANS, level);
         arbok = new Arbok(Cobblepets.ARBOK, level);
+        pikachu = new Pikachu(Cobblepets.PIKACHU, level);
+        raichu = new Raichu(Cobblepets.RAICHU, level);
+        sandshrew = new Sandshrew(Cobblepets.SANDSHREW, level);
+        sandslash = new Sandslash(Cobblepets.SANDSLASH, level);
 
         switch (CONFIG.activePet) {
             case BULBASAUR -> Utils.summonPet(bulbasaur, COBBLE_CONFIG.bulbasorName);
@@ -223,6 +231,10 @@ public abstract class CentralMixin {
             case FEAROW -> Utils.summonPet(fearow, COBBLE_CONFIG.fearowName);
             case EKANS -> Utils.summonPet(ekans, COBBLE_CONFIG.ekansName);
             case ARBOK -> Utils.summonPet(arbok, COBBLE_CONFIG.arbokName);
+            case PIKACHU -> Utils.summonPet(pikachu, COBBLE_CONFIG.pikachuName);
+            case RAICHU -> Utils.summonPet(raichu, COBBLE_CONFIG.raichuName);
+            case SANDSHREW -> Utils.summonPet(sandshrew, COBBLE_CONFIG.sandshrewName);
+            case SANDSLASH -> Utils.summonPet(sandslash, COBBLE_CONFIG.sandslashName);
 
             case null, default -> {
             }
@@ -258,6 +270,10 @@ public abstract class CentralMixin {
         Utils.despawnEntity(fearow);
         Utils.despawnEntity(ekans);
         Utils.despawnEntity(arbok);
+        Utils.despawnEntity(pikachu);
+        Utils.despawnEntity(raichu);
+        Utils.despawnEntity(sandshrew);
+        Utils.despawnEntity(sandslash);
     }
 
     @Inject(at = @At("HEAD"), method = "lambda$createPetNameCommand$1")
@@ -292,11 +308,16 @@ public abstract class CentralMixin {
             case FEAROW -> COBBLE_CONFIG.fearowName = name;
             case EKANS -> COBBLE_CONFIG.ekansName = name;
             case ARBOK -> COBBLE_CONFIG.arbokName = name;
+            case PIKACHU -> COBBLE_CONFIG.pikachuName = name;
+            case RAICHU -> COBBLE_CONFIG.raichuName = name;
+            case SANDSHREW -> COBBLE_CONFIG.sandshrewName = name;
+            case SANDSLASH -> COBBLE_CONFIG.sandslashName = name;
 
             case null, default -> {
             }
         }
-     }
+        AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
+    }
 
     @Inject(at = @At("HEAD"), method = "refreshPetNames")
     private static void refreshPetNames(CallbackInfo ci) {
@@ -327,6 +348,10 @@ public abstract class CentralMixin {
         Utils.checkName(FEAROW, fearow, COBBLE_CONFIG.fearowName);
         Utils.checkName(EKANS, ekans, COBBLE_CONFIG.ekansName);
         Utils.checkName(ARBOK, arbok, COBBLE_CONFIG.arbokName);
+        Utils.checkName(PIKACHU, pikachu, COBBLE_CONFIG.pikachuName);
+        Utils.checkName(RAICHU, raichu, COBBLE_CONFIG.raichuName);
+        Utils.checkName(SANDSHREW, sandshrew, COBBLE_CONFIG.sandshrewName);
+        Utils.checkName(SANDSLASH, sandslash, COBBLE_CONFIG.sandslashName);
     }
 
     @Inject(at = @At("HEAD"), method = "lambda$createPetSkinCommand$1")
@@ -343,6 +368,7 @@ public abstract class CentralMixin {
                 COBBLE_CONFIG.butterfreeSkin = "valencian";
             }
         }
+        AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
     }
 
     @Inject(at = @At(value = "INVOKE", target = "Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;buildFuture()Ljava/util/concurrent/CompletableFuture;"),
