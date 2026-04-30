@@ -18,7 +18,7 @@ public class Nidoranf extends GroundCobblemon {
 
     @Override
     public String getIdleName() {
-        return "animation.nidoranf.ground_idle";
+        return "animation.nidoranf.idle";
     }
 
     @Override
@@ -28,7 +28,7 @@ public class Nidoranf extends GroundCobblemon {
 
     @Override
     public String getWalkName() {
-        return "animation.nidoranf.ground_walk";
+        return this.getIdleName();
     }
 
     @Override

@@ -36,6 +36,29 @@ public class Vals {
     public static final String RAICHU = "raichu";
     public static final String SANDSHREW = "sandshrew";
     public static final String SANDSLASH = "sandslash";
+    public static final String NIDORANF = "nidoranf";
+    public static final String NIDORINA = "nidorina";
+    public static final String NIDOQUEEN = "nidoqueen";
+    public static final String NIDORANM = "nidoranm";
+    public static final String NIDORINO = "nidorino";
+    public static final String NIDOKING = "nidoking";
+    public static final String CLEFAIRY = "clefairy";
+    public static final String CLEFABLE = "clefable";
+    public static final String VULPIX = "vulpix";
+    public static final String NINETALES = "ninetales";
+    public static final String JIGGLYPUFF = "jigglypuff";
+    public static final String WIGGLYTUFF = "wigglytuff";
+    public static final String ZUBAT = "zubat";
+    public static final String GOLBAT = "golbat";
+    public static final String ODDISH = "oddish";
+    public static final String GLOOM = "gloom";
+    public static final String VILEPLUME = "vileplume";
+    public static final String PARAS = "paras";
+    public static final String PARASECT = "parasect";
+    public static final String VENONAT = "venonat";
+    public static final String VENOMOTH = "venomoth";
+    public static final String DIGLETT = "diglett";
+    public static final String DUGTRIO = "dugtrio";
 
     public static String[] getVals() {
         List<String> vals = new ArrayList<>();

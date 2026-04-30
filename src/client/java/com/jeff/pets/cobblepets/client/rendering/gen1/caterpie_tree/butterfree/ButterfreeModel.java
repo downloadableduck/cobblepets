@@ -18,9 +18,9 @@ public class ButterfreeModel extends GeoModel<@NotNull Butterfree> {
     @Override
     public @NotNull Identifier getTextureResource(@NotNull GeoRenderState renderState) {
         String id = "textures/entity/caterpie-tree/butterfree/";
-        if (COBBLE_CONFIG.butterfreeSkin.equals("butterfree") && !COBBLE_CONFIG.isShiny) {
+        if (COBBLE_CONFIG.butterfreeSkin.equals("normal") && !COBBLE_CONFIG.isShiny) {
             return Utils.cobble(id + "butterfree.png");
-        } else if (COBBLE_CONFIG.butterfreeSkin.equals("butterfree") && COBBLE_CONFIG.isShiny) {
+        } else if (COBBLE_CONFIG.butterfreeSkin.equals("normal") && COBBLE_CONFIG.isShiny) {
             return Utils.cobble(id + "shiny.png");
         } else if (COBBLE_CONFIG.butterfreeSkin.equals("valencian") && !COBBLE_CONFIG.isShiny) {
             return Utils.cobble(id + "valencian.png");

@@ -5,7 +5,7 @@ import com.jeff.pets.cobblepets.pets.gen1.sandshrew.Sandslash;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 
-public class SandslashRenderer extends CobbleRenderer<Sandslash, LivingEntityRenderState> {
+public class SandslashRenderer extends CobbleRenderer<Sandslash> {
     public SandslashRenderer(EntityRendererProvider.Context context) {
         super(context, new SandslashModel());
     }

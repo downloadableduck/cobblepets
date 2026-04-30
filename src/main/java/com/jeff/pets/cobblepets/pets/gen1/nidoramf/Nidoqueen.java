@@ -28,7 +28,7 @@ public class Nidoqueen extends GroundCobblemon {
 
     @Override
     public String getWalkName() {
-        return "animation.nidoqueen.ground_walk";
+        return this.getIdleName();
     }
 
     @Override

@@ -5,7 +5,7 @@ import com.jeff.pets.cobblepets.pets.gen1.weedle.Beedrill;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 
-public class BeedrillRenderer extends CobbleRenderer<Beedrill, LivingEntityRenderState> {
+public class BeedrillRenderer extends CobbleRenderer<Beedrill> {
     public BeedrillRenderer(EntityRendererProvider.Context context) {
         super(context, new BeedrillModel());
     }

@@ -5,7 +5,7 @@ import com.jeff.pets.cobblepets.pets.gen1.squirtle.Blastoise;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 
-public class BlastoiseRenderer extends CobbleRenderer<Blastoise, LivingEntityRenderState> {
+public class BlastoiseRenderer extends CobbleRenderer<Blastoise> {
     public BlastoiseRenderer(EntityRendererProvider.Context context) {
         super(context, new BlastoiseModel());
     }

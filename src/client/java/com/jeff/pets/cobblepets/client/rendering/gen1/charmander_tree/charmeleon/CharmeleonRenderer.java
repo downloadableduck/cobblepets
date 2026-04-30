@@ -5,7 +5,7 @@ import com.jeff.pets.cobblepets.pets.gen1.charmander.Charmeleon;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 
-public class CharmeleonRenderer extends CobbleRenderer<Charmeleon, LivingEntityRenderState> {
+public class CharmeleonRenderer extends CobbleRenderer<Charmeleon> {
     public CharmeleonRenderer(EntityRendererProvider.Context context) {
         super(context, new CharmeleonModel());
     }

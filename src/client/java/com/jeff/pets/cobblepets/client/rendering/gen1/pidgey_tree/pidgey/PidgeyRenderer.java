@@ -5,7 +5,7 @@ import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgey;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 
-public class PidgeyRenderer extends CobbleRenderer<Pidgey, LivingEntityRenderState> {
+public class PidgeyRenderer extends CobbleRenderer<Pidgey> {
     public PidgeyRenderer(EntityRendererProvider.Context context) {
         super(context, new PidgeyModel());
     }

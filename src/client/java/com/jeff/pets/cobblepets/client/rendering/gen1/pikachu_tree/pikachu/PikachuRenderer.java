@@ -5,7 +5,7 @@ import com.jeff.pets.cobblepets.pets.gen1.pikachu.Pikachu;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 
-public class PikachuRenderer extends CobbleRenderer<Pikachu, LivingEntityRenderState> {
+public class PikachuRenderer extends CobbleRenderer<Pikachu> {
     public PikachuRenderer(EntityRendererProvider.Context context) {
         super(context, new PikachuModel());
     }

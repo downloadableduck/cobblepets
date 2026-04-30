@@ -10,11 +10,28 @@ import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.caterpie.Metapod;
 import com.jeff.pets.cobblepets.pets.gen1.charmander.Charizard;
 import com.jeff.pets.cobblepets.pets.gen1.charmander.Charmander;
 import com.jeff.pets.cobblepets.pets.gen1.charmander.Charmeleon;
+import com.jeff.pets.cobblepets.pets.gen1.clefairy.Clefable;
+import com.jeff.pets.cobblepets.pets.gen1.clefairy.Clefairy;
+import com.jeff.pets.cobblepets.pets.gen1.diglett.Diglett;
+import com.jeff.pets.cobblepets.pets.gen1.diglett.Dugtrio;
 import com.jeff.pets.cobblepets.pets.gen1.ditto.Ditto;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Arbok;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Ekans;
+import com.jeff.pets.cobblepets.pets.gen1.jigglypuff.Jigglypuff;
+import com.jeff.pets.cobblepets.pets.gen1.jigglypuff.Wigglytuff;
 import com.jeff.pets.cobblepets.pets.gen1.mew.Mew;
 import com.jeff.pets.cobblepets.pets.gen1.mew.Mewtwo;
+import com.jeff.pets.cobblepets.pets.gen1.nidoramf.Nidoqueen;
+import com.jeff.pets.cobblepets.pets.gen1.nidoramf.Nidoranf;
+import com.jeff.pets.cobblepets.pets.gen1.nidoramf.Nidorina;
+import com.jeff.pets.cobblepets.pets.gen1.nidoranm.Nidoking;
+import com.jeff.pets.cobblepets.pets.gen1.nidoranm.Nidoranm;
+import com.jeff.pets.cobblepets.pets.gen1.nidoranm.Nidorino;
+import com.jeff.pets.cobblepets.pets.gen1.oddish.Gloom;
+import com.jeff.pets.cobblepets.pets.gen1.oddish.Oddish;
+import com.jeff.pets.cobblepets.pets.gen1.oddish.Vileplume;
+import com.jeff.pets.cobblepets.pets.gen1.paras.Paras;
+import com.jeff.pets.cobblepets.pets.gen1.paras.Parasect;
 import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgeot;
 import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgeotto;
 import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgey;
@@ -29,9 +46,15 @@ import com.jeff.pets.cobblepets.pets.gen1.spearow.Spearow;
 import com.jeff.pets.cobblepets.pets.gen1.squirtle.Blastoise;
 import com.jeff.pets.cobblepets.pets.gen1.squirtle.Squirtle;
 import com.jeff.pets.cobblepets.pets.gen1.squirtle.Wartortle;
+import com.jeff.pets.cobblepets.pets.gen1.venonat.Venomoth;
+import com.jeff.pets.cobblepets.pets.gen1.venonat.Venonat;
+import com.jeff.pets.cobblepets.pets.gen1.vulpix.Ninetales;
+import com.jeff.pets.cobblepets.pets.gen1.vulpix.Vulpix;
 import com.jeff.pets.cobblepets.pets.gen1.weedle.Beedrill;
 import com.jeff.pets.cobblepets.pets.gen1.weedle.Kakuna;
 import com.jeff.pets.cobblepets.pets.gen1.weedle.Weedle;
+import com.jeff.pets.cobblepets.pets.gen1.zubat.Golbat;
+import com.jeff.pets.cobblepets.pets.gen1.zubat.Zubat;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.core.Registry;
@@ -40,6 +63,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MobCategory;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
@@ -422,40 +446,342 @@ public class Cobblepets implements ModInitializer {
                     .build(SANDSLASH_KEY)
     );
 
+    private static final ResourceKey<@NotNull EntityType<?>> NIDORANF_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "nidoranf"));
+    public static final EntityType<@NotNull Nidoranf> NIDORANF = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "nidoranf"),
+            EntityType.Builder.of(Nidoranf::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(NIDORANF_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> NIDORINA_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "nidorina"));
+    public static final EntityType<@NotNull Nidorina> NIDORINA = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "nidorina"),
+            EntityType.Builder.of(Nidorina::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(NIDORINA_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> NIDOQUEEN_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "nidoqueen"));
+    public static final EntityType<@NotNull Nidoqueen> NIDOQUEEN = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "nidoqueen"),
+            EntityType.Builder.of(Nidoqueen::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1.5f)
+                    .eyeHeight(1.5f)
+                    .build(NIDOQUEEN_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> NIDORANM_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "nidoranm"));
+    public static final EntityType<@NotNull Nidoranm> NIDORANM = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "nidoranm"),
+            EntityType.Builder.of(Nidoranm::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(NIDORANM_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> NIDORINO_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "nidorino"));
+    public static final EntityType<@NotNull Nidorino> NIDORINO = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "nidorino"),
+            EntityType.Builder.of(Nidorino::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(NIDORINO_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> NIDOKING_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "nidoqueen"));
+    public static final EntityType<@NotNull Nidoking> NIDOKING = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "nidoking"),
+            EntityType.Builder.of(Nidoking::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1.5f, 2.5f)
+                    .eyeHeight(2.5f)
+                    .build(NIDOKING_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> CLEFAIRY_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "clefairy"));
+    public static final EntityType<@NotNull Clefairy> CLEFAIRY = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "clefairy"),
+            EntityType.Builder.of(Clefairy::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(CLEFAIRY_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> CLEFABLE_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "clefable"));
+    public static final EntityType<@NotNull Clefable> CLEFABLE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "clefable"),
+            EntityType.Builder.of(Clefable::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(CLEFABLE_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> VULPIX_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "vulpix"));
+    public static final EntityType<@NotNull Vulpix> VULPIX = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "vulpix"),
+            EntityType.Builder.of(Vulpix::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(VULPIX_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> NINETALES_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "ninetales"));
+    public static final EntityType<@NotNull Ninetales> NINETALES = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "ninetales"),
+            EntityType.Builder.of(Ninetales::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1.2f, 1.3f)
+                    .eyeHeight(1.3f)
+                    .build(NINETALES_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> JIGGLYPUFF_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "jigglypuff"));
+    public static final EntityType<@NotNull Jigglypuff> JIGGLYPUFF = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "jigglypuff"),
+            EntityType.Builder.of(Jigglypuff::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1)
+                    .eyeHeight(1f)
+                    .build(JIGGLYPUFF_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> WIGGLYTUFF_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "wigglytuff"));
+    public static final EntityType<@NotNull Wigglytuff> WIGGLYTUFF = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "wigglytuff"),
+            EntityType.Builder.of(Wigglytuff::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1.5f)
+                    .eyeHeight(1.5f)
+                    .build(WIGGLYTUFF_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> ZUBAT_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "zubat"));
+    public static final EntityType<@NotNull Zubat> ZUBAT = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "zubat"),
+            EntityType.Builder.of(Zubat::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(ZUBAT_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> GOLBAT_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "golbat"));
+    public static final EntityType<@NotNull Golbat> GOLBAT = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "golbat"),
+            EntityType.Builder.of(Golbat::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1.5f, 1.5f)
+                    .eyeHeight(1.5f)
+                    .build(GOLBAT_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> ODDISH_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "oddish"));
+    public static final EntityType<@NotNull Oddish> ODDISH = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "oddish"),
+            EntityType.Builder.of(Oddish::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(ODDISH_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> GLOOM_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "gloom"));
+    public static final EntityType<@NotNull Gloom> GLOOM = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "gloom"),
+            EntityType.Builder.of(Gloom::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(GLOOM_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> VILEPLUME_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "vileplume"));
+    public static final EntityType<@NotNull Vileplume> VILEPLUME = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "vileplume"),
+            EntityType.Builder.of(Vileplume::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(2f, 2f)
+                    .eyeHeight(2f)
+                    .build(VILEPLUME_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> PARAS_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "paras"));
+    public static final EntityType<@NotNull Paras> PARAS = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "paras"),
+            EntityType.Builder.of(Paras::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(PARAS_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> PARASECT_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "parasect"));
+    public static final EntityType<@NotNull Parasect> PARASECT = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "parasect"),
+            EntityType.Builder.of(Parasect::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(PARASECT_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> VENONAT_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "venonat"));
+    public static final EntityType<@NotNull Venonat> VENONAT = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "venonat"),
+            EntityType.Builder.of(Venonat::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(VENONAT_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> VENOMOTH_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "venomoth"));
+    public static final EntityType<@NotNull Venomoth> VENOMOTH = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "venomoth"),
+            EntityType.Builder.of(Venomoth::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 2f)
+                    .eyeHeight(2f)
+                    .build(VENOMOTH_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> DIGLETT_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "diglett"));
+    public static final EntityType<@NotNull Diglett> DIGLETT = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "diglett"),
+            EntityType.Builder.of(Diglett::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(0.5f, 0.5f)
+                    .eyeHeight(0.5f)
+                    .build(DIGLETT_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> DUGTRIO_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "dugtrio"));
+    public static final EntityType<@NotNull Dugtrio> DUGTRIO = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "dugtrio"),
+            EntityType.Builder.of(Dugtrio::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(DUGTRIO_KEY)
+    );
+
 
 
     @Override
     public void onInitialize() {
-        FabricDefaultAttributeRegistry.register(BULBASAUR, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(IVYSAUR, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(VENUSAUR, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(CHARMANDER, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(CHARMELEON, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(CHARIZARD, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(SQUIRTLE, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(WARTORTLE, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(BLASTOISE, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(CATERPIE, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(METAPOD, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(BUTTERFREE, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(WEEDLE, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(KAKUNA, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(BEEDRILL, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(PIDGEOT, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(PIDGEOTTO, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(PIDGEY, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(MEW, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(MEWTWO, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(DITTO, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(RATTATA, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(RATICATE, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(SPEAROW, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(FEAROW, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(EKANS, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(ARBOK, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(PIKACHU, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(RAICHU, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(SANDSHREW, GroundCobblemon.createAttributes().build());
-        FabricDefaultAttributeRegistry.register(SANDSLASH, GroundCobblemon.createAttributes().build());
+        register(BULBASAUR);
+        register(IVYSAUR);
+        register(VENUSAUR);
+        register(CHARMANDER);
+        register(CHARMELEON);
+        register(CHARIZARD);
+        register(SQUIRTLE);
+        register(WARTORTLE);
+        register(BLASTOISE);
+        register(CATERPIE);
+        register(METAPOD);
+        register(BUTTERFREE);
+        register(WEEDLE);
+        register(KAKUNA);
+        register(BEEDRILL);
+        register(PIDGEOT);
+        register(PIDGEOTTO);
+        register(PIDGEY);
+        register(MEW);
+        register(MEWTWO);
+        register(DITTO);
+        register(RATTATA);
+        register(RATICATE);
+        register(SPEAROW);
+        register(FEAROW);
+        register(EKANS);
+        register(ARBOK);
+        register(PIKACHU);
+        register(RAICHU);
+        register(SANDSHREW);
+        register(SANDSLASH);
+        register(NIDORANF);
+        register(NIDORINA);
+        register(NIDOQUEEN);
+        register(NIDORANM);
+        register(NIDORINO);
+        register(NIDOKING);
+        register(CLEFAIRY);
+        register(CLEFABLE);
+        register(VULPIX);
+        register(NINETALES);
+        register(JIGGLYPUFF);
+        register(WIGGLYTUFF);
+        register(ZUBAT);
+        register(GOLBAT);
+        register(ODDISH);
+        register(GLOOM);
+        register(VILEPLUME);
+        register(PARAS);
+        register(PARASECT);
+        register(VENONAT);
+        register(VENOMOTH);
+        register(DIGLETT);
+        register(DUGTRIO);
+    }
+    private static void register(EntityType<? extends @NotNull LivingEntity> type) {
+        FabricDefaultAttributeRegistry.register(type, GroundCobblemon.createAttributes().build());
     }
 }

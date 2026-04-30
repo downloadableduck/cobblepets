@@ -17,7 +17,7 @@ public class SandslashModel extends GeoModel<@NotNull Sandslash> {
 
     @Override
     public @NotNull Identifier getTextureResource(@NotNull GeoRenderState renderState) {
-        String id = "textures/entity/sandslash-tree/sandslash/";
+        String id = "textures/entity/sandshrew-tree/sandslash/";
         return COBBLE_CONFIG.isShiny ? Utils.cobble(id + "shiny.png") : Utils.cobble(id + "sandslash.png");
     }
 

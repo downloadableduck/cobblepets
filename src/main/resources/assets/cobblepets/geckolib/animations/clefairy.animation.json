@@ -1,0 +1,127 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.clefairy.ground_idle": {
+			"loop": true,
+			"bones": {
+				"tail": {
+					"rotation": {
+						"vector": [15, 0, 0]
+					}
+				},
+				"tail2": {
+					"rotation": {
+						"vector": [-27.5, 0, 0]
+					}
+				},
+				"torso": {
+					"rotation": {
+						"vector": [1.5, 0, 0]
+					}
+				},
+				"leg_right2": {
+					"rotation": {
+						"vector": [5, 0, -2.5]
+					}
+				},
+				"leg_right": {
+					"rotation": {
+						"vector": [-5, 10, 2.5]
+					},
+					"position": {
+						"vector": [-0.5, -0.25, 0]
+					}
+				},
+				"leg_left": {
+					"rotation": {
+						"vector": [-5, -10, -2.5]
+					},
+					"position": {
+						"vector": [0.5, -0.25, 0]
+					}
+				},
+				"leg_left2": {
+					"rotation": {
+						"vector": [5, 0, 2.5]
+					}
+				},
+				"arm_right": {
+					"rotation": {
+						"vector": [109.9696, -64.60978, -103.88575]
+					},
+					"position": {
+						"vector": [-0.21886, 0.10452, 0.06065]
+					}
+				},
+				"arm_right2": {
+					"rotation": {
+						"vector": [-0.44383, -54.69234, 0.83855]
+					}
+				},
+				"finger_top_right": {
+					"rotation": {
+						"vector": [-1.39365, -35.67045, 15.3162]
+					}
+				},
+				"finger_bottom_right": {
+					"rotation": {
+						"vector": [7.5, -22.5, 0]
+					}
+				},
+				"thumb_right": {
+					"rotation": {
+						"vector": [9.99992, 7.48589, 0.65242]
+					}
+				},
+				"wing_left": {
+					"rotation": {
+						"vector": [-17.1817, 79.65299, -12.94784]
+					}
+				},
+				"wing_right": {
+					"rotation": {
+						"vector": [-8.87434, -69.88363, 4.37033]
+					}
+				},
+				"hand_right": {
+					"rotation": {
+						"vector": [25.10443, -7.32123, -1.63219]
+					}
+				},
+				"arm_left": {
+					"rotation": {
+						"vector": [109.9696, 64.60978, 103.88575]
+					},
+					"position": {
+						"vector": [0.21886, 0.10452, 0.06065]
+					}
+				},
+				"arm_left2": {
+					"rotation": {
+						"vector": [-0.44383, 54.69234, -0.83855]
+					}
+				},
+				"hand_left": {
+					"rotation": {
+						"vector": [25.10443, 7.32123, 1.63219]
+					}
+				},
+				"thumb_left": {
+					"rotation": {
+						"vector": [9.99992, -7.48589, -0.65242]
+					}
+				},
+				"finger_top_left": {
+					"rotation": {
+						"vector": [-1.39365, 35.67045, -15.3162]
+					}
+				},
+				"finger_bottom_left": {
+					"rotation": {
+						"vector": [7.5, 22.5, 0]
+					}
+				}
+			}
+		}
+	}
+}

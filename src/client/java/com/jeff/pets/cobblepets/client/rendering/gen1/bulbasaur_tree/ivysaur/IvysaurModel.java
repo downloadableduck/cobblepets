@@ -1,4 +1,4 @@
-package com.jeff.pets.cobblepets.client.rendering.gen1.ekans_tree.bulbasaur_tree.ivysaur;
+package com.jeff.pets.cobblepets.client.rendering.gen1.bulbasaur_tree.ivysaur;
 
 import com.geckolib.model.GeoModel;
 import com.geckolib.renderer.base.GeoRenderState;

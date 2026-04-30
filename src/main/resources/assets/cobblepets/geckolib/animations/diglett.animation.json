@@ -1,0 +1,45 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.diglett.ground_idle": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2)*0.5", "math.cos(q.anim_time*90*1)*1", "math.sin(q.anim_time*90*1)*1"]
+					},
+					"position": {
+						"vector": ["0.1*math.sin(q.anim_time*90*1)", "0.2*math.sin(q.anim_time*90*3)", 0]
+					}
+				}
+			}
+		},
+		"animation.diglett.ground_walk": {
+			"loop": true,
+			"animation_length": 4,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": ["4-math.sin(q.anim_time*90*6-60)*3", "0+math.cos(q.anim_time*90*6-60)*2", "0+math.cos(q.anim_time*90*3-60)*2-math.sin(q.anim_time*90*3)*3"]
+					},
+					"position": {
+						"vector": ["-math.sin(q.anim_time*90*3)*0.2", "math.sin(q.anim_time*90*6)*0.5", "-0.2+math.cos(q.anim_time*90*6)*0.2"]
+					}
+				},
+				"ground": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					},
+					"position": {
+						"vector": ["math.sin(q.anim_time*90*1)*0.9", 0, "-math.sin(q.anim_time*90*6-90)*0.6"]
+					}
+				},
+				"body2": {
+					"position": {
+						"vector": [0, "math.sin(q.anim_time*90*6-30)*0.2", 0]
+					}
+				}
+			}
+		}
+	}
+}

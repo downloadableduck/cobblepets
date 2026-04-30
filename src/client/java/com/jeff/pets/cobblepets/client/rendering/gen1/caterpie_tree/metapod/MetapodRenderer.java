@@ -5,7 +5,7 @@ import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.caterpie.Metapod;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 
-public class MetapodRenderer extends CobbleRenderer<Metapod, LivingEntityRenderState> {
+public class MetapodRenderer extends CobbleRenderer<Metapod> {
     public MetapodRenderer(EntityRendererProvider.Context context) {
         super(context, new MetapodModel());
     }

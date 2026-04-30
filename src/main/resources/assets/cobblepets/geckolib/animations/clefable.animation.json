@@ -1,0 +1,113 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.clefable.ground_idle": {
+			"loop": true,
+			"bones": {
+				"torso": {
+					"rotation": {
+						"vector": [-1, 0, 0]
+					}
+				},
+				"wing_left": {
+					"rotation": {
+						"vector": [10, 77.5, 0]
+					}
+				},
+				"wing_right": {
+					"rotation": {
+						"vector": [10, -77.5, 0]
+					}
+				},
+				"tail": {
+					"rotation": {
+						"vector": [17.5, 0, 0]
+					},
+					"position": {
+						"vector": [0, -0.75, 0.25]
+					}
+				},
+				"tail2": {
+					"rotation": {
+						"vector": [-32.5, 0, 0]
+					}
+				},
+				"fluff2": {
+					"rotation": {
+						"vector": [-10, 0, 0]
+					}
+				},
+				"arm_right": {
+					"rotation": {
+						"vector": [87.64182, -13.01228, -34.45974]
+					}
+				},
+				"arm_right2": {
+					"rotation": {
+						"vector": [0, 0, 12.5]
+					}
+				},
+				"finger_thumb_right": {
+					"rotation": {
+						"vector": [25, 0, 0]
+					}
+				},
+				"finger_top_right": {
+					"rotation": {
+						"vector": [-2.5, -20, 17.5]
+					}
+				},
+				"finger_bottom_right": {
+					"rotation": {
+						"vector": [0, -12.5, -7.5]
+					}
+				},
+				"leg_left": {
+					"rotation": {
+						"vector": [-5.0387, -4.87294, 0.87279]
+					}
+				},
+				"leg_left2": {
+					"rotation": {
+						"vector": [5, 0, 0]
+					}
+				},
+				"leg_right": {
+					"rotation": {
+						"vector": [-5.0387, 4.87294, -0.87279]
+					}
+				},
+				"leg_right2": {
+					"rotation": {
+						"vector": [5, 0, 0]
+					}
+				},
+				"arm_left": {
+					"rotation": {
+						"vector": [87.64182, 13.01228, 34.45974]
+					}
+				},
+				"arm_left2": {
+					"rotation": {
+						"vector": [0, 0, -12.5]
+					}
+				},
+				"finger_thumb_left": {
+					"rotation": {
+						"vector": [25, 0, 0]
+					}
+				},
+				"finger_top_left": {
+					"rotation": {
+						"vector": [0, 20, -17.5]
+					}
+				},
+				"finger_bottom_left": {
+					"rotation": {
+						"vector": [0, 12.5, 7.5]
+					}
+				}
+			}
+		}
+	}
+}

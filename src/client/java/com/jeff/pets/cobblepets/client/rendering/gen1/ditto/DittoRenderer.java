@@ -5,7 +5,7 @@ import com.jeff.pets.cobblepets.pets.gen1.ditto.Ditto;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 
-public class DittoRenderer extends CobbleRenderer<Ditto, LivingEntityRenderState> {
+public class DittoRenderer extends CobbleRenderer<Ditto> {
     public DittoRenderer(EntityRendererProvider.Context context) {
         super(context, new DittoModel());
     }

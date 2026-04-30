@@ -5,7 +5,7 @@ import com.jeff.pets.cobblepets.pets.gen1.spearow.Spearow;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 
-public class SpearowRenderer extends CobbleRenderer<Spearow, LivingEntityRenderState> {
+public class SpearowRenderer extends CobbleRenderer<Spearow> {
     public SpearowRenderer(EntityRendererProvider.Context context) {
         super(context, new SpearowModel());
     }

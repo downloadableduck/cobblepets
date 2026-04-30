@@ -5,7 +5,7 @@ import com.jeff.pets.cobblepets.pets.gen1.ekans.Ekans;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 
-public class EkansRenderer extends CobbleRenderer<Ekans, LivingEntityRenderState> {
+public class EkansRenderer extends CobbleRenderer<Ekans> {
     public EkansRenderer(EntityRendererProvider.Context context) {
         super(context, new EkansModel());
     }

@@ -5,7 +5,7 @@ import com.jeff.pets.cobblepets.pets.gen1.squirtle.Wartortle;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 
-public class WartortleRenderer extends CobbleRenderer<Wartortle, LivingEntityRenderState> {
+public class WartortleRenderer extends CobbleRenderer<Wartortle> {
     public WartortleRenderer(EntityRendererProvider.Context context) {
         super(context, new WartortleModel());
     }

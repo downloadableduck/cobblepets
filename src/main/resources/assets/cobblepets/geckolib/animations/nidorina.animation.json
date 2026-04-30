@@ -1,0 +1,149 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.nidorina.idle": {
+			"loop": true,
+			"bones": {
+				"torso": {
+					"rotation": {
+						"vector": [-35, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [15, 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, -0.5]
+					},
+					"scale": {
+						"vector": [1, 1, 1]
+					}
+				},
+				"jaw": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"upper_torso": {
+					"rotation": {
+						"vector": [12.5, 0, 0]
+					}
+				},
+				"body": {
+					"position": {
+						"vector": [0, -0.5, 0]
+					}
+				},
+				"left_leg": {
+					"rotation": {
+						"vector": [-14.59615, -12.97202, -0.17957]
+					}
+				},
+				"neck": {
+					"rotation": {
+						"vector": [5, 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"left_foot": {
+					"rotation": {
+						"vector": [15, 0, 0]
+					}
+				},
+				"arms_torso": {
+					"rotation": {
+						"vector": [-35, 0, 0]
+					}
+				},
+				"arms_upper_torso": {
+					"rotation": {
+						"vector": [12.5, 0, 0]
+					}
+				},
+				"left_upper_arm": {
+					"rotation": {
+						"vector": [-0.88045, -9.96156, -17.42327]
+					}
+				},
+				"left_lower_arm": {
+					"rotation": {
+						"vector": [-9.80908, -0.30951, 10.19366]
+					}
+				},
+				"left_hand": {
+					"rotation": {
+						"vector": [-17.5, 0, 0]
+					}
+				},
+				"tail_2": {
+					"rotation": {
+						"vector": [22.5, 0, 0]
+					}
+				},
+				"tail_1": {
+					"rotation": {
+						"vector": [22.5, 0, 0]
+					}
+				},
+				"left_middle_finger": {
+					"rotation": {
+						"vector": [10, 0, 0]
+					}
+				},
+				"left_pinky_finger": {
+					"rotation": {
+						"vector": [12.5, 0, 0]
+					}
+				},
+				"left_index_finger": {
+					"rotation": {
+						"vector": [12.5, 0, 0]
+					}
+				},
+				"right_upper_arm": {
+					"rotation": {
+						"vector": [-0.88045, 9.96156, 17.42327]
+					}
+				},
+				"right_lower_arm": {
+					"rotation": {
+						"vector": [-9.80908, 0.30951, -10.19366]
+					}
+				},
+				"right_hand": {
+					"rotation": {
+						"vector": [-17.5, 0, 0]
+					}
+				},
+				"right_middle_finger": {
+					"rotation": {
+						"vector": [10, 0, 0]
+					}
+				},
+				"right_pinky_finger": {
+					"rotation": {
+						"vector": [12.5, 0, 0]
+					}
+				},
+				"right_index_finger": {
+					"rotation": {
+						"vector": [12.5, 0, 0]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"vector": [-14.59615, 12.97202, 0.17957]
+					}
+				},
+				"right_foot": {
+					"rotation": {
+						"vector": [15, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

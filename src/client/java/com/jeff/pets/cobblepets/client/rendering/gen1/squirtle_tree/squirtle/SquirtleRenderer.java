@@ -5,7 +5,7 @@ import com.jeff.pets.cobblepets.pets.gen1.squirtle.Squirtle;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 
-public class SquirtleRenderer extends CobbleRenderer<Squirtle, LivingEntityRenderState> {
+public class SquirtleRenderer extends CobbleRenderer<Squirtle> {
     public SquirtleRenderer(EntityRendererProvider.Context context) {
         super(context, new SquirtleModel());
     }

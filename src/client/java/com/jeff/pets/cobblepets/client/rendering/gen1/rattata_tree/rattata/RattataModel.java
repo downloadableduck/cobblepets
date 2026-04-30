@@ -16,13 +16,13 @@ public class RattataModel extends GeoModel<@NotNull Rattata> {
     }
 
     @Override
-    public Identifier getTextureResource(GeoRenderState renderState) {
+    public @NotNull Identifier getTextureResource(@NotNull GeoRenderState renderState) {
         String id = "textures/entity/rattata-tree/rattata/";
         return COBBLE_CONFIG.isShiny ? Utils.cobble(id + "shiny.png") : Utils.cobble(id + "rattata.png");
     }
 
     @Override
-    public Identifier getAnimationResource(Rattata animatable) {
+    public @NotNull Identifier getAnimationResource(Rattata animatable) {
         return Utils.cobble("rattata");
     }
 }
