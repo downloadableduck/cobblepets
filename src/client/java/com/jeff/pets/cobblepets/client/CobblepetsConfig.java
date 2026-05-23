@@ -65,4 +65,23 @@ public class CobblepetsConfig implements ConfigData {
     public String diglettSkin;
     public String dugtrioName;
     public String dugtrioSkin;
+    public String meowthName;
+    public String meowthSkin;
+    public String persianName;
+    public String persianSkin;
+    public String psyduckName;
+    public String golduckName;
+    public String mankeyName;
+    public String primeapeName;
+    public String growlithName;
+    public String arcanineName;
+    public String poliwhirlName;
+    public String poliwagName;
+    public String poliwrathName;
+    public String abraName;
+    public String kadabraName;
+    public String alakazamName;
+    public String machopName;
+    public String machokeName;
+    public String machampName;
 }

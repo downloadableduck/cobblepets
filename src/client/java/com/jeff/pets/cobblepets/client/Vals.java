@@ -59,6 +59,23 @@ public class Vals {
     public static final String VENOMOTH = "venomoth";
     public static final String DIGLETT = "diglett";
     public static final String DUGTRIO = "dugtrio";
+    public static final String MEOWTH = "meowth";
+    public static final String PERSIAN = "persian";
+    public static final String PSYDUCK = "psyduck";
+    public static final String GOLDUCK = "golduck";
+    public static final String MANKEY = "mankey";
+    public static final String PRIMEAPE = "primeape";
+    public static final String GROWLITHE = "growlithe";
+    public static final String ARCANINE = "arcanine";
+    public static final String POLIWAG = "poliwag";
+    public static final String POLIWHIRL = "poliwhirl";
+    public static final String POLIWRATH = "poliwrath";
+    public static final String ABRA = "abra";
+    public static final String KADABRA = "kadabra";
+    public static final String ALAKAZAM = "alakazam";
+    public static final String MACHOP = "machop";
+    public static final String MACHOKE = "machoke";
+    public static final String MACHAMP = "machamp";
 
     public static String[] getVals() {
         List<String> vals = new ArrayList<>();

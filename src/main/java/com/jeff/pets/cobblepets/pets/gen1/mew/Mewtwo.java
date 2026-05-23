@@ -17,17 +17,17 @@ public class Mewtwo extends GroundCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.mewtwo_atm.ground_idle";
     }
 
     @Override
-    public String getWalkController() {
+    public String getController() {
         return "mewtwo_walk";
     }
 
     @Override
-    public String getWalkName() {
+    public String getWalkAnim() {
         return "animation.mewtwo_atm.ground_walk";
     }
 

@@ -27,17 +27,17 @@ public class Ivysaur extends GroundCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.ivysaur.ground_idle";
     }
 
     @Override
-    public String getWalkController() {
+    public String getController() {
         return "ivysaur_walk";
     }
 
     @Override
-    public String getWalkName() {
+    public String getWalkAnim() {
         return "animation.ivysaur.ground_walk";
     }
 }

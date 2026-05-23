@@ -4,6 +4,9 @@ import com.jeff.pets.Central;
 import com.jeff.pets.PetsConfig;
 import com.jeff.pets.Utils;
 import com.jeff.pets.cobblepets.client.CobblepetsConfig;
+import com.jeff.pets.cobblepets.pets.gen1.abra.Abra;
+import com.jeff.pets.cobblepets.pets.gen1.abra.Alakazam;
+import com.jeff.pets.cobblepets.pets.gen1.abra.Kadabra;
 import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.Bulbasaur;
 import com.jeff.pets.cobblepets.Cobblepets;
 import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.Ivysaur;
@@ -21,8 +24,17 @@ import com.jeff.pets.cobblepets.pets.gen1.diglett.Dugtrio;
 import com.jeff.pets.cobblepets.pets.gen1.ditto.Ditto;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Arbok;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Ekans;
+import com.jeff.pets.cobblepets.pets.gen1.growlith.Arcanine;
+import com.jeff.pets.cobblepets.pets.gen1.growlith.Growlith;
 import com.jeff.pets.cobblepets.pets.gen1.jigglypuff.Jigglypuff;
 import com.jeff.pets.cobblepets.pets.gen1.jigglypuff.Wigglytuff;
+import com.jeff.pets.cobblepets.pets.gen1.machop.Machamp;
+import com.jeff.pets.cobblepets.pets.gen1.machop.Machoke;
+import com.jeff.pets.cobblepets.pets.gen1.machop.Machop;
+import com.jeff.pets.cobblepets.pets.gen1.mankey.Mankey;
+import com.jeff.pets.cobblepets.pets.gen1.mankey.Primeape;
+import com.jeff.pets.cobblepets.pets.gen1.meowth.Meowth;
+import com.jeff.pets.cobblepets.pets.gen1.meowth.Persian;
 import com.jeff.pets.cobblepets.pets.gen1.mew.Mew;
 import com.jeff.pets.cobblepets.pets.gen1.mew.Mewtwo;
 import com.jeff.pets.cobblepets.pets.gen1.nidoramf.Nidoqueen;
@@ -41,6 +53,11 @@ import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgeotto;
 import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgey;
 import com.jeff.pets.cobblepets.pets.gen1.pikachu.Pikachu;
 import com.jeff.pets.cobblepets.pets.gen1.pikachu.Raichu;
+import com.jeff.pets.cobblepets.pets.gen1.poliwag.Poliwag;
+import com.jeff.pets.cobblepets.pets.gen1.poliwag.Poliwhirl;
+import com.jeff.pets.cobblepets.pets.gen1.poliwag.Poliwrath;
+import com.jeff.pets.cobblepets.pets.gen1.psyduck.Golduck;
+import com.jeff.pets.cobblepets.pets.gen1.psyduck.Psyduck;
 import com.jeff.pets.cobblepets.pets.gen1.rattata.Raticate;
 import com.jeff.pets.cobblepets.pets.gen1.rattata.Rattata;
 import com.jeff.pets.cobblepets.pets.gen1.sandshrew.Sandshrew;
@@ -59,6 +76,7 @@ import com.jeff.pets.cobblepets.pets.gen1.weedle.Kakuna;
 import com.jeff.pets.cobblepets.pets.gen1.weedle.Weedle;
 import com.jeff.pets.cobblepets.pets.gen1.zubat.Golbat;
 import com.jeff.pets.cobblepets.pets.gen1.zubat.Zubat;
+import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
@@ -68,7 +86,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -78,18 +98,30 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Predicate;
 
 import static com.jeff.pets.Central.CONFIG;
+import static com.jeff.pets.Central.currentSuggestions;
 import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 import static com.jeff.pets.cobblepets.client.Vals.*;
 
 @Mixin(Central.class)
 public abstract class CentralMixin {
 
+    @Shadow
+    @Final
+    public static CopyOnWriteArrayList<String> currentSuggestions;
+
+    @Shadow
+    private static void updateSuggestions(Minecraft client) {
+
+    }
+
     @Unique
     private static final List<String> VALENCIAN_SKINS = List.of("normal", "valencian");
     private static final List<String> ALOLAN_SKINS = List.of("normal", "alolan");
+    private static final List<String> ALOLAN_GALARIAN_SKINS = List.of("normal", "alolan", "galarian");
     @Unique
     private static final List<String> POKEMON_SKINS = List.of("shiny", "not shiny");
 
@@ -156,6 +188,23 @@ public abstract class CentralMixin {
     private static Venomoth venomoth;
     private static Diglett diglett;
     private static Dugtrio dugtrio;
+    private static Meowth meowth;
+    private static Persian persian;
+    private static Psyduck psyduck;
+    private static Golduck golduck;
+    private static Mankey mankey;
+    private static Primeape primeape;
+    private static Growlith growlith;
+    private static Arcanine arcanine;
+    private static Poliwag poliwag;
+    private static Poliwhirl poliwhirl;
+    private static Poliwrath poliwrath;
+    private static Abra abra;
+    private static Kadabra kadabra;
+    private static Alakazam alakazam;
+    private static Machop machop;
+    private static Machoke machoke;
+    private static Machamp machamp;
 
     @Unique
     private static void spawnEntity(CommandContext<FabricClientCommandSource> context, Entity entity, String activePet) {
@@ -164,6 +213,7 @@ public abstract class CentralMixin {
         context.getSource().sendFeedback(Component.literal("§b[PetsMod] §aYour active pet has been switched to " + activePet.replace("_", " ")));
         Central.despawnPet();
         Central.summonPet();
+        Central.refreshChatSuggestor(Minecraft.getInstance());
     }
 
     @Inject(at = @At("HEAD"), method = "lambda$createPetSpeciesCommand$1", cancellable = true)
@@ -224,12 +274,30 @@ public abstract class CentralMixin {
             case VENOMOTH -> spawnEntity(context, venomoth, VENOMOTH);
             case DIGLETT -> spawnEntity(context, diglett, DIGLETT);
             case DUGTRIO -> spawnEntity(context, dugtrio, DUGTRIO);
+            case MEOWTH -> spawnEntity(context, meowth, MEOWTH);
+            case PERSIAN -> spawnEntity(context, persian, PERSIAN);
+            case PSYDUCK -> spawnEntity(context, psyduck, PSYDUCK);
+            case GOLDUCK -> spawnEntity(context, golduck, GOLDUCK);
+            case MANKEY -> spawnEntity(context, mankey, MANKEY);
+            case PRIMEAPE -> spawnEntity(context, primeape, PRIMEAPE);
+            case GROWLITHE -> spawnEntity(context, growlith, GROWLITHE);
+            case ARCANINE -> spawnEntity(context, arcanine, ARCANINE);
+            case POLIWAG -> spawnEntity(context, poliwag, POLIWAG);
+            case POLIWHIRL -> spawnEntity(context, poliwhirl, POLIWHIRL);
+            case POLIWRATH -> spawnEntity(context, poliwrath, POLIWRATH);
+            case ABRA -> spawnEntity(context, abra, ABRA);
+            case KADABRA -> spawnEntity(context, kadabra, KADABRA);
+            case ALAKAZAM -> spawnEntity(context, alakazam, ALAKAZAM);
+            case MACHOP -> spawnEntity(context, machop, MACHOP);
+            case MACHOKE -> spawnEntity(context, machoke, MACHOKE);
+            case MACHAMP -> spawnEntity(context, machamp, MACHAMP);
 
             case null, default -> {
             }
         }
         AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
         if (Arrays.stream(getVals()).anyMatch(Predicate.isEqual(species))) {
+            updateSuggestions(Minecraft.getInstance());
             cir.setReturnValue(1);
         }
     }
@@ -291,6 +359,23 @@ public abstract class CentralMixin {
         venomoth = new Venomoth(Cobblepets.VENOMOTH, level);
         diglett = new Diglett(Cobblepets.DIGLETT, level);
         dugtrio = new Dugtrio(Cobblepets.DUGTRIO, level);
+        meowth = new Meowth(Cobblepets.MEOWTH, level);
+        persian = new Persian(Cobblepets.PERSIAN, level);
+        psyduck = new Psyduck(Cobblepets.PSYDUCK, level);
+        golduck = new Golduck(Cobblepets.GOLDUCK, level);
+        mankey = new Mankey(Cobblepets.MANKEY, level);
+        primeape = new Primeape(Cobblepets.PRIMEAPE, level);
+        growlith = new Growlith(Cobblepets.GROWLITHE, level);
+        arcanine = new Arcanine(Cobblepets.ARCANINE, level);
+        poliwag = new Poliwag(Cobblepets.POLIWAG, level);
+        poliwhirl = new Poliwhirl(Cobblepets.POLIWHIRL, level);
+        poliwrath = new Poliwrath(Cobblepets.POLIWRATH, level);
+        abra = new Abra(Cobblepets.ABRA, level);
+        kadabra = new Kadabra(Cobblepets.KADABRA, level);
+        alakazam = new Alakazam(Cobblepets.ALAKAZAM, level);
+        machop = new Machop(Cobblepets.MACHOP, level);
+        machoke = new Machoke(Cobblepets.MACHOKE, level);
+        machamp = new Machamp(Cobblepets.MACHAMP, level);
 
         switch (CONFIG.activePet) {
             case BULBASAUR -> Utils.summonPet(bulbasaur, COBBLE_CONFIG.bulbasorName);
@@ -347,6 +432,23 @@ public abstract class CentralMixin {
             case VENOMOTH -> Utils.summonPet(venomoth, COBBLE_CONFIG.venomothName);
             case DIGLETT -> Utils.summonPet(diglett, COBBLE_CONFIG.diglettName);
             case DUGTRIO -> Utils.summonPet(dugtrio, COBBLE_CONFIG.dugtrioName);
+            case MEOWTH -> Utils.summonPet(meowth, COBBLE_CONFIG.meowthName);
+            case PERSIAN -> Utils.summonPet(persian, COBBLE_CONFIG.persianName);
+            case PSYDUCK -> Utils.summonPet(psyduck, COBBLE_CONFIG.psyduckName);
+            case GOLDUCK -> Utils.summonPet(golduck, COBBLE_CONFIG.golduckName);
+            case MANKEY -> Utils.summonPet(mankey, COBBLE_CONFIG.mankeyName);
+            case PRIMEAPE -> Utils.summonPet(primeape, COBBLE_CONFIG.primeapeName);
+            case GROWLITHE -> Utils.summonPet(growlith, COBBLE_CONFIG.growlithName);
+            case ARCANINE -> Utils.summonPet(arcanine, COBBLE_CONFIG.arcanineName);
+            case POLIWAG -> Utils.summonPet(poliwag, COBBLE_CONFIG.poliwagName);
+            case POLIWHIRL -> Utils.summonPet(poliwhirl, COBBLE_CONFIG.poliwhirlName);
+            case POLIWRATH -> Utils.summonPet(poliwrath, COBBLE_CONFIG.poliwrathName);
+            case ABRA -> Utils.summonPet(abra, COBBLE_CONFIG.abraName);
+            case KADABRA -> Utils.summonPet(kadabra, COBBLE_CONFIG.kadabraName);
+            case ALAKAZAM -> Utils.summonPet(alakazam, COBBLE_CONFIG.alakazamName);
+            case MACHOP -> Utils.summonPet(machop, COBBLE_CONFIG.machopName);
+            case MACHOKE -> Utils.summonPet(machoke, COBBLE_CONFIG.machokeName);
+            case MACHAMP -> Utils.summonPet(machamp, COBBLE_CONFIG.machampName);
 
             case null, default -> {
             }
@@ -409,6 +511,23 @@ public abstract class CentralMixin {
         Utils.despawnEntity(venomoth);
         Utils.despawnEntity(diglett);
         Utils.despawnEntity(dugtrio);
+        Utils.despawnEntity(meowth);
+        Utils.despawnEntity(persian);
+        Utils.despawnEntity(psyduck);
+        Utils.despawnEntity(golduck);
+        Utils.despawnEntity(mankey);
+        Utils.despawnEntity(primeape);
+        Utils.despawnEntity(growlith);
+        Utils.despawnEntity(arcanine);
+        Utils.despawnEntity(poliwag);
+        Utils.despawnEntity(poliwhirl);
+        Utils.despawnEntity(poliwrath);
+        Utils.despawnEntity(abra);
+        Utils.despawnEntity(kadabra);
+        Utils.despawnEntity(alakazam);
+        Utils.despawnEntity(machop);
+        Utils.despawnEntity(machoke);
+        Utils.despawnEntity(machamp);
     }
 
     @Inject(at = @At("HEAD"), method = "lambda$createPetNameCommand$1")
@@ -470,6 +589,23 @@ public abstract class CentralMixin {
             case VENOMOTH -> COBBLE_CONFIG.venomothName = name;
             case DIGLETT -> COBBLE_CONFIG.diglettName = name;
             case DUGTRIO -> COBBLE_CONFIG.dugtrioName = name;
+            case MEOWTH -> COBBLE_CONFIG.meowthName = name;
+            case PERSIAN -> COBBLE_CONFIG.persianName = name;
+            case PSYDUCK -> COBBLE_CONFIG.psyduckName = name;
+            case GOLDUCK -> COBBLE_CONFIG.golduckName = name;
+            case MANKEY -> COBBLE_CONFIG.mankeyName = name;
+            case PRIMEAPE -> COBBLE_CONFIG.primeapeName = name;
+            case GROWLITHE -> COBBLE_CONFIG.growlithName = name;
+            case ARCANINE -> COBBLE_CONFIG.arcanineName = name;
+            case POLIWAG -> COBBLE_CONFIG.poliwagName = name;
+            case POLIWHIRL -> COBBLE_CONFIG.poliwhirlName = name;
+            case POLIWRATH -> COBBLE_CONFIG.poliwrathName = name;
+            case ABRA -> COBBLE_CONFIG.abraName = name;
+            case KADABRA -> COBBLE_CONFIG.kadabraName = name;
+            case ALAKAZAM -> COBBLE_CONFIG.alakazamName = name;
+            case MACHOP -> COBBLE_CONFIG.machopName = name;
+            case MACHOKE -> COBBLE_CONFIG.machokeName = name;
+            case MACHAMP -> COBBLE_CONFIG.machampName = name;
 
             case null, default -> {
             }
@@ -533,6 +669,23 @@ public abstract class CentralMixin {
         Utils.checkName(VENOMOTH, venomoth, COBBLE_CONFIG.venomothName);
         Utils.checkName(DIGLETT, diglett, COBBLE_CONFIG.diglettName);
         Utils.checkName(DUGTRIO, dugtrio, COBBLE_CONFIG.dugtrioName);
+        Utils.checkName(MEOWTH, meowth, COBBLE_CONFIG.meowthName);
+        Utils.checkName(PERSIAN, persian, COBBLE_CONFIG.persianName);
+        Utils.checkName(PSYDUCK, psyduck, COBBLE_CONFIG.psyduckName);
+        Utils.checkName(GOLDUCK, golduck, COBBLE_CONFIG.golduckName);
+        Utils.checkName(MANKEY, mankey, COBBLE_CONFIG.mankeyName);
+        Utils.checkName(PRIMEAPE, primeape, COBBLE_CONFIG.primeapeName);
+        Utils.checkName(GROWLITHE, growlith, COBBLE_CONFIG.growlithName);
+        Utils.checkName(ARCANINE, arcanine, COBBLE_CONFIG.arcanineName);
+        Utils.checkName(POLIWAG, poliwag, COBBLE_CONFIG.poliwagName);
+        Utils.checkName(POLIWRATH, poliwrath, COBBLE_CONFIG.poliwrathName);
+        Utils.checkName(POLIWHIRL, poliwhirl, COBBLE_CONFIG.poliwhirlName);
+        Utils.checkName(ABRA, abra, COBBLE_CONFIG.abraName);
+        Utils.checkName(KADABRA, kadabra, COBBLE_CONFIG.kadabraName);
+        Utils.checkName(ALAKAZAM, alakazam, COBBLE_CONFIG.alakazamName);
+        Utils.checkName(MACHOP, machop, COBBLE_CONFIG.machopName);
+        Utils.checkName(MACHOKE, machoke, COBBLE_CONFIG.machokeName);
+        Utils.checkName(MACHAMP, machamp, COBBLE_CONFIG.machampName);
     }
 
     @Inject(at = @At("HEAD"), method = "lambda$createPetSkinCommand$1")
@@ -572,6 +725,18 @@ public abstract class CentralMixin {
             } else if (skin.equals("alolan")) {
                 COBBLE_CONFIG.dugtrioSkin = "alolan";
             }
+        } else if (CONFIG.activePet.equals("meowth")) {
+            switch (skin) {
+                case "normal" -> COBBLE_CONFIG.meowthSkin = "normal";
+                case "alolan" -> COBBLE_CONFIG.meowthSkin = "alolan";
+                case "galarian" -> COBBLE_CONFIG.meowthSkin = "galarian";
+            }
+        }
+        else if (CONFIG.activePet.equals("persian")) {
+            switch (skin) {
+                case "alolan" -> COBBLE_CONFIG.persianSkin = "alolan";
+                case "galarian" -> COBBLE_CONFIG.persianSkin = "galarian";
+            }
         }
 
 
@@ -579,7 +744,7 @@ public abstract class CentralMixin {
     }
 
     @Inject(at = @At(value = "INVOKE", target = "Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;buildFuture()Ljava/util/concurrent/CompletableFuture;"),
-            method = "lambda$new$0")
+            method = "lambda$new$0", cancellable = true)
     private static void addSkins(CommandContext<?> context, SuggestionsBuilder builder, CallbackInfoReturnable<CompletableFuture<Void>> cir) {
         String remaining = builder.getRemainingLowerCase();
         if (Arrays.stream(getVals()).anyMatch(Predicate.isEqual(CONFIG.activePet))) {
@@ -595,12 +760,26 @@ public abstract class CentralMixin {
                     builder.suggest(s);
                 }
             }
-        } else if (CONFIG.activePet.equals("diglett") || CONFIG.activePet.equals("dugtrio")) {
+        } else if (CONFIG.activePet.equals("diglett") || CONFIG.activePet.equals("dugtrio") || CONFIG.activePet.equals("persian")) {
             for (String s : ALOLAN_SKINS) {
                 if (s.toLowerCase().startsWith(remaining)) {
                     builder.suggest(s);
                 }
             }
+        } else if (CONFIG.activePet.equals("meowth")) {
+            for (String s : ALOLAN_GALARIAN_SKINS) {
+                if (s.toLowerCase().startsWith(remaining)) {
+                    builder.suggest(s);
+                }
+            }
+        }
+    }
+    @Inject(at = @At("TAIL"), method = "updateSuggestions")
+    private static void updateSuggestions(Minecraft client, CallbackInfo ci, @Local(name="skinSuggestions") List<String> skinSuggestions) {
+        if (Arrays.stream(getVals()).anyMatch(Predicate.isEqual(CONFIG.activePet))) {
+            currentSuggestions.remove("adult");
+            currentSuggestions.remove("baby");
+            currentSuggestions.removeAll(skinSuggestions);
         }
     }
 }

@@ -17,17 +17,17 @@ public class Caterpie extends GroundCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.caterpie.ground_idle";
     }
 
     @Override
-    public String getWalkController() {
+    public String getController() {
         return "caterpie_walk";
     }
 
     @Override
-    public String getWalkName() {
+    public String getWalkAnim() {
         return "animation.caterpie.ground_walk";
     }
 

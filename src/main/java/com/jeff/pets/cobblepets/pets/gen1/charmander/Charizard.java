@@ -17,17 +17,17 @@ public class Charizard extends FlyingCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.charizard.air_idle";
     }
 
     @Override
-    public String getFlyController() {
+    public String getController() {
         return "charizard_fly";
     }
 
     @Override
-    public String getFlyName() {
+    public String getFlyAnim() {
         return "animation.charizard.air_fly";
     }
 

@@ -17,17 +17,17 @@ public class Venomoth extends FlyingCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.venomoth.air_idle";
     }
 
     @Override
-    public String getFlyController() {
+    public String getController() {
         return "venomoth_fly";
     }
 
     @Override
-    public String getFlyName() {
+    public String getFlyAnim() {
         return "animation.venomoth.air_fly";
     }
 

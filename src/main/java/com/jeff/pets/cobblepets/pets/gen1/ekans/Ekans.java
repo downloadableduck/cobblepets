@@ -17,18 +17,18 @@ public class Ekans extends GroundCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.ekans.ground_idle";
     }
 
     @Override
-    public String getWalkController() {
+    public String getController() {
         return "ekans_walk";
     }
 
     @Override
-    public String getWalkName() {
-        return this.getIdleName();
+    public String getWalkAnim() {
+        return this.getIdleAnim();
     }
 
     @Override

@@ -17,17 +17,17 @@ public class Venonat extends GroundCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.venonat.ground_idle";
     }
 
     @Override
-    public String getWalkController() {
+    public String getController() {
         return "venonat_walk";
     }
 
     @Override
-    public String getWalkName() {
+    public String getWalkAnim() {
         return "animation.venonat.ground_walk";
     }
 

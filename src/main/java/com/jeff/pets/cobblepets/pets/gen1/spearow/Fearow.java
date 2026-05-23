@@ -1,6 +1,5 @@
 package com.jeff.pets.cobblepets.pets.gen1.spearow;
 
-import com.jeff.pets.cobblepets.pets.FlyingCobblemon;
 import com.jeff.pets.cobblepets.pets.GroundCobblemon;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.TamableAnimal;
@@ -18,18 +17,18 @@ public class Fearow extends GroundCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.fearow.ground_idle";
     }
 
     @Override
-    public String getWalkController() {
+    public String getController() {
         return "fearow_fly";
     }
 
     @Override
-    public String getWalkName() {
-        return this.getIdleName();
+    public String getWalkAnim() {
+        return this.getIdleAnim();
     }
 
     @Override

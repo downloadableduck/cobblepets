@@ -1,5 +1,8 @@
 package com.jeff.pets.cobblepets;
 
+import com.jeff.pets.cobblepets.pets.gen1.abra.Abra;
+import com.jeff.pets.cobblepets.pets.gen1.abra.Alakazam;
+import com.jeff.pets.cobblepets.pets.gen1.abra.Kadabra;
 import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.Bulbasaur;
 import com.jeff.pets.cobblepets.pets.GroundCobblemon;
 import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.Ivysaur;
@@ -17,8 +20,17 @@ import com.jeff.pets.cobblepets.pets.gen1.diglett.Dugtrio;
 import com.jeff.pets.cobblepets.pets.gen1.ditto.Ditto;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Arbok;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Ekans;
+import com.jeff.pets.cobblepets.pets.gen1.growlith.Arcanine;
+import com.jeff.pets.cobblepets.pets.gen1.growlith.Growlith;
 import com.jeff.pets.cobblepets.pets.gen1.jigglypuff.Jigglypuff;
 import com.jeff.pets.cobblepets.pets.gen1.jigglypuff.Wigglytuff;
+import com.jeff.pets.cobblepets.pets.gen1.machop.Machamp;
+import com.jeff.pets.cobblepets.pets.gen1.machop.Machoke;
+import com.jeff.pets.cobblepets.pets.gen1.machop.Machop;
+import com.jeff.pets.cobblepets.pets.gen1.mankey.Mankey;
+import com.jeff.pets.cobblepets.pets.gen1.mankey.Primeape;
+import com.jeff.pets.cobblepets.pets.gen1.meowth.Meowth;
+import com.jeff.pets.cobblepets.pets.gen1.meowth.Persian;
 import com.jeff.pets.cobblepets.pets.gen1.mew.Mew;
 import com.jeff.pets.cobblepets.pets.gen1.mew.Mewtwo;
 import com.jeff.pets.cobblepets.pets.gen1.nidoramf.Nidoqueen;
@@ -37,6 +49,11 @@ import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgeotto;
 import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgey;
 import com.jeff.pets.cobblepets.pets.gen1.pikachu.Pikachu;
 import com.jeff.pets.cobblepets.pets.gen1.pikachu.Raichu;
+import com.jeff.pets.cobblepets.pets.gen1.poliwag.Poliwag;
+import com.jeff.pets.cobblepets.pets.gen1.poliwag.Poliwhirl;
+import com.jeff.pets.cobblepets.pets.gen1.poliwag.Poliwrath;
+import com.jeff.pets.cobblepets.pets.gen1.psyduck.Golduck;
+import com.jeff.pets.cobblepets.pets.gen1.psyduck.Psyduck;
 import com.jeff.pets.cobblepets.pets.gen1.rattata.Raticate;
 import com.jeff.pets.cobblepets.pets.gen1.rattata.Rattata;
 import com.jeff.pets.cobblepets.pets.gen1.sandshrew.Sandshrew;
@@ -722,6 +739,210 @@ public class Cobblepets implements ModInitializer {
                     .build(DUGTRIO_KEY)
     );
 
+    private static final ResourceKey<@NotNull EntityType<?>> MEOWTH_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "meowth"));
+    public static final EntityType<@NotNull Meowth> MEOWTH = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "meowth"),
+            EntityType.Builder.of(Meowth::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1.5f)
+                    .eyeHeight(1.5f)
+                    .build(MEOWTH_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> PERSIAN_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "persian"));
+    public static final EntityType<@NotNull Persian> PERSIAN = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "persian"),
+            EntityType.Builder.of(Persian::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1.5f)
+                    .eyeHeight(1.5f)
+                    .build(PERSIAN_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> PSYDUCK_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "psyduck"));
+    public static final EntityType<@NotNull Psyduck> PSYDUCK = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "psyduck"),
+            EntityType.Builder.of(Psyduck::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1.5f)
+                    .eyeHeight(1.5f)
+                    .build(PSYDUCK_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> GOLDDUCK_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "golduck"));
+    public static final EntityType<@NotNull Golduck> GOLDUCK = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "golduck"),
+            EntityType.Builder.of(Golduck::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1.5f)
+                    .eyeHeight(1.5f)
+                    .build(GOLDDUCK_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> MANKEY_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "mankey"));
+    public static final EntityType<@NotNull Mankey> MANKEY = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "mankey"),
+            EntityType.Builder.of(Mankey::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(0.75f, 0.75f)
+                    .eyeHeight(0.75f)
+                    .build(MANKEY_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> PRIMEAPE_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "primeape"));
+    public static final EntityType<@NotNull Primeape> PRIMEAPE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "primeape"),
+            EntityType.Builder.of(Primeape::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1.5f)
+                    .eyeHeight(1.5f)
+                    .build(PRIMEAPE_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> GROWLITHE_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "growlith"));
+    public static final EntityType<@NotNull Growlith> GROWLITHE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "growlith"),
+            EntityType.Builder.of(Growlith::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(GROWLITHE_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> ARCANINE_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "arcanine"));
+    public static final EntityType<@NotNull Arcanine> ARCANINE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "arcanine"),
+            EntityType.Builder.of(Arcanine::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(2f, 2f)
+                    .eyeHeight(2f)
+                    .build(ARCANINE_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> POLIWAG_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "poliwag"));
+    public static final EntityType<@NotNull Poliwag> POLIWAG = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "poliwag"),
+            EntityType.Builder.of(Poliwag::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(POLIWAG_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> POLIWHIRL_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "poliwhirl"));
+    public static final EntityType<@NotNull Poliwhirl> POLIWHIRL = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "poliwhirl"),
+            EntityType.Builder.of(Poliwhirl::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1.5f, 1.5f)
+                    .eyeHeight(1.5f)
+                    .build(POLIWHIRL_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> POLIWRATH_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "poliwrath"));
+    public static final EntityType<@NotNull Poliwrath> POLIWRATH = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "poliwrath"),
+            EntityType.Builder.of(Poliwrath::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1.5f, 1.5f)
+                    .eyeHeight(1.5f)
+                    .build(POLIWRATH_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> ABRA_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "abra"));
+    public static final EntityType<@NotNull Abra> ABRA = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "abra"),
+            EntityType.Builder.of(Abra::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(ABRA_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> KADABRA_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "kadabra"));
+    public static final EntityType<@NotNull Kadabra> KADABRA = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "kadabra"),
+            EntityType.Builder.of(Kadabra::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1.5f)
+                    .eyeHeight(1f)
+                    .build(KADABRA_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> ALAKAZAM_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "alakazam"));
+    public static final EntityType<@NotNull Alakazam> ALAKAZAM = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "alakazam"),
+            EntityType.Builder.of(Alakazam::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1.5f)
+                    .eyeHeight(1.5f)
+                    .build(ALAKAZAM_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> MACHOP_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "machop"));
+    public static final EntityType<@NotNull Machop> MACHOP = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "machop"),
+            EntityType.Builder.of(Machop::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(MACHOP_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> MACHOKE_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "machoke"));
+    public static final EntityType<@NotNull Machoke> MACHOKE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "machoke"),
+            EntityType.Builder.of(Machoke::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(MACHOKE_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> MACHAMP_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "machamp"));
+    public static final EntityType<@NotNull Machamp> MACHAMP = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "machamp"),
+            EntityType.Builder.of(Machamp::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1.5f)
+                    .eyeHeight(1.5f)
+                    .build(MACHAMP_KEY)
+    );
+
 
 
     @Override
@@ -780,6 +1001,23 @@ public class Cobblepets implements ModInitializer {
         register(VENOMOTH);
         register(DIGLETT);
         register(DUGTRIO);
+        register(MEOWTH);
+        register(PERSIAN);
+        register(PSYDUCK);
+        register(GOLDUCK);
+        register(MANKEY);
+        register(PRIMEAPE);
+        register(GROWLITHE);
+        register(ARCANINE);
+        register(POLIWAG);
+        register(POLIWHIRL);
+        register(POLIWRATH);
+        register(ABRA);
+        register(KADABRA);
+        register(ALAKAZAM);
+        register(MACHOP);
+        register(MACHOKE);
+        register(MACHAMP);
     }
     private static void register(EntityType<? extends @NotNull LivingEntity> type) {
         FabricDefaultAttributeRegistry.register(type, GroundCobblemon.createAttributes().build());

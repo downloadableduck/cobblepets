@@ -17,17 +17,17 @@ public class Bulbasaur extends GroundCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.bulbasaur.ground_idle";
     }
 
     @Override
-    public String getWalkController() {
+    public String getController() {
         return "bulbasaur_walk";
     }
 
     @Override
-    public String getWalkName() {
+    public String getWalkAnim() {
         return "animation.bulbasaur.ground_walk";
     }
 

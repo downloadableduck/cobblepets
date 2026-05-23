@@ -17,17 +17,17 @@ public class Paras extends GroundCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.paras.ground_idle";
     }
 
     @Override
-    public String getWalkController() {
+    public String getController() {
         return "paras_walk";
     }
 
     @Override
-    public String getWalkName() {
+    public String getWalkAnim() {
         return "animation.paras.ground_walk";
     }
 

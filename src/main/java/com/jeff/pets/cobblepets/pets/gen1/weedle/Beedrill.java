@@ -18,17 +18,17 @@ public class Beedrill extends FlyingCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.beedrill.air_idle";
     }
 
     @Override
-    public String getFlyController() {
+    public String getController() {
         return "beedrill_fly";
     }
 
     @Override
-    public String getFlyName() {
+    public String getFlyAnim() {
         return "animation.beedrill.air_fly";
     }
 

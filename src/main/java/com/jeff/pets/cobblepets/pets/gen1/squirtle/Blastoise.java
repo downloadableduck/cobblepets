@@ -17,17 +17,17 @@ public class Blastoise extends GroundCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.blastoise.ground_idle";
     }
 
     @Override
-    public String getWalkController() {
+    public String getController() {
         return "blastoise_walk";
     }
 
     @Override
-    public String getWalkName() {
+    public String getWalkAnim() {
         return "animation.blastoise.ground_walk";
     }
 

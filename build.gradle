@@ -10,6 +10,7 @@ repositories {
     maven { url "https://maven.shedaniel.me/" }
     maven { url "https://maven.terraformersmc.com/" }
     maven { url "https://maven.isxander.dev/releases" }
+    maven { url "https://api.modrinth.com/maven"}
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
@@ -48,7 +49,8 @@ dependencies {
     implementation("com.terraformersmc:modmenu:${project.modmenu_version}")
     implementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
     implementation "com.geckolib:geckolib-fabric-${project.minecraft_version}:${project.geckolibVersion}"
-    implementation files(files("libs/petsmod-${project.petsmod_version}.jar"))
+    implementation "maven.modrinth:pets-mod:${project.petsmod_version}"
+    implementation "maven.modrinth:pets-mod:${project.petsmod_version}:sources"
 	
 }
 

@@ -14,17 +14,17 @@ public class Nidoking extends GroundCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.nidoking.ground_idle";
     }
 
     @Override
-    public String getWalkController() {
+    public String getController() {
         return "nidoking_walk";
     }
 
     @Override
-    public String getWalkName() {
+    public String getWalkAnim() {
         return "animation.nidoking.ground_walk";
     }
 

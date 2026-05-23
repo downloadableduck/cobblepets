@@ -17,17 +17,17 @@ public class Charmander extends GroundCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.charmander.ground_idle";
     }
 
     @Override
-    public String getWalkController() {
+    public String getController() {
         return "charmander_walk";
     }
 
     @Override
-    public String getWalkName() {
+    public String getWalkAnim() {
         return "animation.charmander.ground_walk";
     }
 

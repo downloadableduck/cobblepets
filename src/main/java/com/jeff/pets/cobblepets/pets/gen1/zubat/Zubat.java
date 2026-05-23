@@ -17,17 +17,17 @@ public class Zubat extends FlyingCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.zubat.air_idle";
     }
 
     @Override
-    public String getFlyController() {
+    public String getController() {
         return "zubat_fly";
     }
 
     @Override
-    public String getFlyName() {
+    public String getFlyAnim() {
         return "animation.zubat.air_fly";
     }
 

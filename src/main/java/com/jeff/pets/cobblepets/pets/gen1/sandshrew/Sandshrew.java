@@ -17,17 +17,17 @@ public class Sandshrew extends GroundCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.sandshrew.ground_idle";
     }
 
     @Override
-    public String getWalkController() {
+    public String getController() {
         return "sandshrew_walk";
     }
 
     @Override
-    public String getWalkName() {
+    public String getWalkAnim() {
         return "animation.sandshrew.ground_walk";
     }
 

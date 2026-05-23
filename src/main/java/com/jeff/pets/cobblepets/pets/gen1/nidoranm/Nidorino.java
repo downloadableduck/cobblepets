@@ -14,17 +14,17 @@ public class Nidorino extends GroundCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "";
     }
 
     @Override
-    public String getWalkController() {
+    public String getController() {
         return "nidorino_walk";
     }
 
     @Override
-    public String getWalkName() {
+    public String getWalkAnim() {
         return "";
     }
 

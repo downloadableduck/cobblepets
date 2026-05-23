@@ -17,17 +17,17 @@ public class Butterfree extends FlyingCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.butterfree.air_idle";
     }
 
     @Override
-    public String getFlyController() {
+    public String getController() {
         return "butterfree_fly";
     }
 
     @Override
-    public String getFlyName() {
+    public String getFlyAnim() {
         return "animation.butterfree.air_fly";
     }
 

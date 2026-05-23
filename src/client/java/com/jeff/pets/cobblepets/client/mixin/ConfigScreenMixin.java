@@ -4,7 +4,6 @@ import com.jeff.pets.PetsConfig;
 import com.jeff.pets.PetsConfigScreen;
 import com.jeff.pets.cobblepets.client.CobblepetsConfig;
 import com.jeff.pets.cobblepets.client.CobblepetsPetList;
-import com.jeff.pets.cobblepets.client.enums.ButterfreeSkins;
 import me.shedaniel.autoconfig.AutoConfig;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -92,6 +91,23 @@ public class ConfigScreenMixin {
             case VENOMOTH -> cir.setReturnValue(COBBLE_CONFIG.venomothName);
             case DIGLETT -> cir.setReturnValue(COBBLE_CONFIG.diglettName);
             case DUGTRIO -> cir.setReturnValue(COBBLE_CONFIG.dugtrioName);
+            case MEOWTH -> cir.setReturnValue(COBBLE_CONFIG.meowthName);
+            case PERSIAN -> cir.setReturnValue(COBBLE_CONFIG.persianName);
+            case PSYDUCK -> cir.setReturnValue(COBBLE_CONFIG.psyduckName);
+            case GOLDUCK -> cir.setReturnValue(COBBLE_CONFIG.golduckName);
+            case MANKEY -> cir.setReturnValue(COBBLE_CONFIG.mankeyName);
+            case PRIMEAPE -> cir.setReturnValue(COBBLE_CONFIG.primeapeName);
+            case GROWLITHE -> cir.setReturnValue(COBBLE_CONFIG.growlithName);
+            case ARCANINE -> cir.setReturnValue(COBBLE_CONFIG.arcanineName);
+            case POLIWAG -> cir.setReturnValue(COBBLE_CONFIG.poliwagName);
+            case POLIWHIRL -> cir.setReturnValue(COBBLE_CONFIG.poliwhirlName);
+            case POLIWRATH -> cir.setReturnValue(COBBLE_CONFIG.poliwrathName);
+            case ABRA -> cir.setReturnValue(COBBLE_CONFIG.abraName);
+            case KADABRA -> cir.setReturnValue(COBBLE_CONFIG.kadabraName);
+            case ALAKAZAM -> cir.setReturnValue(COBBLE_CONFIG.alakazamName);
+            case MACHOP -> cir.setReturnValue(COBBLE_CONFIG.machopName);
+            case MACHOKE -> cir.setReturnValue(COBBLE_CONFIG.machokeName);
+            case MACHAMP -> cir.setReturnValue(COBBLE_CONFIG.machampName);
         }
     }
 
@@ -152,6 +168,23 @@ public class ConfigScreenMixin {
             case VENOMOTH -> COBBLE_CONFIG.venomothName = name;
             case DIGLETT -> COBBLE_CONFIG.diglettName = name;
             case DUGTRIO -> COBBLE_CONFIG.dugtrioName = name;
+            case MEOWTH -> COBBLE_CONFIG.meowthName = name;
+            case PERSIAN -> COBBLE_CONFIG.persianName = name;
+            case PSYDUCK -> COBBLE_CONFIG.psyduckName = name;
+            case GOLDUCK -> COBBLE_CONFIG.golduckName = name;
+            case MANKEY -> COBBLE_CONFIG.mankeyName = name;
+            case PRIMEAPE -> COBBLE_CONFIG.primeapeName = name;
+            case GROWLITHE -> COBBLE_CONFIG.growlithName = name;
+            case ARCANINE -> COBBLE_CONFIG.arcanineName = name;
+            case POLIWAG -> COBBLE_CONFIG.poliwagName = name;
+            case POLIWHIRL -> COBBLE_CONFIG.poliwhirlName = name;
+            case POLIWRATH -> COBBLE_CONFIG.poliwrathName = name;
+            case ABRA -> COBBLE_CONFIG.abraName = name;
+            case KADABRA -> COBBLE_CONFIG.kadabraName = name;
+            case ALAKAZAM -> COBBLE_CONFIG.alakazamName = name;
+            case MACHOP -> COBBLE_CONFIG.machopName = name;
+            case MACHOKE -> COBBLE_CONFIG.machokeName = name;
+            case MACHAMP -> COBBLE_CONFIG.machampName = name;
         }
         AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
     }

@@ -17,17 +17,17 @@ public class Golbat extends FlyingCobblemon {
     }
 
     @Override
-    public String getIdleName() {
+    public String getIdleAnim() {
         return "animation.golbat.air_idle";
     }
 
     @Override
-    public String getFlyController() {
+    public String getController() {
         return "golbat_fly";
     }
 
     @Override
-    public String getFlyName() {
+    public String getFlyAnim() {
         return "animation.golbat.air_fly";
     }
 
