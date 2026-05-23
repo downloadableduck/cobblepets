@@ -11,7 +11,7 @@ import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
 public class PersianModel extends GeoModel<Persian> {
     @Override
-    public String locationResource() {
+    public String resourceLocation() {
         if (COBBLE_CONFIG.persianSkin.equals("alolan")) {
             return "persian_alolan";
         } else if (COBBLE_CONFIG.persianSkin.equals("galarian")) {

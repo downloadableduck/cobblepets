@@ -7,6 +7,9 @@ import com.jeff.pets.cobblepets.client.CobblepetsConfig;
 import com.jeff.pets.cobblepets.pets.gen1.abra.Abra;
 import com.jeff.pets.cobblepets.pets.gen1.abra.Alakazam;
 import com.jeff.pets.cobblepets.pets.gen1.abra.Kadabra;
+import com.jeff.pets.cobblepets.pets.gen1.bellsprout.Bellsprout;
+import com.jeff.pets.cobblepets.pets.gen1.bellsprout.Victreebel;
+import com.jeff.pets.cobblepets.pets.gen1.bellsprout.Weepinbell;
 import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.Bulbasaur;
 import com.jeff.pets.cobblepets.Cobblepets;
 import com.jeff.pets.cobblepets.pets.gen1.bulbasaur.Ivysaur;
@@ -24,6 +27,9 @@ import com.jeff.pets.cobblepets.pets.gen1.diglett.Dugtrio;
 import com.jeff.pets.cobblepets.pets.gen1.ditto.Ditto;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Arbok;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Ekans;
+import com.jeff.pets.cobblepets.pets.gen1.geodude.Geodude;
+import com.jeff.pets.cobblepets.pets.gen1.geodude.Golem;
+import com.jeff.pets.cobblepets.pets.gen1.geodude.Graveler;
 import com.jeff.pets.cobblepets.pets.gen1.growlith.Arcanine;
 import com.jeff.pets.cobblepets.pets.gen1.growlith.Growlith;
 import com.jeff.pets.cobblepets.pets.gen1.jigglypuff.Jigglypuff;
@@ -56,6 +62,8 @@ import com.jeff.pets.cobblepets.pets.gen1.pikachu.Raichu;
 import com.jeff.pets.cobblepets.pets.gen1.poliwag.Poliwag;
 import com.jeff.pets.cobblepets.pets.gen1.poliwag.Poliwhirl;
 import com.jeff.pets.cobblepets.pets.gen1.poliwag.Poliwrath;
+import com.jeff.pets.cobblepets.pets.gen1.ponyta.Ponyta;
+import com.jeff.pets.cobblepets.pets.gen1.ponyta.Rapidash;
 import com.jeff.pets.cobblepets.pets.gen1.psyduck.Golduck;
 import com.jeff.pets.cobblepets.pets.gen1.psyduck.Psyduck;
 import com.jeff.pets.cobblepets.pets.gen1.rattata.Raticate;
@@ -67,6 +75,8 @@ import com.jeff.pets.cobblepets.pets.gen1.spearow.Spearow;
 import com.jeff.pets.cobblepets.pets.gen1.squirtle.Blastoise;
 import com.jeff.pets.cobblepets.pets.gen1.squirtle.Squirtle;
 import com.jeff.pets.cobblepets.pets.gen1.squirtle.Wartortle;
+import com.jeff.pets.cobblepets.pets.gen1.tentacool.Tentacool;
+import com.jeff.pets.cobblepets.pets.gen1.tentacool.Tentacruel;
 import com.jeff.pets.cobblepets.pets.gen1.venonat.Venomoth;
 import com.jeff.pets.cobblepets.pets.gen1.venonat.Venonat;
 import com.jeff.pets.cobblepets.pets.gen1.vulpix.Ninetales;
@@ -102,7 +112,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Predicate;
 
 import static com.jeff.pets.Central.CONFIG;
-import static com.jeff.pets.Central.currentSuggestions;
 import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 import static com.jeff.pets.cobblepets.client.Vals.*;
 
@@ -121,6 +130,7 @@ public abstract class CentralMixin {
     @Unique
     private static final List<String> VALENCIAN_SKINS = List.of("normal", "valencian");
     private static final List<String> ALOLAN_SKINS = List.of("normal", "alolan");
+    private static final List<String> GALARIAN_SKINS = List.of("normal", "galarian");
     private static final List<String> ALOLAN_GALARIAN_SKINS = List.of("normal", "alolan", "galarian");
     @Unique
     private static final List<String> POKEMON_SKINS = List.of("shiny", "not shiny");
@@ -205,6 +215,16 @@ public abstract class CentralMixin {
     private static Machop machop;
     private static Machoke machoke;
     private static Machamp machamp;
+    private static Bellsprout bellsprout;
+    private static Weepinbell weepinbell;
+    private static Victreebel victreebel;
+    private static Tentacool tentacool;
+    private static Tentacruel tentacruel;
+    private static Geodude geodude;
+    private static Graveler graveler;
+    private static Golem golem;
+    private static Ponyta ponyta;
+    private static Rapidash rapidash;
 
     @Unique
     private static void spawnEntity(CommandContext<FabricClientCommandSource> context, Entity entity, String activePet) {
@@ -291,6 +311,16 @@ public abstract class CentralMixin {
             case MACHOP -> spawnEntity(context, machop, MACHOP);
             case MACHOKE -> spawnEntity(context, machoke, MACHOKE);
             case MACHAMP -> spawnEntity(context, machamp, MACHAMP);
+            case BELLSPROUT -> spawnEntity(context, bellsprout, BELLSPROUT);
+            case WEEPINBELL -> spawnEntity(context, weepinbell, WEEPINBELL);
+            case VICTREEBEL -> spawnEntity(context, victreebel, VICTREEBEL);
+            case TENTACOOL -> spawnEntity(context, tentacool, TENTACOOL);
+            case TENTACRUEL -> spawnEntity(context, tentacruel, TENTACRUEL);
+            case GEODUDE -> spawnEntity(context, geodude, GEODUDE);
+            case GRAVELER -> spawnEntity(context, graveler, GRAVELER);
+            case GOLEM -> spawnEntity(context, golem, GOLEM);
+            case PONYTA -> spawnEntity(context, ponyta, PONYTA);
+            case RAPIDASH -> spawnEntity(context, rapidash, RAPIDASH);
 
             case null, default -> {
             }
@@ -376,6 +406,16 @@ public abstract class CentralMixin {
         machop = new Machop(Cobblepets.MACHOP, level);
         machoke = new Machoke(Cobblepets.MACHOKE, level);
         machamp = new Machamp(Cobblepets.MACHAMP, level);
+        bellsprout = new Bellsprout(Cobblepets.BELLSPROUT, level);
+        weepinbell = new Weepinbell(Cobblepets.WEEPINBELL, level);
+        victreebel = new Victreebel(Cobblepets.VICTREEBEL, level);
+        tentacool = new Tentacool(Cobblepets.TENTACOOL, level);
+        tentacruel = new Tentacruel(Cobblepets.TENTACRUEL, level);
+        geodude = new Geodude(Cobblepets.GEODUDE, level);
+        graveler = new Graveler(Cobblepets.GRAVELER, level);
+        golem = new Golem(Cobblepets.GOLEM, level);
+        ponyta = new Ponyta(Cobblepets.PONYTA, level);
+        rapidash = new Rapidash(Cobblepets.RAPIDASH, level);
 
         switch (CONFIG.activePet) {
             case BULBASAUR -> Utils.summonPet(bulbasaur, COBBLE_CONFIG.bulbasorName);
@@ -449,6 +489,16 @@ public abstract class CentralMixin {
             case MACHOP -> Utils.summonPet(machop, COBBLE_CONFIG.machopName);
             case MACHOKE -> Utils.summonPet(machoke, COBBLE_CONFIG.machokeName);
             case MACHAMP -> Utils.summonPet(machamp, COBBLE_CONFIG.machampName);
+            case BELLSPROUT -> Utils.summonPet(bellsprout, COBBLE_CONFIG.bellsproutName);
+            case WEEPINBELL -> Utils.summonPet(weepinbell, COBBLE_CONFIG.weepinbellName);
+            case VICTREEBEL -> Utils.summonPet(victreebel, COBBLE_CONFIG.victreebelName);
+            case TENTACOOL -> Utils.summonPet(tentacool, COBBLE_CONFIG.tentacoolName);
+            case TENTACRUEL -> Utils.summonPet(tentacruel, COBBLE_CONFIG.tentacruelName);
+            case GEODUDE -> Utils.summonPet(geodude, COBBLE_CONFIG.geodudeName);
+            case GRAVELER -> Utils.summonPet(graveler, COBBLE_CONFIG.gravelerName);
+            case GOLEM -> Utils.summonPet(golem, COBBLE_CONFIG.golemName);
+            case PONYTA -> Utils.summonPet(ponyta, COBBLE_CONFIG.ponytaName);
+            case RAPIDASH -> Utils.summonPet(rapidash, COBBLE_CONFIG.rapidashName);
 
             case null, default -> {
             }
@@ -528,6 +578,16 @@ public abstract class CentralMixin {
         Utils.despawnEntity(machop);
         Utils.despawnEntity(machoke);
         Utils.despawnEntity(machamp);
+        Utils.despawnEntity(bellsprout);
+        Utils.despawnEntity(weepinbell);
+        Utils.despawnEntity(victreebel);
+        Utils.despawnEntity(tentacool);
+        Utils.despawnEntity(tentacruel);
+        Utils.despawnEntity(geodude);
+        Utils.despawnEntity(graveler);
+        Utils.despawnEntity(golem);
+        Utils.despawnEntity(ponyta);
+        Utils.despawnEntity(rapidash);
     }
 
     @Inject(at = @At("HEAD"), method = "lambda$createPetNameCommand$1")
@@ -606,6 +666,16 @@ public abstract class CentralMixin {
             case MACHOP -> COBBLE_CONFIG.machopName = name;
             case MACHOKE -> COBBLE_CONFIG.machokeName = name;
             case MACHAMP -> COBBLE_CONFIG.machampName = name;
+            case BELLSPROUT -> COBBLE_CONFIG.bellsproutName = name;
+            case WEEPINBELL -> COBBLE_CONFIG.weepinbellName = name;
+            case VICTREEBEL -> COBBLE_CONFIG.victreebelName = name;
+            case TENTACOOL -> COBBLE_CONFIG.tentacoolName = name;
+            case TENTACRUEL -> COBBLE_CONFIG.tentacruelName = name;
+            case GEODUDE -> COBBLE_CONFIG.geodudeName = name;
+            case GRAVELER -> COBBLE_CONFIG.gravelerName = name;
+            case GOLEM -> COBBLE_CONFIG.golemName = name;
+            case PONYTA -> COBBLE_CONFIG.ponytaName = name;
+            case RAPIDASH -> COBBLE_CONFIG.rapidashName = name;
 
             case null, default -> {
             }
@@ -686,6 +756,16 @@ public abstract class CentralMixin {
         Utils.checkName(MACHOP, machop, COBBLE_CONFIG.machopName);
         Utils.checkName(MACHOKE, machoke, COBBLE_CONFIG.machokeName);
         Utils.checkName(MACHAMP, machamp, COBBLE_CONFIG.machampName);
+        Utils.checkName(BELLSPROUT, bellsprout, COBBLE_CONFIG.bellsproutName);
+        Utils.checkName(WEEPINBELL, weepinbell, COBBLE_CONFIG.weepinbellName);
+        Utils.checkName(VICTREEBEL, victreebel, COBBLE_CONFIG.victreebelName);
+        Utils.checkName(TENTACOOL, tentacool, COBBLE_CONFIG.tentacoolName);
+        Utils.checkName(TENTACRUEL, tentacruel, COBBLE_CONFIG.tentacruelName);
+        Utils.checkName(GEODUDE, geodude, COBBLE_CONFIG.geodudeName);
+        Utils.checkName(GRAVELER, graveler, COBBLE_CONFIG.gravelerName);
+        Utils.checkName(GOLEM, golem, COBBLE_CONFIG.golemName);
+        Utils.checkName(PONYTA, ponyta, COBBLE_CONFIG.ponytaName);
+        Utils.checkName(RAPIDASH, rapidash, COBBLE_CONFIG.rapidashName);
     }
 
     @Inject(at = @At("HEAD"), method = "lambda$createPetSkinCommand$1")
@@ -734,8 +814,34 @@ public abstract class CentralMixin {
         }
         else if (CONFIG.activePet.equals("persian")) {
             switch (skin) {
+                case "normal" -> COBBLE_CONFIG.persianSkin = "normal";
                 case "alolan" -> COBBLE_CONFIG.persianSkin = "alolan";
                 case "galarian" -> COBBLE_CONFIG.persianSkin = "galarian";
+            }
+        } else if (CONFIG.activePet.equals("geodude")) {
+            switch(skin) {
+                case "normal" -> COBBLE_CONFIG.geodudeSkin = "normal";
+                case "alolan" -> COBBLE_CONFIG.geodudeSkin = "alolan";
+            }
+        } else if (CONFIG.activePet.equals("graveler")) {
+            switch (skin) {
+                case "normal" -> COBBLE_CONFIG.gravelerSkin = "normal";
+                case "alolan" -> COBBLE_CONFIG.gravelerSkin = "alolan";
+            }
+        } else if (CONFIG.activePet.equals("golem")) {
+            switch (skin) {
+                case "normal" -> COBBLE_CONFIG.golemSkin = "normal";
+                case "alolan" -> COBBLE_CONFIG.golemSkin = "alolan";
+            }
+        } else if (CONFIG.activePet.equals("ponyta")) {
+            switch(skin) {
+                case "normal" -> COBBLE_CONFIG.ponytaSkin = "normal";
+                case "galarian" -> COBBLE_CONFIG.ponytaSkin = "galarian";
+            }
+        } else if (CONFIG.activePet.equals("rapidash")) {
+            switch(skin) {
+                case "normal" -> COBBLE_CONFIG.rapidashSkin = "normal";
+                case "galarian" -> COBBLE_CONFIG.rapidashSkin = "galarian";
             }
         }
 
@@ -744,7 +850,7 @@ public abstract class CentralMixin {
     }
 
     @Inject(at = @At(value = "INVOKE", target = "Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;buildFuture()Ljava/util/concurrent/CompletableFuture;"),
-            method = "lambda$new$0", cancellable = true)
+            method = "lambda$new$0")
     private static void addSkins(CommandContext<?> context, SuggestionsBuilder builder, CallbackInfoReturnable<CompletableFuture<Void>> cir) {
         String remaining = builder.getRemainingLowerCase();
         if (Arrays.stream(getVals()).anyMatch(Predicate.isEqual(CONFIG.activePet))) {
@@ -760,7 +866,8 @@ public abstract class CentralMixin {
                     builder.suggest(s);
                 }
             }
-        } else if (CONFIG.activePet.equals("diglett") || CONFIG.activePet.equals("dugtrio") || CONFIG.activePet.equals("persian")) {
+        } else if (CONFIG.activePet.equals("diglett") || CONFIG.activePet.equals("dugtrio") || CONFIG.activePet.equals("persian")
+        || CONFIG.activePet.equals("geodude") || CONFIG.activePet.equals("graveler") || CONFIG.activePet.equals("golem")) {
             for (String s : ALOLAN_SKINS) {
                 if (s.toLowerCase().startsWith(remaining)) {
                     builder.suggest(s);
@@ -768,6 +875,12 @@ public abstract class CentralMixin {
             }
         } else if (CONFIG.activePet.equals("meowth")) {
             for (String s : ALOLAN_GALARIAN_SKINS) {
+                if (s.toLowerCase().startsWith(remaining)) {
+                    builder.suggest(s);
+                }
+            }
+        } else if (CONFIG.activePet.equals("ponyta") || CONFIG.activePet.equals("rapidash")) {
+            for (String s : GALARIAN_SKINS) {
                 if (s.toLowerCase().startsWith(remaining)) {
                     builder.suggest(s);
                 }

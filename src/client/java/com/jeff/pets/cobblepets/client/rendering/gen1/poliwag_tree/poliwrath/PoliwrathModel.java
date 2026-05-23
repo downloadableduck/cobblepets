@@ -10,7 +10,7 @@ import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
 public class PoliwrathModel extends GeoModel<Poliwrath> {
     @Override
-    public String locationResource() {
+    public String resourceLocation() {
         return "poliwrath";
     }
 

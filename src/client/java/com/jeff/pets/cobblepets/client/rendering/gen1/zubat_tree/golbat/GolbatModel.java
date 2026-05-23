@@ -11,7 +11,7 @@ import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
 public class GolbatModel extends GeoModel<Golbat> {
     @Override
-    public String locationResource() {
+    public String resourceLocation() {
         return "golbat";
     }
 

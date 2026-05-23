@@ -108,6 +108,16 @@ public class ConfigScreenMixin {
             case MACHOP -> cir.setReturnValue(COBBLE_CONFIG.machopName);
             case MACHOKE -> cir.setReturnValue(COBBLE_CONFIG.machokeName);
             case MACHAMP -> cir.setReturnValue(COBBLE_CONFIG.machampName);
+            case BELLSPROUT -> cir.setReturnValue(COBBLE_CONFIG.bellsproutName);
+            case WEEPINBELL -> cir.setReturnValue(COBBLE_CONFIG.weepinbellName);
+            case VICTREEBEL -> cir.setReturnValue(COBBLE_CONFIG.victreebelName);
+            case TENTACOOL -> cir.setReturnValue(COBBLE_CONFIG.tentacoolName);
+            case TENTACRUEL -> cir.setReturnValue(COBBLE_CONFIG.tentacruelName);
+            case GEODUDE -> cir.setReturnValue(COBBLE_CONFIG.geodudeName);
+            case GRAVELER -> cir.setReturnValue(COBBLE_CONFIG.gravelerName);
+            case GOLEM -> cir.setReturnValue(COBBLE_CONFIG.golemName);
+            case PONYTA -> cir.setReturnValue(COBBLE_CONFIG.ponytaName);
+            case RAPIDASH -> cir.setReturnValue(COBBLE_CONFIG.rapidashName);
         }
     }
 
@@ -185,6 +195,16 @@ public class ConfigScreenMixin {
             case MACHOP -> COBBLE_CONFIG.machopName = name;
             case MACHOKE -> COBBLE_CONFIG.machokeName = name;
             case MACHAMP -> COBBLE_CONFIG.machampName = name;
+            case BELLSPROUT -> COBBLE_CONFIG.bellsproutName = name;
+            case WEEPINBELL -> COBBLE_CONFIG.weepinbellName = name;
+            case VICTREEBEL -> COBBLE_CONFIG.victreebelName = name;
+            case TENTACOOL -> COBBLE_CONFIG.tentacoolName = name;
+            case TENTACRUEL -> COBBLE_CONFIG.tentacruelName = name;
+            case GEODUDE -> COBBLE_CONFIG.geodudeName = name;
+            case GRAVELER -> COBBLE_CONFIG.gravelerName = name;
+            case GOLEM -> COBBLE_CONFIG.golemName = name;
+            case PONYTA -> COBBLE_CONFIG.ponytaName = name;
+            case RAPIDASH -> COBBLE_CONFIG.rapidashName = name;
         }
         AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
     }

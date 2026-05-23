@@ -11,7 +11,7 @@ import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
 public class AbraModel extends GeoModel<Abra> {
     @Override
-    public String locationResource() {
+    public String resourceLocation() {
         return "abra";
     }
 

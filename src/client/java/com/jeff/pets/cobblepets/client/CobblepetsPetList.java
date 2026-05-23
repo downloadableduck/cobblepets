@@ -5,6 +5,16 @@ import net.minecraft.network.chat.Component;
 
 public enum CobblepetsPetList implements NameableEnum {
 
+    ponyta,
+    rapidash,
+    geodude,
+    graveler,
+    golem,
+    tentacool,
+    tentacruel,
+    bellsprout,
+    weepinbell,
+    victreebel,
     machop,
     machoke,
     machamp,

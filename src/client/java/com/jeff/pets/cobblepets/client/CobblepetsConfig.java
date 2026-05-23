@@ -84,4 +84,19 @@ public class CobblepetsConfig implements ConfigData {
     public String machopName;
     public String machokeName;
     public String machampName;
+    public String bellsproutName;
+    public String weepinbellName;
+    public String victreebelName;
+    public String tentacoolName;
+    public String tentacruelName;
+    public String geodudeName;
+    public String geodudeSkin;
+    public String gravelerName;
+    public String gravelerSkin;
+    public String golemName;
+    public String golemSkin;
+    public String ponytaName;
+    public String ponytaSkin;
+    public String rapidashName;
+    public String rapidashSkin;
 }

@@ -11,7 +11,7 @@ import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
 public class PoliwhirlModel extends GeoModel<Poliwhirl> {
     @Override
-    public String locationResource() {
+    public String resourceLocation() {
         return "poliwhirl";
     }
 

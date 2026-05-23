@@ -7,6 +7,9 @@ import com.jeff.pets.cobblepets.Cobblepets;
 import com.jeff.pets.cobblepets.client.rendering.gen1.abra_tree.abra.AbraRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.abra_tree.alakazam.AlakazamRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.abra_tree.kadabra.KadabraRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.bellsprout_tree.bellsprout.BellsproutRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.bellsprout_tree.victreebel.VictreebelRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.bellsprout_tree.weepinbell.WeepinbellRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.bulbasaur_tree.bulbasaur.BulbasaurRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.bulbasaur_tree.ivysaur.IvysaurRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.bulbasaur_tree.venusaur.VenusaurRenderer;
@@ -23,6 +26,9 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.diglett_tree.dugtrio.Dugtr
 import com.jeff.pets.cobblepets.client.rendering.gen1.ditto.DittoRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.ekans_tree.arbok.ArbokRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.ekans_tree.ekans.EkansRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.geodude_tree.geodude.GeodudeRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.geodude_tree.golem.GolemRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.geodude_tree.graveler.GravelerRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.growlith_tree.arcanine.ArcanineRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.growlith_tree.growlith.GrowlithRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.jigglypuff_tree.jigglypuff.JigglypuffRenderer;
@@ -55,6 +61,8 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.pikachu_tree.raichu.Raichu
 import com.jeff.pets.cobblepets.client.rendering.gen1.poliwag_tree.poliwag.PoliwagRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.poliwag_tree.poliwhirl.PoliwhirlRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.poliwag_tree.poliwrath.PoliwrathRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.ponyta_tree.ponyta.PonytaRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.ponyta_tree.rapidash.RapidashRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.psyduck_tree.golduck.GolduckRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.psyduck_tree.psyduck.PsyduckRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.rattata_tree.raticate.RaticateRenderer;
@@ -66,6 +74,8 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.spearow_tree.spearow.Spear
 import com.jeff.pets.cobblepets.client.rendering.gen1.squirtle_tree.blastoise.BlastoiseRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.squirtle_tree.squirtle.SquirtleRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.squirtle_tree.wartortle.WartortleRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.tentacool_tree.tentacool.TentacoolRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.tentacool_tree.tentacruel.TentacruelRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.venonat_tree.venomoth.VenomothRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.venonat_tree.venonat.VenonatRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.vulpix_tree.ninetales.NinetalesRenderer;
@@ -183,6 +193,21 @@ public class CobblepetsClient implements ClientModInitializer {
         COBBLE_CONFIG.machopName = Utils.checkNullString(COBBLE_CONFIG.machopName);
         COBBLE_CONFIG.machokeName = Utils.checkNullString(COBBLE_CONFIG.machokeName);
         COBBLE_CONFIG.machampName = Utils.checkNullString(COBBLE_CONFIG.machampName);
+        COBBLE_CONFIG.bellsproutName = Utils.checkNullString(COBBLE_CONFIG.bellsproutName);
+        COBBLE_CONFIG.weepinbellName = Utils.checkNullString(COBBLE_CONFIG.weepinbellName);
+        COBBLE_CONFIG.victreebelName = Utils.checkNullString(COBBLE_CONFIG.victreebelName);
+        COBBLE_CONFIG.tentacoolName = Utils.checkNullString(COBBLE_CONFIG.tentacoolName);
+        COBBLE_CONFIG.tentacruelName = Utils.checkNullString(COBBLE_CONFIG.tentacruelName);
+        COBBLE_CONFIG.geodudeName = Utils.checkNullString(COBBLE_CONFIG.geodudeName);
+        COBBLE_CONFIG.geodudeSkin = Utils.checkNullString(COBBLE_CONFIG.geodudeSkin, "normal");
+        COBBLE_CONFIG.gravelerName = Utils.checkNullString(COBBLE_CONFIG.gravelerName);
+        COBBLE_CONFIG.gravelerSkin = Utils.checkNullString(COBBLE_CONFIG.gravelerSkin, "normal");
+        COBBLE_CONFIG.golemName = Utils.checkNullString(COBBLE_CONFIG.golemName);
+        COBBLE_CONFIG.golemSkin = Utils.checkNullString(COBBLE_CONFIG.golemSkin, "normal");
+        COBBLE_CONFIG.ponytaName = Utils.checkNullString(COBBLE_CONFIG.ponytaName);
+        COBBLE_CONFIG.ponytaSkin = Utils.checkNullString(COBBLE_CONFIG.ponytaSkin, "normal");
+        COBBLE_CONFIG.rapidashName = Utils.checkNullString(COBBLE_CONFIG.rapidashName);
+        COBBLE_CONFIG.rapidashSkin = Utils.checkNullString(COBBLE_CONFIG.rapidashSkin, "normal");
 
         AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
     }
@@ -259,6 +284,16 @@ public class CobblepetsClient implements ClientModInitializer {
         register(MACHOP, MachopRenderer::new);
         register(MACHOKE, MachokeRenderer::new);
         register(MACHAMP, MachampRenderer::new);
+        register(BELLSPROUT, BellsproutRenderer::new);
+        register(WEEPINBELL, WeepinbellRenderer::new);
+        register(VICTREEBEL, VictreebelRenderer::new);
+        register(TENTACOOL, TentacoolRenderer::new);
+        register(TENTACRUEL, TentacruelRenderer::new);
+        register(GEODUDE, GeodudeRenderer::new);
+        register(GRAVELER, GravelerRenderer::new);
+        register(GOLEM, GolemRenderer::new);
+        register(PONYTA, PonytaRenderer::new);
+        register(RAPIDASH, RapidashRenderer::new);
     }
 
     private void addAllToPetList(String ... s) {

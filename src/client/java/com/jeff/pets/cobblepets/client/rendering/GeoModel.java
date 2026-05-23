@@ -7,15 +7,15 @@ import net.minecraft.resources.Identifier;
 import org.jetbrains.annotations.NotNull;
 
 public abstract class GeoModel<T extends GeoAnimatable> extends com.geckolib.model.GeoModel<@NotNull T> {
-    public abstract String locationResource();
+    public abstract String resourceLocation();
 
     @Override
     public @NotNull Identifier getModelResource(@NotNull GeoRenderState renderState) {
-        return Utils.cobble(locationResource());
+        return Utils.cobble(resourceLocation());
     }
 
     @Override
     public @NotNull Identifier getAnimationResource(T animatable) {
-        return Utils.cobble(locationResource());
+        return Utils.cobble(resourceLocation());
     }
 }

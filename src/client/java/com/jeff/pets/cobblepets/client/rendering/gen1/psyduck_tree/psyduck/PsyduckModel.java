@@ -9,7 +9,7 @@ import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
 public class PsyduckModel extends GeoModel<com.jeff.pets.cobblepets.pets.gen1.psyduck.Psyduck> {
     @Override
-    public String locationResource() {
+    public String resourceLocation() {
         return "psyduck";
     }
 

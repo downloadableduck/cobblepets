@@ -11,7 +11,7 @@ import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
 public class MachokeModel extends GeoModel<Machoke> {
     @Override
-    public String locationResource() {
+    public String resourceLocation() {
         return "machoke";
     }
 

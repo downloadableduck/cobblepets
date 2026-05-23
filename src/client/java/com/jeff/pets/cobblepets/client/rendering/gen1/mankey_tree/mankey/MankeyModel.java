@@ -10,7 +10,7 @@ import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
 public class MankeyModel extends GeoModel<Mankey> {
     @Override
-    public String locationResource() {
+    public String resourceLocation() {
         return "mankey";
     }
 

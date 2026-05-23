@@ -10,7 +10,7 @@ import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
 public class GrowlithModel extends GeoModel<Growlith> {
     @Override
-    public String locationResource() {
+    public String resourceLocation() {
         return "growlithe";
     }
 

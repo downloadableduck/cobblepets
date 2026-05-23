@@ -76,6 +76,16 @@ public class Vals {
     public static final String MACHOP = "machop";
     public static final String MACHOKE = "machoke";
     public static final String MACHAMP = "machamp";
+    public static final String BELLSPROUT = "bellsprout";
+    public static final String WEEPINBELL = "weepinbell";
+    public static final String VICTREEBEL = "victreebel";
+    public static final String TENTACOOL = "tentacool";
+    public static final String TENTACRUEL = "tentacruel";
+    public static final String GEODUDE = "geodude";
+    public static final String GRAVELER = "graveler";
+    public static final String GOLEM = "golem";
+    public static final String PONYTA = "ponyta";
+    public static final String RAPIDASH = "rapidash";
 
     public static String[] getVals() {
         List<String> vals = new ArrayList<>();
