@@ -1,0 +1,143 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.muk.ground_idle": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": {
+						"vector": [1.2, 1, 1]
+					}
+				},
+				"body2": {
+					"rotation": {
+						"vector": [0, 0, 2.5]
+					},
+					"scale": {
+						"vector": [0.8, 1, 1]
+					}
+				},
+				"arm_left": {
+					"rotation": {
+						"vector": [-2.4905, 0.21782, 4.99527]
+					}
+				},
+				"arm_left2": {
+					"rotation": {
+						"vector": [2.06319, 1.18242, -4.91091]
+					}
+				},
+				"arm_left3": {
+					"rotation": {
+						"vector": [4.98107, 0.43523, -4.98107]
+					}
+				},
+				"hand_left": {
+					"rotation": {
+						"vector": [5, 0, 0]
+					}
+				},
+				"finger_inner_left": {
+					"rotation": {
+						"vector": [0, -15, 0]
+					}
+				},
+				"finger_middle_left": {
+					"rotation": {
+						"vector": [17.25002, 2.99318, -9.54589]
+					}
+				},
+				"finger_outer_left": {
+					"rotation": {
+						"vector": [0, 10, 0]
+					}
+				},
+				"arm_right": {
+					"rotation": {
+						"vector": [34.89743, 2.86544, -4.09918]
+					}
+				},
+				"arm_right2": {
+					"rotation": {
+						"vector": [40, 0, 0]
+					}
+				},
+				"arm_right3": {
+					"rotation": {
+						"vector": [25, 0, 0]
+					}
+				},
+				"hand_right": {
+					"rotation": {
+						"vector": [12.5, 0, 0]
+					}
+				},
+				"finger_inner_right": {
+					"rotation": {
+						"vector": [0, 7.5, 0]
+					}
+				},
+				"finger_middle_right": {
+					"rotation": {
+						"vector": [20, 0, 0]
+					}
+				},
+				"finger_outer_right": {
+					"rotation": {
+						"vector": [0, -5, 0]
+					}
+				},
+				"muzzle": {
+					"rotation": {
+						"vector": [2.5, 0, 0]
+					}
+				},
+				"mouth_sludge": {
+					"rotation": {
+						"vector": [0, -2.5, 0]
+					}
+				},
+				"jaw": {
+					"rotation": {
+						"vector": [-2.5, 0, 0]
+					}
+				},
+				"mouth_sludge2": {
+					"rotation": {
+						"vector": [-5.00474, -2.49048, 0.21803]
+					}
+				},
+				"body_base_left": {
+					"scale": {
+						"vector": [1.2, 1, 1]
+					}
+				},
+				"body_base_left2": {
+					"scale": {
+						"vector": [1.2, 1, 1]
+					}
+				},
+				"body_base_right": {
+					"scale": {
+						"vector": [1.2, 1, 1]
+					}
+				},
+				"body_base_right2": {
+					"scale": {
+						"vector": [1.2, 1, 1]
+					}
+				},
+				"slime_left": {
+					"rotation": {
+						"vector": [-10, 0, 0]
+					}
+				},
+				"slime_right2": {
+					"rotation": {
+						"vector": [-112.5, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

@@ -16,7 +16,7 @@ public class MeowthModel extends GeoModel<Meowth> {
     }
 
     @Override
-    public Identifier getModelResource(GeoRenderState state) {
+    public @NotNull Identifier getModelResource(@NotNull GeoRenderState state) {
         if (COBBLE_CONFIG.meowthSkin.equals("alolan")) {
             return Utils.cobble("meowth_alolan");
         } else if (COBBLE_CONFIG.meowthSkin.equals("galarian")) {
@@ -26,7 +26,7 @@ public class MeowthModel extends GeoModel<Meowth> {
     }
 
     @Override
-    public Identifier getAnimationResource(Meowth state) {
+    public @NotNull Identifier getAnimationResource(@NotNull Meowth state) {
         return Utils.cobble("meowth");
     }
 

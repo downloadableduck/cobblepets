@@ -1,0 +1,107 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.magnemite.air_idle": {
+			"loop": true,
+			"animation_length": 37.8333,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": [0, "0 - Math.Sin(((q.anim_time + 0.1) * 180 * 0.5) * 1) * 5", "Math.Sin(((q.anim_time + 0.4) * 180 * 0.5) * 1) * 5"]
+					},
+					"position": {
+						"vector": ["Math.Sin((q.anim_time * 180 * 0.5) * 1) * 1.5", "1+Math.Sin((q.anim_time * 90 * 0.5) * 1) * 1.5", 0]
+					}
+				},
+				"headnail": {
+					"rotation": {
+						"vector": [0, "q.anim_time * -270", 0]
+					}
+				},
+				"magnet_left": {
+					"rotation": {
+						"vector": ["q.anim_time * 270", 0, 0]
+					}
+				},
+				"magnet_right": {
+					"rotation": {
+						"vector": ["q.anim_time * -270", 0, 0]
+					}
+				},
+				"nail_right": {
+					"rotation": {
+						"vector": [4.8225, -4.98167, -0.46322]
+					}
+				},
+				"nail_left_rotation": {
+					"rotation": {
+						"vector": [0, 0, "q.anim_time * -270"]
+					}
+				},
+				"nail_right_rotation": {
+					"rotation": {
+						"vector": [0, 0, "q.anim_time * 270"]
+					}
+				},
+				"nail_head": {
+					"rotation": {
+						"vector": [0, "q.anim_time * -270 ", 0]
+					}
+				}
+			}
+		},
+		"animation.magnemite.air_fly": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": [15, "0- Math.Sin(((q.anim_time + 0.1) * 180 * 0.5) * 1) * 5", "Math.Sin(((q.anim_time + 0.4) * 180 * 0.5) * 1) * 5"]
+					},
+					"position": {
+						"vector": ["Math.Sin((q.anim_time * 180 * 0.5) * 1) * 1.5", "2+Math.Sin((q.anim_time * 90 * 0.5) * 1) * 1.5", 0]
+					}
+				},
+				"headnail": {
+					"rotation": {
+						"vector": [0, "q.anim_time * -270", 0]
+					}
+				},
+				"magnet_left": {
+					"rotation": {
+						"vector": ["q.anim_time * 270", 0, 0]
+					}
+				},
+				"magnet_right": {
+					"rotation": {
+						"vector": ["q.anim_time * -270", 0, 0]
+					}
+				},
+				"nail_left": {
+					"rotation": {
+						"vector": [1.96916, 1.9988, 0.07581]
+					}
+				},
+				"nail_right": {
+					"rotation": {
+						"vector": [1.95498, -2.99821, -0.11287]
+					}
+				},
+				"nail_left_rotation": {
+					"rotation": {
+						"vector": [0, 0, "q.anim_time * -270"]
+					}
+				},
+				"nail_right_rotation": {
+					"rotation": {
+						"vector": [0, 0, "q.anim_time * 270"]
+					}
+				},
+				"nail_head": {
+					"rotation": {
+						"vector": [0, "q.anim_time * -270", 0]
+					}
+				}
+			}
+		}
+	}
+}

@@ -4,6 +4,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("SpellCheckingInspection")
 public class Vals {
     public static final String BULBASAUR = "bulbasaur";
     public static final String IVYSAUR = "ivysaur";
@@ -86,6 +87,17 @@ public class Vals {
     public static final String GOLEM = "golem";
     public static final String PONYTA = "ponyta";
     public static final String RAPIDASH = "rapidash";
+    public static final String SLOWPOKE = "slowpoke";
+    public static final String SLOWBRO = "slowbro";
+    public static final String MAGNEMITE = "magnemite";
+    public static final String MAGNETON = "magneton";
+    public static final String FARFETCHD = "farfetchd";
+    public static final String DODUO = "doduo";
+    public static final String DODRIO = "dodrio";
+    public static final String SEEL = "seel";
+    public static final String DEWGONG = "dewgong";
+    public static final String GRIMER = "grimer";
+    public static final String MUK = "muk";
 
     public static String[] getVals() {
         List<String> vals = new ArrayList<>();

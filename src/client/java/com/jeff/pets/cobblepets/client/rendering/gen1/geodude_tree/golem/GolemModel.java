@@ -6,6 +6,7 @@ import com.jeff.pets.cobblepets.client.Utils;
 import com.jeff.pets.cobblepets.client.rendering.GeoModel;
 import com.jeff.pets.cobblepets.pets.gen1.geodude.Golem;
 import net.minecraft.resources.Identifier;
+import org.jetbrains.annotations.NotNull;
 
 import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
@@ -16,7 +17,7 @@ public class GolemModel extends GeoModel<Golem> {
     }
 
     @Override
-    public Identifier getModelResource(GeoRenderState state) {
+    public @NotNull Identifier getModelResource(@NotNull GeoRenderState state) {
         if (COBBLE_CONFIG.golemSkin.equals("alolan")) {
             return Utils.cobble("golem_alolan");
         }
@@ -24,7 +25,7 @@ public class GolemModel extends GeoModel<Golem> {
     }
 
     @Override
-    public Identifier getAnimationResource(Golem animatable) {
+    public @NotNull Identifier getAnimationResource(@NotNull Golem animatable) {
         return Utils.cobble("golem");
     }
 

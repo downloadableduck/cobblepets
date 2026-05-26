@@ -6,6 +6,7 @@ import com.jeff.pets.cobblepets.client.rendering.GeoModel;
 import com.jeff.pets.cobblepets.pets.gen1.geodude.Graveler;
 import com.jeff.pets.cobblepets.pets.gen1.ponyta.Ponyta;
 import net.minecraft.resources.Identifier;
+import org.jetbrains.annotations.NotNull;
 
 import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
@@ -16,7 +17,7 @@ public class PonytaModel extends GeoModel<Ponyta> {
     }
 
     @Override
-    public Identifier getModelResource(GeoRenderState state) {
+    public @NotNull Identifier getModelResource(@NotNull GeoRenderState state) {
         if (COBBLE_CONFIG.ponytaSkin.equals("galarian")) {
             return Utils.cobble("ponyta_galarian");
         }
@@ -24,7 +25,7 @@ public class PonytaModel extends GeoModel<Ponyta> {
     }
 
     @Override
-    public Identifier getAnimationResource(Ponyta animatable) {
+    public @NotNull Identifier getAnimationResource(@NotNull Ponyta animatable) {
         return Utils.cobble("ponyta");
     }
 

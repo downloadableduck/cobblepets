@@ -15,7 +15,7 @@ public abstract class GeoModel<T extends GeoAnimatable> extends com.geckolib.mod
     }
 
     @Override
-    public @NotNull Identifier getAnimationResource(T animatable) {
+    public @NotNull Identifier getAnimationResource(@NotNull T animatable) {
         return Utils.cobble(resourceLocation());
     }
 }

@@ -5,6 +5,7 @@ import com.jeff.pets.cobblepets.client.Utils;
 import com.jeff.pets.cobblepets.client.rendering.GeoModel;
 import com.jeff.pets.cobblepets.pets.gen1.geodude.Geodude;
 import net.minecraft.resources.Identifier;
+import org.jetbrains.annotations.NotNull;
 
 import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
@@ -15,7 +16,7 @@ public class GeodudeModel extends GeoModel<Geodude> {
     }
 
     @Override
-    public Identifier getModelResource(GeoRenderState state) {
+    public @NotNull Identifier getModelResource(@NotNull GeoRenderState state) {
         if (COBBLE_CONFIG.geodudeSkin.equals("alolan")) {
             return Utils.cobble("geodude_alolan");
         }
@@ -23,7 +24,7 @@ public class GeodudeModel extends GeoModel<Geodude> {
     }
 
     @Override
-    public Identifier getAnimationResource(Geodude dude) {
+    public @NotNull Identifier getAnimationResource(@NotNull Geodude dude) {
         return Utils.cobble("geodude");
     }
 

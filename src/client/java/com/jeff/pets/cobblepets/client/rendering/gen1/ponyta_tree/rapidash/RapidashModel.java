@@ -6,6 +6,7 @@ import com.jeff.pets.cobblepets.client.rendering.GeoModel;
 import com.jeff.pets.cobblepets.pets.gen1.geodude.Graveler;
 import com.jeff.pets.cobblepets.pets.gen1.ponyta.Rapidash;
 import net.minecraft.resources.Identifier;
+import org.jetbrains.annotations.NotNull;
 
 import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
@@ -16,7 +17,7 @@ public class RapidashModel extends GeoModel<Rapidash> {
     }
 
     @Override
-    public Identifier getModelResource(GeoRenderState state) {
+    public @NotNull Identifier getModelResource(@NotNull GeoRenderState state) {
         if (COBBLE_CONFIG.rapidashSkin.equals("galarian")) {
             return Utils.cobble("rapidash_galarian");
         }
@@ -24,7 +25,7 @@ public class RapidashModel extends GeoModel<Rapidash> {
     }
 
     @Override
-    public Identifier getAnimationResource(Rapidash animatable) {
+    public @NotNull Identifier getAnimationResource(@NotNull Rapidash animatable) {
         return Utils.cobble("rapidash");
     }
 

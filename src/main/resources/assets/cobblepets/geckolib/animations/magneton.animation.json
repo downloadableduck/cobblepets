@@ -1,0 +1,295 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.magneton.air_idle": {
+			"loop": true,
+			"bones": {
+				"magnet_left": {
+					"rotation": {
+						"vector": [0, 20, -30]
+					},
+					"position": {
+						"vector": [0, 1, 0]
+					}
+				},
+				"magnet_right": {
+					"rotation": {
+						"vector": [0, -20, 35]
+					},
+					"position": {
+						"vector": [0, 1, 0]
+					}
+				},
+				"body2": {
+					"rotation": {
+						"vector": [-5, 0, 135]
+					},
+					"position": {
+						"vector": [-4, 6, 0.5]
+					}
+				},
+				"nail_left_rotation2": {
+					"rotation": {
+						"vector": [0, 0, "q.anim_time * 270"]
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"magnet_left2": {
+					"rotation": {
+						"vector": [0, 35, -40]
+					},
+					"position": {
+						"vector": [0, 1, 0]
+					}
+				},
+				"magnet_right2": {
+					"rotation": {
+						"vector": [0, 10, 25]
+					}
+				},
+				"body3": {
+					"rotation": {
+						"vector": [-5, 0, -135]
+					},
+					"position": {
+						"vector": [4, 6, 0.5]
+					}
+				},
+				"nail_right_rotation3": {
+					"rotation": {
+						"vector": [0, 0, "q.anim_time * -270"]
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"magnet_left3": {
+					"rotation": {
+						"vector": [0, -10, -25]
+					}
+				},
+				"magnet_right3": {
+					"rotation": {
+						"vector": [0, -35, 40]
+					},
+					"position": {
+						"vector": [0, 1, 0]
+					}
+				},
+				"magnet_left_rotation": {
+					"rotation": {
+						"vector": ["-15 + q.anim_time * - 270", 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"magnet_right_rotation": {
+					"rotation": {
+						"vector": ["-15 + q.anim_time * -270", 0, 0]
+					}
+				},
+				"magnet_left2_rotation": {
+					"rotation": {
+						"vector": ["-70 + q.anim_time * 270", 0, 0]
+					}
+				},
+				"magnet_right3_rotation": {
+					"rotation": {
+						"vector": ["110 + q.anim_time * 270", 0, 0]
+					}
+				},
+				"nail_head": {
+					"rotation": {
+						"vector": [0, "q.anim_time * -270 ", 0]
+					}
+				},
+				"nail_left_rotation": {
+					"rotation": {
+						"vector": [0, 0, "q.anim_time * -270"]
+					}
+				},
+				"nail_right_rotation": {
+					"rotation": {
+						"vector": [0, 0, "q.anim_time * 270"]
+					}
+				},
+				"nail_head2": {
+					"rotation": {
+						"vector": [0, "q.anim_time * -270 ", 0]
+					}
+				},
+				"magnet_right2_rotation": {
+					"rotation": {
+						"vector": ["150 + q.anim_time * - 270", -27.5, 0]
+					}
+				},
+				"nail_head3": {
+					"rotation": {
+						"vector": [0, "q.anim_time * 270 ", 0]
+					}
+				},
+				"magnet_left3_rotation": {
+					"rotation": {
+						"vector": ["150 + q.anim_time * - 270", 27.5, 0]
+					}
+				},
+				"allbodies": {
+					"rotation": {
+						"vector": [0, "0 - Math.Sin(((q.anim_time + 0.1) * 180 * 0.5) * 1) * 5", "Math.Sin(((q.anim_time + 0.4) * 180 * 0.5) * 1) * 5"]
+					},
+					"position": {
+						"vector": ["Math.Sin((q.anim_time * 180 * 0.5) * 1) * 1.5", "1+Math.Sin((q.anim_time * 90 * 0.5) * 1) * 1.5", 0]
+					}
+				}
+			}
+		},
+		"animation.magneton.air_fly": {
+			"loop": true,
+			"bones": {
+				"magnet_left": {
+					"rotation": {
+						"vector": [0, 20, -30]
+					},
+					"position": {
+						"vector": [0, 1, 0]
+					}
+				},
+				"magnet_right": {
+					"rotation": {
+						"vector": [0, -20, 35]
+					},
+					"position": {
+						"vector": [0, 1, 0]
+					}
+				},
+				"body2": {
+					"rotation": {
+						"vector": [-5, 0, 135]
+					},
+					"position": {
+						"vector": [-4, 6, 0.5]
+					}
+				},
+				"nail_left_rotation2": {
+					"rotation": {
+						"vector": [0, 0, "q.anim_time * 270"]
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"magnet_left2": {
+					"rotation": {
+						"vector": [0, 35, -40]
+					},
+					"position": {
+						"vector": [0, 1, 0]
+					}
+				},
+				"magnet_right2": {
+					"rotation": {
+						"vector": [0, 10, 25]
+					}
+				},
+				"body3": {
+					"rotation": {
+						"vector": [-5, 0, -135]
+					},
+					"position": {
+						"vector": [4, 6, 0.5]
+					}
+				},
+				"nail_right_rotation3": {
+					"rotation": {
+						"vector": [0, 0, "q.anim_time * -270"]
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"magnet_left3": {
+					"rotation": {
+						"vector": [0, -10, -25]
+					}
+				},
+				"magnet_right3": {
+					"rotation": {
+						"vector": [0, -35, 40]
+					},
+					"position": {
+						"vector": [0, 1, 0]
+					}
+				},
+				"magnet_left_rotation": {
+					"rotation": {
+						"vector": ["-15 + q.anim_time * - 270", 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"magnet_right_rotation": {
+					"rotation": {
+						"vector": ["-15 + q.anim_time * -270", 0, 0]
+					}
+				},
+				"magnet_left2_rotation": {
+					"rotation": {
+						"vector": ["-70 + q.anim_time * 270", 0, 0]
+					}
+				},
+				"magnet_right3_rotation": {
+					"rotation": {
+						"vector": ["110 + q.anim_time * 270", 0, 0]
+					}
+				},
+				"nail_head": {
+					"rotation": {
+						"vector": [0, "q.anim_time * -270 ", 0]
+					}
+				},
+				"nail_left_rotation": {
+					"rotation": {
+						"vector": [0, 0, "q.anim_time * -270"]
+					}
+				},
+				"nail_right_rotation": {
+					"rotation": {
+						"vector": [0, 0, "q.anim_time * 270"]
+					}
+				},
+				"nail_head2": {
+					"rotation": {
+						"vector": [0, "q.anim_time * -270 ", 0]
+					}
+				},
+				"magnet_right2_rotation": {
+					"rotation": {
+						"vector": ["150 + q.anim_time * - 270", -27.5, 0]
+					}
+				},
+				"nail_head3": {
+					"rotation": {
+						"vector": [0, "q.anim_time * 270 ", 0]
+					}
+				},
+				"magnet_left3_rotation": {
+					"rotation": {
+						"vector": ["150 + q.anim_time * - 270", 27.5, 0]
+					}
+				},
+				"allbodies": {
+					"rotation": {
+						"vector": [15, "0 - Math.Sin(((q.anim_time + 0.1) * 180 * 0.5) * 1) * 5", "Math.Sin(((q.anim_time + 0.4) * 180 * 0.5) * 1) * 5"]
+					},
+					"position": {
+						"vector": ["Math.Sin((q.anim_time * 180 * 0.5) * 1) * 1.5", "1+Math.Sin((q.anim_time * 90 * 0.5) * 1) * 1.5", 0]
+					}
+				}
+			}
+		}
+	}
+}

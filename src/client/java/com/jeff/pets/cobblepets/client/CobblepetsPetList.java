@@ -3,8 +3,20 @@ package com.jeff.pets.cobblepets.client;
 import dev.isxander.yacl3.api.NameableEnum;
 import net.minecraft.network.chat.Component;
 
+@SuppressWarnings("SpellCheckingInspection")
 public enum CobblepetsPetList implements NameableEnum {
 
+    grimer,
+    muk,
+    seel,
+    dewgong,
+    doduo,
+    dodrio,
+    farfetchd,
+    magnemite,
+    magneton,
+    slowpoke,
+    slowbro,
     ponyta,
     rapidash,
     geodude,

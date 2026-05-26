@@ -5,6 +5,7 @@ import com.jeff.pets.cobblepets.client.Utils;
 import com.jeff.pets.cobblepets.client.rendering.GeoModel;
 import com.jeff.pets.cobblepets.pets.gen1.geodude.Graveler;
 import net.minecraft.resources.Identifier;
+import org.jetbrains.annotations.NotNull;
 
 import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
@@ -15,7 +16,7 @@ public class GravelerModel extends GeoModel<Graveler> {
     }
 
     @Override
-    public Identifier getModelResource(GeoRenderState state) {
+    public @NotNull Identifier getModelResource(@NotNull GeoRenderState state) {
         if (COBBLE_CONFIG.gravelerSkin.equals("alolan")) {
             return Utils.cobble("graveler_alolan");
         }
@@ -23,7 +24,7 @@ public class GravelerModel extends GeoModel<Graveler> {
     }
 
     @Override
-    public Identifier getAnimationResource(Graveler animatable) {
+    public @NotNull Identifier getAnimationResource(@NotNull Graveler animatable) {
         return Utils.cobble("graveler");
     }
 

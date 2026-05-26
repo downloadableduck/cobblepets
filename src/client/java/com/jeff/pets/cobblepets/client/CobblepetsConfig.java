@@ -99,4 +99,20 @@ public class CobblepetsConfig implements ConfigData {
     public String ponytaSkin;
     public String rapidashName;
     public String rapidashSkin;
+    public String slowpokeName;
+    public String slowpokeSkin;
+    public String slowbroName;
+    public String slowbroSkin;
+    public String magnemiteName;
+    public String magnetonName;
+    public String farfetchdName;
+    public String farfetchdSkin;
+    public String doduoName;
+    public String dodrioName;
+    public String seelName;
+    public String dewgongName;
+    public String grimerName;
+    public String grimerSkin;
+    public String mukName;
+    public String mukSkin;
 }

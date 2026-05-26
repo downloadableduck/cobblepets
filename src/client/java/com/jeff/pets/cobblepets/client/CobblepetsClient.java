@@ -3,7 +3,6 @@ package com.jeff.pets.cobblepets.client;
 import com.jeff.pets.Central;
 import com.jeff.pets.PetsClientInitializer;
 import com.jeff.pets.Utils;
-import com.jeff.pets.cobblepets.Cobblepets;
 import com.jeff.pets.cobblepets.client.rendering.gen1.abra_tree.abra.AbraRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.abra_tree.alakazam.AlakazamRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.abra_tree.kadabra.KadabraRenderer;
@@ -24,11 +23,16 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.charmander_tree.charmeleon
 import com.jeff.pets.cobblepets.client.rendering.gen1.diglett_tree.diglett.DiglettRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.diglett_tree.dugtrio.DugtrioRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.ditto.DittoRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.doduo_tree.dodrio.DodrioRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.doduo_tree.doduo.DoduoRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.ekans_tree.arbok.ArbokRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.ekans_tree.ekans.EkansRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.farfetchd.FarfetchdRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.geodude_tree.geodude.GeodudeRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.geodude_tree.golem.GolemRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.geodude_tree.graveler.GravelerRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.grimer_tree.grimer.GrimerRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.grimer_tree.muk.MukRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.growlith_tree.arcanine.ArcanineRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.growlith_tree.growlith.GrowlithRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.jigglypuff_tree.jigglypuff.JigglypuffRenderer;
@@ -36,6 +40,8 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.jigglypuff_tree.wigglytuff
 import com.jeff.pets.cobblepets.client.rendering.gen1.machop_tree.machamp.MachampRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.machop_tree.machoke.MachokeRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.machop_tree.machop.MachopRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.magnemite_tree.magnemite.MagnemiteRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.magnemite_tree.magneton.MagnetonRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.mankey_tree.mankey.MankeyRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.mankey_tree.primeape.PrimeapeRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.meowth_tree.meowth.MeowthRenderer;
@@ -69,6 +75,10 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.rattata_tree.raticate.Rati
 import com.jeff.pets.cobblepets.client.rendering.gen1.rattata_tree.rattata.RattataRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.sandshrew_tree.sandshrew.SandshrewRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.sandshrew_tree.sandslash.SandslashRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.seel_tree.dewgong.DewgongRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.seel_tree.seel.SeelRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.slowpoke_tree.slowbro.SlowbroRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.slowpoke_tree.slowpoke.SlowpokeRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.spearow_tree.fearow.FearowRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.spearow_tree.spearow.SpearowRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.squirtle_tree.blastoise.BlastoiseRenderer;
@@ -208,6 +218,22 @@ public class CobblepetsClient implements ClientModInitializer {
         COBBLE_CONFIG.ponytaSkin = Utils.checkNullString(COBBLE_CONFIG.ponytaSkin, "normal");
         COBBLE_CONFIG.rapidashName = Utils.checkNullString(COBBLE_CONFIG.rapidashName);
         COBBLE_CONFIG.rapidashSkin = Utils.checkNullString(COBBLE_CONFIG.rapidashSkin, "normal");
+        COBBLE_CONFIG.slowbroName = Utils.checkNullString(COBBLE_CONFIG.slowbroName);
+        COBBLE_CONFIG.slowbroSkin = Utils.checkNullString(COBBLE_CONFIG.slowbroSkin, "normal");
+        COBBLE_CONFIG.slowpokeName = Utils.checkNullString(COBBLE_CONFIG.slowpokeName);
+        COBBLE_CONFIG.slowpokeSkin = Utils.checkNullString(COBBLE_CONFIG.slowpokeSkin, "normal");
+        COBBLE_CONFIG.magnemiteName = Utils.checkNullString(COBBLE_CONFIG.magnemiteName);
+        COBBLE_CONFIG.magnetonName = Utils.checkNullString(COBBLE_CONFIG.magnetonName);
+        COBBLE_CONFIG.farfetchdName = Utils.checkNullString(COBBLE_CONFIG.farfetchdName);
+        COBBLE_CONFIG.farfetchdSkin = Utils.checkNullString(COBBLE_CONFIG.farfetchdSkin, "normal");
+        COBBLE_CONFIG.doduoName = Utils.checkNullString(COBBLE_CONFIG.doduoName);
+        COBBLE_CONFIG.dodrioName = Utils.checkNullString(COBBLE_CONFIG.dodrioName);
+        COBBLE_CONFIG.seelName = Utils.checkNullString(COBBLE_CONFIG.seelName);
+        COBBLE_CONFIG.dewgongName = Utils.checkNullString(COBBLE_CONFIG.dewgongName);
+        COBBLE_CONFIG.grimerName = Utils.checkNullString(COBBLE_CONFIG.grimerName);
+        COBBLE_CONFIG.grimerSkin = Utils.checkNullString(COBBLE_CONFIG.grimerSkin, "normal");
+        COBBLE_CONFIG.mukName = Utils.checkNullString(COBBLE_CONFIG.mukName);
+        COBBLE_CONFIG.mukSkin = Utils.checkNullString(COBBLE_CONFIG.mukSkin, "normal");
 
         AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
     }
@@ -294,6 +320,17 @@ public class CobblepetsClient implements ClientModInitializer {
         register(GOLEM, GolemRenderer::new);
         register(PONYTA, PonytaRenderer::new);
         register(RAPIDASH, RapidashRenderer::new);
+        register(SLOWPOKE, SlowpokeRenderer::new);
+        register(SLOWBRO, SlowbroRenderer::new);
+        register(MAGNEMITE, MagnemiteRenderer::new);
+        register(MAGNETON, MagnetonRenderer::new);
+        register(FARFETCHD, FarfetchdRenderer::new);
+        register(DODUO, DoduoRenderer::new);
+        register(DODRIO, DodrioRenderer::new);
+        register(SEEL, SeelRenderer::new);
+        register(DEWGONG, DewgongRenderer::new);
+        register(GRIMER, GrimerRenderer::new);
+        register(MUK, MukRenderer::new);
     }
 
     private void addAllToPetList(String ... s) {
