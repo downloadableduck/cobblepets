@@ -32,6 +32,9 @@ import com.jeff.pets.cobblepets.pets.gen1.doduo.Doduo;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Arbok;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Ekans;
 import com.jeff.pets.cobblepets.pets.gen1.farfetchd.Farfetchd;
+import com.jeff.pets.cobblepets.pets.gen1.gastly.Gastly;
+import com.jeff.pets.cobblepets.pets.gen1.gastly.Gengar;
+import com.jeff.pets.cobblepets.pets.gen1.gastly.Haunter;
 import com.jeff.pets.cobblepets.pets.gen1.geodude.Geodude;
 import com.jeff.pets.cobblepets.pets.gen1.geodude.Golem;
 import com.jeff.pets.cobblepets.pets.gen1.geodude.Graveler;
@@ -81,6 +84,8 @@ import com.jeff.pets.cobblepets.pets.gen1.sandshrew.Sandshrew;
 import com.jeff.pets.cobblepets.pets.gen1.sandshrew.Sandslash;
 import com.jeff.pets.cobblepets.pets.gen1.seel.Dewgong;
 import com.jeff.pets.cobblepets.pets.gen1.seel.Seel;
+import com.jeff.pets.cobblepets.pets.gen1.shellder.Cloyster;
+import com.jeff.pets.cobblepets.pets.gen1.shellder.Shellder;
 import com.jeff.pets.cobblepets.pets.gen1.slowpoke.Slowbro;
 import com.jeff.pets.cobblepets.pets.gen1.slowpoke.Slowpoke;
 import com.jeff.pets.cobblepets.pets.gen1.spearow.Fearow;
@@ -251,6 +256,11 @@ public abstract class CentralMixin {
     private static Dewgong dewgong;
     private static Grimer grimer;
     private static Muk muk;
+    private static Shellder shellder;
+    private static Cloyster cloyster;
+    private static Gastly gastly;
+    private static Haunter haunter;
+    private static Gengar gengar;
 
     @Unique
     private static void spawnEntity(CommandContext<FabricClientCommandSource> context, Entity entity, String activePet) {
@@ -358,6 +368,11 @@ public abstract class CentralMixin {
             case DEWGONG -> spawnEntity(context, dewgong, DEWGONG);
             case GRIMER -> spawnEntity(context, grimer, GRIMER);
             case MUK -> spawnEntity(context, muk, MUK);
+            case CLOYSTER -> spawnEntity(context, cloyster, CLOYSTER);
+            case SHELLDER -> spawnEntity(context, shellder, SHELLDER);
+            case GASTLY -> spawnEntity(context, gastly, GASTLY);
+            case HAUNTER -> spawnEntity(context, haunter, HAUNTER);
+            case GENGAR -> spawnEntity(context, gengar, GENGAR);
 
             case null, default -> {
             }
@@ -464,6 +479,11 @@ public abstract class CentralMixin {
         dewgong = new Dewgong(Cobblepets.DEWGONG, level);
         grimer = new Grimer(Cobblepets.GRIMER, level);
         muk = new Muk(Cobblepets.MUK, level);
+        shellder = new Shellder(Cobblepets.SHELLDER, level);
+        cloyster = new Cloyster(Cobblepets.CLOYSTER, level);
+        gastly = new Gastly(Cobblepets.GASTLY, level);
+        haunter = new Haunter(Cobblepets.HAUNTER, level);
+        gengar = new Gengar(Cobblepets.GENGAR, level);
 
         switch (CONFIG.activePet) {
             case BULBASAUR -> Utils.summonPet(bulbasaur, COBBLE_CONFIG.bulbasorName);
@@ -558,6 +578,11 @@ public abstract class CentralMixin {
             case DEWGONG -> Utils.summonPet(dewgong, COBBLE_CONFIG.dewgongName);
             case GRIMER -> Utils.summonPet(grimer, COBBLE_CONFIG.grimerName);
             case MUK -> Utils.summonPet(muk, COBBLE_CONFIG.mukName);
+            case SHELLDER -> Utils.summonPet(shellder, COBBLE_CONFIG.shellderName);
+            case CLOYSTER -> Utils.summonPet(cloyster, COBBLE_CONFIG.cloysterName);
+            case GASTLY -> Utils.summonPet(gastly, COBBLE_CONFIG.gastlyName);
+            case HAUNTER -> Utils.summonPet(haunter, COBBLE_CONFIG.haunterName);
+            case GENGAR -> Utils.summonPet(gengar, COBBLE_CONFIG.gengarName);
 
             case null, default -> {
             }
@@ -681,6 +706,11 @@ public abstract class CentralMixin {
         Utils.checkName(DEWGONG, dewgong, COBBLE_CONFIG.dewgongName);
         Utils.checkName(GRIMER, grimer, COBBLE_CONFIG.grimerName);
         Utils.checkName(MUK, muk, COBBLE_CONFIG.mukName);
+        Utils.checkName(SHELLDER, shellder, COBBLE_CONFIG.shellderName);
+        Utils.checkName(CLOYSTER, cloyster, COBBLE_CONFIG.cloysterName);
+        Utils.checkName(GASTLY, gastly, COBBLE_CONFIG.gastlyName);
+        Utils.checkName(HAUNTER, haunter, COBBLE_CONFIG.haunterName);
+        Utils.checkName(GENGAR, gengar, COBBLE_CONFIG.gengarName);
     }
 
     @Inject(at = @At("HEAD"), method = "lambda$createPetSkinCommand$1")

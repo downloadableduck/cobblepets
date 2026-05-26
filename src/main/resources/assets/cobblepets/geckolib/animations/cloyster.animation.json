@@ -1,0 +1,93 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cloyster.ground_idle": {
+			"loop": true,
+			"animation_length": 3,
+			"bones": {
+				"shell_left": {
+					"rotation": {
+						"vector": [0, "-1+math.clamp(-math.sin(q.anim_time*90*1.333)*0.5,0,180)", 0]
+					}
+				},
+				"shell_right": {
+					"rotation": {
+						"vector": [0, "1-math.clamp(math.sin(q.anim_time*90*1.333)*0.5,0,180)", 0]
+					}
+				},
+				"body": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(q.anim_time*90*1.333)*1"]
+					},
+					"position": {
+						"vector": ["math.sin(q.anim_time*90*1.333)*0.33", "-0.3+math.abs(math.sin(q.anim_time*90*1.333)*0.33)", 0]
+					}
+				},
+				"inner_shell_left": {
+					"rotation": {
+						"vector": [0, 0, "-math.sin(q.anim_time*90*2.667+70)*0.3"]
+					}
+				},
+				"inner_shell_right": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(q.anim_time*90*2.667+70)*0.3"]
+					}
+				},
+				"inner_spike": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2.667-20)*0.25", 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(q.anim_time*90*1.333-90)*0.5"]
+					}
+				}
+			}
+		},
+		"animation.cloyster.ground_walk": {
+			"loop": true,
+			"animation_length": 1.5,
+			"bones": {
+				"shell_left": {
+					"rotation": {
+						"vector": [0, "-1+math.clamp(-math.sin(q.anim_time*90*2.667)*1.75,0,180)", 0]
+					}
+				},
+				"shell_right": {
+					"rotation": {
+						"vector": [0, "1-math.clamp(math.sin(q.anim_time*90*2.667)*1.75,0,180)", 0]
+					}
+				},
+				"body": {
+					"rotation": {
+						"vector": [0, "math.sin(q.anim_time*90*2.667+90)*8", "math.sin(q.anim_time*90*2.667)*4"]
+					},
+					"position": {
+						"vector": ["math.sin(q.anim_time*90*2.667)*0.45", "-0.2+math.abs(math.sin(q.anim_time*90*2.667)*1.25)", 0]
+					}
+				},
+				"inner_shell_left": {
+					"rotation": {
+						"vector": [0, 0, "-math.sin(q.anim_time*90*2.667+70)*0.3"]
+					}
+				},
+				"inner_shell_right": {
+					"rotation": {
+						"vector": [0, 0, "math.sin(q.anim_time*90*2.667+70)*0.3"]
+					}
+				},
+				"inner_spike": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*2.667-20)*0.25", 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*5.334-45)*1.5", "math.sin(q.anim_time*90*2.667-65)*4", "math.sin(q.anim_time*90*2.667-90)*0.25"]
+					}
+				}
+			}
+		}
+	}
+}

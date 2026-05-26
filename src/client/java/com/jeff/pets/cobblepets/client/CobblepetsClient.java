@@ -28,6 +28,9 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.doduo_tree.doduo.DoduoRend
 import com.jeff.pets.cobblepets.client.rendering.gen1.ekans_tree.arbok.ArbokRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.ekans_tree.ekans.EkansRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.farfetchd.FarfetchdRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.gastly_tree.gastly.GastlyRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.gastly_tree.gengar.GengarRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.gastly_tree.haunter.HaunterRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.geodude_tree.geodude.GeodudeRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.geodude_tree.golem.GolemRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.geodude_tree.graveler.GravelerRenderer;
@@ -77,6 +80,8 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.sandshrew_tree.sandshrew.S
 import com.jeff.pets.cobblepets.client.rendering.gen1.sandshrew_tree.sandslash.SandslashRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.seel_tree.dewgong.DewgongRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.seel_tree.seel.SeelRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.shellder_tree.cloyster.CloysterRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.shellder_tree.shellder.ShellderRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.slowpoke_tree.slowbro.SlowbroRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.slowpoke_tree.slowpoke.SlowpokeRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.spearow_tree.fearow.FearowRenderer;
@@ -234,6 +239,11 @@ public class CobblepetsClient implements ClientModInitializer {
         COBBLE_CONFIG.grimerSkin = Utils.checkNullString(COBBLE_CONFIG.grimerSkin, "normal");
         COBBLE_CONFIG.mukName = Utils.checkNullString(COBBLE_CONFIG.mukName);
         COBBLE_CONFIG.mukSkin = Utils.checkNullString(COBBLE_CONFIG.mukSkin, "normal");
+        COBBLE_CONFIG.shellderName = Utils.checkNullString(COBBLE_CONFIG.shellderName);
+        COBBLE_CONFIG.cloysterName = Utils.checkNullString(COBBLE_CONFIG.cloysterName);
+        COBBLE_CONFIG.gastlyName = Utils.checkNullString(COBBLE_CONFIG.gastlyName);
+        COBBLE_CONFIG.haunterName = Utils.checkNullString(COBBLE_CONFIG.haunterName);
+        COBBLE_CONFIG.gengarName = Utils.checkNullString(COBBLE_CONFIG.gengarName);
 
         AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
     }
@@ -331,6 +341,11 @@ public class CobblepetsClient implements ClientModInitializer {
         register(DEWGONG, DewgongRenderer::new);
         register(GRIMER, GrimerRenderer::new);
         register(MUK, MukRenderer::new);
+        register(SHELLDER, ShellderRenderer::new);
+        register(CLOYSTER, CloysterRenderer::new);
+        register(GASTLY, GastlyRenderer::new);
+        register(HAUNTER, HaunterRenderer::new);
+        register(GENGAR, GengarRenderer::new);
     }
 
     private void addAllToPetList(String ... s) {

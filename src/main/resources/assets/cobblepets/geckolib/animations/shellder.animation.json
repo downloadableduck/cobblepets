@@ -1,0 +1,112 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.shellder.ground_idle": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": ["-5-math.cos(q.anim_time*90*2)*0.75", 0, 0]
+					},
+					"position": {
+						"vector": [0, 0.5, "math.cos(q.anim_time*90*2)*0.07"]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": ["-math.cos(q.anim_time*90*2-90)*0.5", 0, 0]
+					},
+					"position": {
+						"vector": [0, -0.5, 0]
+					}
+				},
+				"face": {
+					"position": {
+						"vector": [0, 0.5, 0]
+					}
+				},
+				"head_hidden": {
+					"position": {
+						"vector": [0, 1.5, 0]
+					}
+				},
+				"shell_top": {
+					"rotation": {
+						"vector": ["-5-math.cos(q.anim_time*90*2-105)*0.45", 0, 0]
+					}
+				},
+				"shell_bottom": {
+					"rotation": {
+						"vector": [2.5, 0, 0]
+					}
+				},
+				"tongue": {
+					"rotation": {
+						"vector": ["17.5-math.cos(q.anim_time*90*2-125)*2", 0, 0]
+					}
+				},
+				"tongue2": {
+					"rotation": {
+						"vector": ["10-math.cos(q.anim_time*90*2-180)*3", 0, 0]
+					}
+				}
+			}
+		},
+		"animation.shellder.ground_walk": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": ["-5-math.cos(q.anim_time*90*8-135)*5", 0, 0]
+					},
+					"position": {
+						"vector": [0, "0.5+math.abs(math.cos(q.anim_time*90*4)*2.5)", "math.cos(q.anim_time*90*8+90)*0.6"]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": ["-math.cos(q.anim_time*90*8-20)*2", 0, 0]
+					},
+					"position": {
+						"vector": [0, -0.5, 0]
+					}
+				},
+				"face": {
+					"position": {
+						"vector": [0, 0.5, 0]
+					}
+				},
+				"head_hidden": {
+					"position": {
+						"vector": [0, 1.5, 0]
+					}
+				},
+				"shell_top": {
+					"rotation": {
+						"vector": ["-5-math.cos(q.anim_time*90*8-25)*3", 0, 0]
+					}
+				},
+				"shell_bottom": {
+					"rotation": {
+						"vector": [2.5, 0, 0]
+					}
+				},
+				"tongue": {
+					"rotation": {
+						"vector": ["22.5-math.abs(math.cos(q.anim_time*90*4-60)*20)", 0, 0]
+					}
+				},
+				"tongue2": {
+					"rotation": {
+						"vector": ["5+math.cos(q.anim_time*90*8-60)*16", 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, "-math.cos(q.anim_time*90*8-60)*0.05"]
+					}
+				}
+			}
+		}
+	}
+}

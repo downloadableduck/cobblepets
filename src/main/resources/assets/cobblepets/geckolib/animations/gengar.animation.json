@@ -1,0 +1,77 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.gengar.ground_idle": {
+			"loop": true,
+			"bones": {
+				"arm_right": {
+					"rotation": {
+						"vector": [20, 0, -27.5]
+					},
+					"position": {
+						"vector": [0, -1, 0]
+					}
+				},
+				"arm_right2": {
+					"rotation": {
+						"vector": [0, -17.5, 0]
+					}
+				},
+				"arm_left": {
+					"rotation": {
+						"vector": [20, 0, 27.5]
+					},
+					"position": {
+						"vector": [0, -1, 0]
+					}
+				},
+				"arm_left2": {
+					"rotation": {
+						"vector": [0, 17.5, 0]
+					}
+				},
+				"tail": {
+					"rotation": {
+						"vector": [-27.5, 0, 0]
+					}
+				},
+				"tail2": {
+					"rotation": {
+						"vector": [10, 0, 0]
+					}
+				},
+				"torso": {
+					"rotation": {
+						"vector": [5, 0, 0]
+					}
+				},
+				"leg_right": {
+					"rotation": {
+						"vector": [-10, 12.5, 0]
+					},
+					"position": {
+						"vector": [0, -0.75, 0]
+					}
+				},
+				"leg_right2": {
+					"rotation": {
+						"vector": [10, 0, 0]
+					}
+				},
+				"leg_left": {
+					"rotation": {
+						"vector": [-10, -12.5, 0]
+					},
+					"position": {
+						"vector": [0, -0.75, 0]
+					}
+				},
+				"leg_left2": {
+					"rotation": {
+						"vector": [10, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

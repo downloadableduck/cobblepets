@@ -98,6 +98,11 @@ public class Vals {
     public static final String DEWGONG = "dewgong";
     public static final String GRIMER = "grimer";
     public static final String MUK = "muk";
+    public static final String SHELLDER = "shellder";
+    public static final String CLOYSTER = "cloyster";
+    public static final String GASTLY = "gastly";
+    public static final String HAUNTER = "haunter";
+    public static final String GENGAR = "gengar";
 
     public static String[] getVals() {
         List<String> vals = new ArrayList<>();

@@ -130,6 +130,11 @@ public class ConfigScreenMixin {
             case DEWGONG -> cir.setReturnValue(COBBLE_CONFIG.dewgongName);
             case GRIMER -> cir.setReturnValue(COBBLE_CONFIG.grimerName);
             case MUK -> cir.setReturnValue(COBBLE_CONFIG.mukName);
+            case SHELLDER -> cir.setReturnValue(COBBLE_CONFIG.shellderName);
+            case CLOYSTER -> cir.setReturnValue(COBBLE_CONFIG.cloysterName);
+            case GASTLY -> cir.setReturnValue(COBBLE_CONFIG.gastlyName);
+            case HAUNTER -> cir.setReturnValue(COBBLE_CONFIG.haunterName);
+            case GENGAR -> cir.setReturnValue(COBBLE_CONFIG.gengarName);
         }
     }
 

@@ -115,4 +115,9 @@ public class CobblepetsConfig implements ConfigData {
     public String grimerSkin;
     public String mukName;
     public String mukSkin;
+    public String shellderName;
+    public String cloysterName;
+    public String gastlyName;
+    public String haunterName;
+    public String gengarName;
 }

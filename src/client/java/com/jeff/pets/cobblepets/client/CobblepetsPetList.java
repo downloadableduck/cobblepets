@@ -6,6 +6,11 @@ import net.minecraft.network.chat.Component;
 @SuppressWarnings("SpellCheckingInspection")
 public enum CobblepetsPetList implements NameableEnum {
 
+    gastly,
+    haunter,
+    gengar,
+    shellder,
+    cloyster,
     grimer,
     muk,
     seel,

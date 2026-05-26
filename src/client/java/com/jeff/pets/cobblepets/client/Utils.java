@@ -7,7 +7,6 @@ import static com.jeff.pets.Central.CONFIG;
 import static com.jeff.pets.cobblepets.Cobblepets.MOD_ID;
 import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 import static com.jeff.pets.cobblepets.client.Vals.*;
-import static com.jeff.pets.cobblepets.client.Vals.DODRIO;
 
 public class Utils extends com.jeff.pets.Utils {
     public static Identifier cobble(String path) {
@@ -136,6 +135,11 @@ public class Utils extends com.jeff.pets.Utils {
             case DEWGONG -> COBBLE_CONFIG.dewgongName = name;
             case GRIMER -> COBBLE_CONFIG.grimerName = name;
             case MUK -> COBBLE_CONFIG.mukName = name;
+            case SHELLDER -> COBBLE_CONFIG.shellderName = name;
+            case CLOYSTER -> COBBLE_CONFIG.cloysterName = name;
+            case GASTLY -> COBBLE_CONFIG.gastlyName = name;
+            case HAUNTER -> COBBLE_CONFIG.haunterName = name;
+            case GENGAR -> COBBLE_CONFIG.gengarName = name;
 
             case null, default -> {
             }

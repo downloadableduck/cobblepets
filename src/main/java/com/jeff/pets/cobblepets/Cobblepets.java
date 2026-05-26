@@ -26,6 +26,9 @@ import com.jeff.pets.cobblepets.pets.gen1.doduo.Doduo;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Arbok;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Ekans;
 import com.jeff.pets.cobblepets.pets.gen1.farfetchd.Farfetchd;
+import com.jeff.pets.cobblepets.pets.gen1.gastly.Gastly;
+import com.jeff.pets.cobblepets.pets.gen1.gastly.Gengar;
+import com.jeff.pets.cobblepets.pets.gen1.gastly.Haunter;
 import com.jeff.pets.cobblepets.pets.gen1.geodude.Geodude;
 import com.jeff.pets.cobblepets.pets.gen1.geodude.Golem;
 import com.jeff.pets.cobblepets.pets.gen1.geodude.Graveler;
@@ -75,6 +78,8 @@ import com.jeff.pets.cobblepets.pets.gen1.sandshrew.Sandshrew;
 import com.jeff.pets.cobblepets.pets.gen1.sandshrew.Sandslash;
 import com.jeff.pets.cobblepets.pets.gen1.seel.Dewgong;
 import com.jeff.pets.cobblepets.pets.gen1.seel.Seel;
+import com.jeff.pets.cobblepets.pets.gen1.shellder.Cloyster;
+import com.jeff.pets.cobblepets.pets.gen1.shellder.Shellder;
 import com.jeff.pets.cobblepets.pets.gen1.slowpoke.Slowbro;
 import com.jeff.pets.cobblepets.pets.gen1.slowpoke.Slowpoke;
 import com.jeff.pets.cobblepets.pets.gen1.spearow.Fearow;
@@ -1218,6 +1223,66 @@ public class Cobblepets implements ModInitializer {
                     .build(MUK_KEY)
     );
 
+    private static final ResourceKey<@NotNull EntityType<?>> SHELLDER_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "shellder_tree"));
+    public static final EntityType<@NotNull Shellder> SHELLDER = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "shellder_tree"),
+            EntityType.Builder.of(Shellder::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(SHELLDER_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> CLOYSTER_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "cloyster"));
+    public static final EntityType<@NotNull Cloyster> CLOYSTER = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "cloyster"),
+            EntityType.Builder.of(Cloyster::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(2f, 2f)
+                    .eyeHeight(2f)
+                    .build(CLOYSTER_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> GASTLY_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "gastly"));
+    public static final EntityType<@NotNull Gastly> GASTLY = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "gastly"),
+            EntityType.Builder.of(Gastly::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(GASTLY_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> HAUNTER_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "haunter"));
+    public static final EntityType<@NotNull Haunter> HAUNTER = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "haunter"),
+            EntityType.Builder.of(Haunter::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1.5f)
+                    .eyeHeight(1.5f)
+                    .build(HAUNTER_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> GENGAR_KEY=
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "gengar"));
+    public static final EntityType<@NotNull Gengar> GENGAR = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "gengar"),
+            EntityType.Builder.of(Gengar::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(2f, 2f)
+                    .eyeHeight(2f)
+                    .build(GENGAR_KEY)
+    );
+
     @Override
     public void onInitialize() {
         register(BULBASAUR);
@@ -1312,6 +1377,11 @@ public class Cobblepets implements ModInitializer {
         register(DEWGONG);
         register(GRIMER);
         register(MUK);
+        register(SHELLDER);
+        register(CLOYSTER);
+        register(GASTLY);
+        register(HAUNTER);
+        register(GENGAR);
     }
     private static void register(EntityType<? extends @NotNull LivingEntity> type) {
         FabricDefaultAttributeRegistry.register(type, GroundCobblemon.createAttributes().build());
