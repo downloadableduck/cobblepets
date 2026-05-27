@@ -120,4 +120,17 @@ public class CobblepetsConfig implements ConfigData {
     public String gastlyName;
     public String haunterName;
     public String gengarName;
+    public String onixName;
+    public String drowzeeName;
+    public String hypnoName;
+    public String krabbyName;
+    public String kinglerName;
+    public String voltorbName;
+    public String voltorbSkin;
+    public String electrodeName;
+    public String electrodeSkin;
+    public String exeggcuteName;
+    public String exeggcuteSkin;
+    public String exeggutorName;
+    public String exeggutorSkin;
 }

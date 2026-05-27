@@ -135,6 +135,15 @@ public class ConfigScreenMixin {
             case GASTLY -> cir.setReturnValue(COBBLE_CONFIG.gastlyName);
             case HAUNTER -> cir.setReturnValue(COBBLE_CONFIG.haunterName);
             case GENGAR -> cir.setReturnValue(COBBLE_CONFIG.gengarName);
+            case ONIX -> cir.setReturnValue(COBBLE_CONFIG.onixName);
+            case DROWZEE -> cir.setReturnValue(COBBLE_CONFIG.drowzeeName);
+            case HYPNO -> cir.setReturnValue(COBBLE_CONFIG.hypnoName);
+            case KRABBY -> cir.setReturnValue(COBBLE_CONFIG.krabbyName);
+            case KINGLER -> cir.setReturnValue(COBBLE_CONFIG.kinglerName);
+            case VOLTORB -> cir.setReturnValue(COBBLE_CONFIG.voltorbName);
+            case ELECTRODE -> cir.setReturnValue(COBBLE_CONFIG.electrodeName);
+            case EXEGGCUTE -> cir.setReturnValue(COBBLE_CONFIG.exeggcuteName);
+            case EXEGGUTOR -> cir.setReturnValue(COBBLE_CONFIG.exeggutorName);
         }
     }
 

@@ -38,7 +38,13 @@ public class Utils extends com.jeff.pets.Utils {
                     return cobble(base + "alolan_shiny.png");
                 }
                 return cobble(base + "alolan.png");
-            } case null, default -> throw new IllegalArgumentException("Skin for pet " + name + " did not match any accepted skins! Skin: " + skin);
+            } case "hisuian" -> {
+                if (COBBLE_CONFIG.isShiny) {
+                    return cobble(base + "hisuian_shiny.png");
+                }
+                return cobble(base + "hisuian.png");
+            }
+            case null, default -> throw new IllegalArgumentException("Skin for pet " + name + " did not match any accepted skins! Skin: " + skin);
         }
     }
     public static void assignName(String name) {
@@ -140,6 +146,15 @@ public class Utils extends com.jeff.pets.Utils {
             case GASTLY -> COBBLE_CONFIG.gastlyName = name;
             case HAUNTER -> COBBLE_CONFIG.haunterName = name;
             case GENGAR -> COBBLE_CONFIG.gengarName = name;
+            case ONIX -> COBBLE_CONFIG.onixName = name;
+            case DROWZEE -> COBBLE_CONFIG.drowzeeName = name;
+            case HYPNO -> COBBLE_CONFIG.hypnoName = name;
+            case KRABBY -> COBBLE_CONFIG.krabbyName = name;
+            case KINGLER -> COBBLE_CONFIG.kinglerName = name;
+            case VOLTORB -> COBBLE_CONFIG.voltorbName = name;
+            case ELECTRODE -> COBBLE_CONFIG.electrodeName = name;
+            case EXEGGCUTE -> COBBLE_CONFIG.exeggcuteName = name;
+            case EXEGGUTOR -> COBBLE_CONFIG.exeggutorName = name;
 
             case null, default -> {
             }

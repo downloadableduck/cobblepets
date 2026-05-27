@@ -3,6 +3,7 @@ package com.jeff.pets.cobblepets.client;
 import com.jeff.pets.Central;
 import com.jeff.pets.PetsClientInitializer;
 import com.jeff.pets.Utils;
+import com.jeff.pets.cobblepets.Cobblepets;
 import com.jeff.pets.cobblepets.client.rendering.gen1.abra_tree.abra.AbraRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.abra_tree.alakazam.AlakazamRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.abra_tree.kadabra.KadabraRenderer;
@@ -25,8 +26,12 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.diglett_tree.dugtrio.Dugtr
 import com.jeff.pets.cobblepets.client.rendering.gen1.ditto.DittoRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.doduo_tree.dodrio.DodrioRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.doduo_tree.doduo.DoduoRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.drowzee_tree.drowzee.DrowzeeRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.drowzee_tree.hypno.HypnoRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.ekans_tree.arbok.ArbokRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.ekans_tree.ekans.EkansRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.exeggcute_tree.exeggcute.ExeggcuteRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.exeggcute_tree.exeggutor.ExeggutorRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.farfetchd.FarfetchdRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.gastly_tree.gastly.GastlyRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.gastly_tree.gengar.GengarRenderer;
@@ -40,6 +45,8 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.growlith_tree.arcanine.Arc
 import com.jeff.pets.cobblepets.client.rendering.gen1.growlith_tree.growlith.GrowlithRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.jigglypuff_tree.jigglypuff.JigglypuffRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.jigglypuff_tree.wigglytuff.WigglytuffRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.krabby_tree.kingler.KinglerRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.krabby_tree.krabby.KrabbyRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.machop_tree.machamp.MachampRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.machop_tree.machoke.MachokeRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.machop_tree.machop.MachopRenderer;
@@ -60,6 +67,7 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.nidoranm_tree.nidorino.Nid
 import com.jeff.pets.cobblepets.client.rendering.gen1.oddish_tree.gloom.GloomRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.oddish_tree.oddish.OddishRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.oddish_tree.vileplume.VileplumeRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.onix_tree.onix.OnixRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.paras_tree.paras.ParasRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.paras_tree.parasect.ParasectRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.pidgey_tree.pidgeot.PidgeotRenderer;
@@ -93,6 +101,8 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.tentacool_tree.tentacool.T
 import com.jeff.pets.cobblepets.client.rendering.gen1.tentacool_tree.tentacruel.TentacruelRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.venonat_tree.venomoth.VenomothRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.venonat_tree.venonat.VenonatRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.voltorb_tree.electrode.ElectrodeRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.voltorb_tree.voltorb.VoltorbRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.vulpix_tree.ninetales.NinetalesRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.vulpix_tree.vulpix.VulpixRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.weedle_tree.beedrill.BeedrillRenderer;
@@ -103,12 +113,13 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.zubat_tree.zubat.ZubatRend
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
+import net.minecraft.world.entity.ai.goal.CatLieOnBedGoal;
 
 import java.util.Arrays;
 
 import static com.jeff.pets.cobblepets.Cobblepets.*;
 import static com.jeff.pets.cobblepets.Cobblepets.MOD_ID;
-import static net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry.register;
+import static net.minecraft.client.renderer.entity.EntityRenderers.register;
 
 public class CobblepetsClient implements ClientModInitializer {
     public static CobblepetsConfig COBBLE_CONFIG;
@@ -244,6 +255,19 @@ public class CobblepetsClient implements ClientModInitializer {
         COBBLE_CONFIG.gastlyName = Utils.checkNullString(COBBLE_CONFIG.gastlyName);
         COBBLE_CONFIG.haunterName = Utils.checkNullString(COBBLE_CONFIG.haunterName);
         COBBLE_CONFIG.gengarName = Utils.checkNullString(COBBLE_CONFIG.gengarName);
+        COBBLE_CONFIG.onixName = Utils.checkNullString(COBBLE_CONFIG.onixName);
+        COBBLE_CONFIG.drowzeeName = Utils.checkNullString(COBBLE_CONFIG.drowzeeName);
+        COBBLE_CONFIG.hypnoName = Utils.checkNullString(COBBLE_CONFIG.hypnoName);
+        COBBLE_CONFIG.krabbyName = Utils.checkNullString(COBBLE_CONFIG.krabbyName);
+        COBBLE_CONFIG.kinglerName = Utils.checkNullString(COBBLE_CONFIG.kinglerName);
+        COBBLE_CONFIG.voltorbName = Utils.checkNullString(COBBLE_CONFIG.voltorbName);
+        COBBLE_CONFIG.voltorbSkin = Utils.checkNullString(COBBLE_CONFIG.voltorbSkin, "normal");
+        COBBLE_CONFIG.electrodeName = Utils.checkNullString(COBBLE_CONFIG.electrodeName);
+        COBBLE_CONFIG.electrodeSkin = Utils.checkNullString(COBBLE_CONFIG.electrodeSkin, "normal");
+        COBBLE_CONFIG.exeggcuteName = Utils.checkNullString(COBBLE_CONFIG.exeggcuteName);
+        COBBLE_CONFIG.exeggcuteSkin = Utils.checkNullString(COBBLE_CONFIG.exeggcuteSkin, "normal");
+        COBBLE_CONFIG.exeggutorName = Utils.checkNullString(COBBLE_CONFIG.exeggutorName);
+        COBBLE_CONFIG.exeggutorSkin = Utils.checkNullString(COBBLE_CONFIG.exeggutorSkin, "normal");
 
         AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
     }
@@ -346,6 +370,15 @@ public class CobblepetsClient implements ClientModInitializer {
         register(GASTLY, GastlyRenderer::new);
         register(HAUNTER, HaunterRenderer::new);
         register(GENGAR, GengarRenderer::new);
+        register(ONIX, OnixRenderer::new);
+        register(DROWZEE, DrowzeeRenderer::new);
+        register(HYPNO, HypnoRenderer::new);
+        register(KRABBY, KrabbyRenderer::new);
+        register(KINGLER, KinglerRenderer::new);
+        register(VOLTORB, VoltorbRenderer::new);
+        register(ELECTRODE, ElectrodeRenderer::new);
+        register(EXEGGCUTE, ExeggcuteRenderer::new);
+        register(EXEGGUTOR, ExeggutorRenderer::new);
     }
 
     private void addAllToPetList(String ... s) {

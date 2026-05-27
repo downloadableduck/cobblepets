@@ -29,8 +29,12 @@ import com.jeff.pets.cobblepets.pets.gen1.diglett.Dugtrio;
 import com.jeff.pets.cobblepets.pets.gen1.ditto.Ditto;
 import com.jeff.pets.cobblepets.pets.gen1.doduo.Dodrio;
 import com.jeff.pets.cobblepets.pets.gen1.doduo.Doduo;
+import com.jeff.pets.cobblepets.pets.gen1.drowzee.Drowzee;
+import com.jeff.pets.cobblepets.pets.gen1.drowzee.Hypno;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Arbok;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Ekans;
+import com.jeff.pets.cobblepets.pets.gen1.exeggcute.Exeggcute;
+import com.jeff.pets.cobblepets.pets.gen1.exeggcute.Exeggutor;
 import com.jeff.pets.cobblepets.pets.gen1.farfetchd.Farfetchd;
 import com.jeff.pets.cobblepets.pets.gen1.gastly.Gastly;
 import com.jeff.pets.cobblepets.pets.gen1.gastly.Gengar;
@@ -44,6 +48,8 @@ import com.jeff.pets.cobblepets.pets.gen1.growlith.Arcanine;
 import com.jeff.pets.cobblepets.pets.gen1.growlith.Growlith;
 import com.jeff.pets.cobblepets.pets.gen1.jigglypuff.Jigglypuff;
 import com.jeff.pets.cobblepets.pets.gen1.jigglypuff.Wigglytuff;
+import com.jeff.pets.cobblepets.pets.gen1.krabby.Kingler;
+import com.jeff.pets.cobblepets.pets.gen1.krabby.Krabby;
 import com.jeff.pets.cobblepets.pets.gen1.machop.Machamp;
 import com.jeff.pets.cobblepets.pets.gen1.machop.Machoke;
 import com.jeff.pets.cobblepets.pets.gen1.machop.Machop;
@@ -64,6 +70,7 @@ import com.jeff.pets.cobblepets.pets.gen1.nidoranm.Nidorino;
 import com.jeff.pets.cobblepets.pets.gen1.oddish.Gloom;
 import com.jeff.pets.cobblepets.pets.gen1.oddish.Oddish;
 import com.jeff.pets.cobblepets.pets.gen1.oddish.Vileplume;
+import com.jeff.pets.cobblepets.pets.gen1.onix.Onix;
 import com.jeff.pets.cobblepets.pets.gen1.paras.Paras;
 import com.jeff.pets.cobblepets.pets.gen1.paras.Parasect;
 import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgeot;
@@ -97,6 +104,8 @@ import com.jeff.pets.cobblepets.pets.gen1.tentacool.Tentacool;
 import com.jeff.pets.cobblepets.pets.gen1.tentacool.Tentacruel;
 import com.jeff.pets.cobblepets.pets.gen1.venonat.Venomoth;
 import com.jeff.pets.cobblepets.pets.gen1.venonat.Venonat;
+import com.jeff.pets.cobblepets.pets.gen1.voltorb.Electrode;
+import com.jeff.pets.cobblepets.pets.gen1.voltorb.Voltorb;
 import com.jeff.pets.cobblepets.pets.gen1.vulpix.Ninetales;
 import com.jeff.pets.cobblepets.pets.gen1.vulpix.Vulpix;
 import com.jeff.pets.cobblepets.pets.gen1.weedle.Beedrill;
@@ -152,6 +161,7 @@ public abstract class CentralMixin {
     private static final List<String> ALOLAN_SKINS = List.of("normal", "alolan");
     private static final List<String> GALARIAN_SKINS = List.of("normal", "galarian");
     private static final List<String> ALOLAN_GALARIAN_SKINS = List.of("normal", "alolan", "galarian");
+    private static final List<String> HISUIAN_SKINS = List.of("normal", "hisuian");
     @Unique
     private static final List<String> POKEMON_SKINS = List.of("shiny", "not shiny");
 
@@ -261,6 +271,15 @@ public abstract class CentralMixin {
     private static Gastly gastly;
     private static Haunter haunter;
     private static Gengar gengar;
+    private static Onix onix;
+    private static Drowzee drowzee;
+    private static Hypno hypno;
+    private static Krabby krabby;
+    private static Kingler kingler;
+    private static Voltorb voltorb;
+    private static Electrode electrode;
+    private static Exeggcute exeggcute;
+    private static Exeggutor exeggutor;
 
     @Unique
     private static void spawnEntity(CommandContext<FabricClientCommandSource> context, Entity entity, String activePet) {
@@ -373,6 +392,15 @@ public abstract class CentralMixin {
             case GASTLY -> spawnEntity(context, gastly, GASTLY);
             case HAUNTER -> spawnEntity(context, haunter, HAUNTER);
             case GENGAR -> spawnEntity(context, gengar, GENGAR);
+            case ONIX -> spawnEntity(context, onix, ONIX);
+            case DROWZEE -> spawnEntity(context, drowzee, DROWZEE);
+            case HYPNO -> spawnEntity(context, hypno, HYPNO);
+            case KRABBY -> spawnEntity(context, krabby, KRABBY);
+            case KINGLER -> spawnEntity(context, kingler, KINGLER);
+            case VOLTORB -> spawnEntity(context, voltorb, VOLTORB);
+            case ELECTRODE -> spawnEntity(context, electrode, ELECTRODE);
+            case EXEGGCUTE -> spawnEntity(context, exeggcute, EXEGGCUTE);
+            case EXEGGUTOR -> spawnEntity(context, exeggutor, EXEGGUTOR);
 
             case null, default -> {
             }
@@ -484,6 +512,15 @@ public abstract class CentralMixin {
         gastly = new Gastly(Cobblepets.GASTLY, level);
         haunter = new Haunter(Cobblepets.HAUNTER, level);
         gengar = new Gengar(Cobblepets.GENGAR, level);
+        onix = new Onix(Cobblepets.ONIX, level);
+        drowzee = new Drowzee(Cobblepets.DROWZEE, level);
+        hypno = new Hypno(Cobblepets.HYPNO, level);
+        krabby = new Krabby(Cobblepets.KRABBY, level);
+        kingler = new Kingler(Cobblepets.KINGLER, level);
+        voltorb = new Voltorb(Cobblepets.VOLTORB, level);
+        electrode = new Electrode(Cobblepets.ELECTRODE, level);
+        exeggcute = new Exeggcute(Cobblepets.EXEGGCUTE, level);
+        exeggutor = new Exeggutor(Cobblepets.EXEGGUTOR, level);
 
         switch (CONFIG.activePet) {
             case BULBASAUR -> Utils.summonPet(bulbasaur, COBBLE_CONFIG.bulbasorName);
@@ -583,6 +620,15 @@ public abstract class CentralMixin {
             case GASTLY -> Utils.summonPet(gastly, COBBLE_CONFIG.gastlyName);
             case HAUNTER -> Utils.summonPet(haunter, COBBLE_CONFIG.haunterName);
             case GENGAR -> Utils.summonPet(gengar, COBBLE_CONFIG.gengarName);
+            case ONIX -> Utils.summonPet(onix, COBBLE_CONFIG.onixName);
+            case DROWZEE -> Utils.summonPet(drowzee, COBBLE_CONFIG.drowzeeName);
+            case HYPNO -> Utils.summonPet(hypno, COBBLE_CONFIG.hypnoName);
+            case KRABBY -> Utils.summonPet(krabby, COBBLE_CONFIG.krabbyName);
+            case KINGLER -> Utils.summonPet(kingler, COBBLE_CONFIG.kinglerName);
+            case VOLTORB -> Utils.summonPet(voltorb, COBBLE_CONFIG.voltorbName);
+            case ELECTRODE -> Utils.summonPet(electrode, COBBLE_CONFIG.electrodeName);
+            case EXEGGCUTE -> Utils.summonPet(exeggcute, COBBLE_CONFIG.exeggcuteName);
+            case EXEGGUTOR -> Utils.summonPet(exeggutor, COBBLE_CONFIG.exeggutorName);
 
             case null, default -> {
             }
@@ -711,6 +757,15 @@ public abstract class CentralMixin {
         Utils.checkName(GASTLY, gastly, COBBLE_CONFIG.gastlyName);
         Utils.checkName(HAUNTER, haunter, COBBLE_CONFIG.haunterName);
         Utils.checkName(GENGAR, gengar, COBBLE_CONFIG.gengarName);
+        Utils.checkName(ONIX, onix, COBBLE_CONFIG.onixName);
+        Utils.checkName(DROWZEE, drowzee, COBBLE_CONFIG.drowzeeName);
+        Utils.checkName(HYPNO, hypno, COBBLE_CONFIG.hypnoName);
+        Utils.checkName(KRABBY, krabby, COBBLE_CONFIG.krabbyName);
+        Utils.checkName(KINGLER, kingler, COBBLE_CONFIG.kinglerName);
+        Utils.checkName(VOLTORB, voltorb, COBBLE_CONFIG.voltorbName);
+        Utils.checkName(ELECTRODE, electrode, COBBLE_CONFIG.electrodeName);
+        Utils.checkName(EXEGGCUTE, exeggcute, COBBLE_CONFIG.exeggcuteName);
+        Utils.checkName(EXEGGUTOR, exeggutor, COBBLE_CONFIG.exeggutorName);
     }
 
     @Inject(at = @At("HEAD"), method = "lambda$createPetSkinCommand$1")
@@ -810,6 +865,18 @@ public abstract class CentralMixin {
             switch(skin) {
                 case "normal", "alolan" -> COBBLE_CONFIG.mukSkin = skin;
             }
+        } else if (CONFIG.activePet.equals("voltorb")) {
+            switch(skin) {
+                case "normal", "hisuian" -> COBBLE_CONFIG.voltorbSkin = skin;
+            }
+        } else if (CONFIG.activePet.equals("electrode")) {
+            switch(skin) {
+                case "normal", "hisuian" -> COBBLE_CONFIG.electrodeSkin = skin;
+            }
+        } else if (CONFIG.activePet.equals("exeggutor")) {
+            switch(skin) {
+                case "normal", "alolan" -> COBBLE_CONFIG.exeggutorSkin = skin;
+            }
         }
         AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
     }
@@ -832,8 +899,8 @@ public abstract class CentralMixin {
                 }
             }
         } else if (CONFIG.activePet.equals("diglett") || CONFIG.activePet.equals("dugtrio") || CONFIG.activePet.equals("persian")
-        || CONFIG.activePet.equals("geodude") || CONFIG.activePet.equals("graveler") || CONFIG.activePet.equals("golem")
-                || CONFIG.activePet.equals(GRIMER) || CONFIG.activePet.equals(MUK)) {
+                || CONFIG.activePet.equals("geodude") || CONFIG.activePet.equals("graveler") || CONFIG.activePet.equals("golem")
+                || CONFIG.activePet.equals(GRIMER) || CONFIG.activePet.equals(MUK) || CONFIG.activePet.equals(EXEGGUTOR)) {
             for (String s : ALOLAN_SKINS) {
                 if (s.toLowerCase().startsWith(remaining)) {
                     builder.suggest(s);
@@ -847,6 +914,12 @@ public abstract class CentralMixin {
             }
         } else if (CONFIG.activePet.equals("ponyta") || CONFIG.activePet.equals("rapidash") || CONFIG.activePet.equals("slowpoke") || CONFIG.activePet.equals("slowbro") || CONFIG.activePet.equals("farfetchd")) {
             for (String s : GALARIAN_SKINS) {
+                if (s.toLowerCase().startsWith(remaining)) {
+                    builder.suggest(s);
+                }
+            }
+        } else if (CONFIG.activePet.equals("voltorb") || CONFIG.activePet.equals("electrode")) {
+            for (String s : HISUIAN_SKINS) {
                 if (s.toLowerCase().startsWith(remaining)) {
                     builder.suggest(s);
                 }

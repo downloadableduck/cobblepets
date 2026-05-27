@@ -103,6 +103,15 @@ public class Vals {
     public static final String GASTLY = "gastly";
     public static final String HAUNTER = "haunter";
     public static final String GENGAR = "gengar";
+    public static final String ONIX = "onix";
+    public static final String DROWZEE = "drowzee";
+    public static final String HYPNO = "hypno";
+    public static final String KRABBY = "krabby";
+    public static final String KINGLER = "kingler";
+    public static final String VOLTORB = "voltorb";
+    public static final String ELECTRODE = "electrode";
+    public static final String EXEGGCUTE = "exeggcute";
+    public static final String EXEGGUTOR = "exeggutor";
 
     public static String[] getVals() {
         List<String> vals = new ArrayList<>();

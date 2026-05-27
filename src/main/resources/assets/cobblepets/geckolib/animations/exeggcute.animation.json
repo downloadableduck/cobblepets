@@ -1,0 +1,122 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.exeggcute.ground_idle": {
+			"loop": true,
+			"animation_length": 4,
+			"bones": {
+				"egg1": {
+					"rotation": {
+						"vector": ["-(math.sin(q.anim_time*90*1)*2)", 0, 0]
+					},
+					"position": {
+						"vector": [0, "math.abs(math.sin(q.anim_time*90*1)*0.125)", 0]
+					}
+				},
+				"egg2": {
+					"rotation": {
+						"vector": ["(math.sin(q.anim_time*90*8)*1)", "15-(math.sin(q.anim_time*90*2)*2)", 0]
+					},
+					"position": {
+						"vector": [1, "0+math.abs(math.sin(q.anim_time*90*4)*0.25)", 0]
+					}
+				},
+				"egg3": {
+					"rotation": {
+						"vector": [0, -15, "0+(math.sin(q.anim_time*90*3)*2)"]
+					},
+					"position": {
+						"vector": [-1, "math.abs(math.sin(q.anim_time*90*3)*0.125)", 0]
+					}
+				},
+				"egg4": {
+					"rotation": {
+						"vector": ["0+math.random(0,(math.sin(q.anim_time*90*1)*1))", -10, "0+math.random(0,(math.sin(q.anim_time*90*1)*1))"]
+					},
+					"position": {
+						"vector": [-0.5, 0, 0]
+					}
+				},
+				"egg6": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*3-90)*1", -180, "math.sin(q.anim_time*90*3)*1"]
+					},
+					"position": {
+						"vector": [0, "math.abs(math.sin(q.anim_time*90*3)*0.125)", -0.5]
+					}
+				},
+				"egg5": {
+					"rotation": {
+						"vector": ["math.sin(q.anim_time*90*4-90)*2", 10, "math.sin(q.anim_time*90*4)*2"]
+					},
+					"position": {
+						"vector": [0.5, 0.2, 0]
+					}
+				}
+			}
+		},
+		"animation.exeggcute.ground_walk": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"egg1": {
+					"rotation": {
+						"vector": ["12.5-(math.sin(q.anim_time*90*8-40)*8)", 0, "-(math.sin(q.anim_time*90*4-40)*4)"]
+					},
+					"position": {
+						"vector": ["-(math.sin(q.anim_time*90*4-40)*0.25)", "0.5+math.abs(math.sin(q.anim_time*90*4-40)*4)", "-math.abs(math.sin(q.anim_time*90*4-40)*1.5)"]
+					}
+				},
+				"egg2": {
+					"rotation": {
+						"vector": ["12.5-(math.sin(q.anim_time*90*8)*8)", 0, "-(math.sin(q.anim_time*90*4)*4)"]
+					},
+					"position": {
+						"vector": ["-(math.sin(q.anim_time*90*4)*0.25)", "0.5+math.abs(math.sin(q.anim_time*90*4)*4)", "-math.abs(math.sin(q.anim_time*90*4)*1.5)"]
+					}
+				},
+				"egg3": {
+					"rotation": {
+						"vector": ["12.5-(math.sin(q.anim_time*90*8-20)*8)", 0, "-(math.sin(q.anim_time*90*4-20)*4)"]
+					},
+					"position": {
+						"vector": ["-(math.sin(q.anim_time*90*4-20)*0.25)", "0.5+math.abs(math.sin(q.anim_time*90*4-20)*4)", "-math.abs(math.sin(q.anim_time*90*4-20)*1.5)"]
+					}
+				},
+				"egg4": {
+					"rotation": {
+						"vector": ["12.5-(math.sin(q.anim_time*90*8-80)*8)", 0, "-(math.sin(q.anim_time*90*4-80)*4)"]
+					},
+					"position": {
+						"vector": ["-(math.sin(q.anim_time*90*4-80)*0.25)", "0.5+math.abs(math.sin(q.anim_time*90*4-80)*4)", "-math.abs(math.sin(q.anim_time*90*4-80)*1.5)"]
+					}
+				},
+				"egg6": {
+					"rotation": {
+						"vector": ["-5+(math.sin(q.anim_time*90*8-100)*8)", 0, "-(math.sin(q.anim_time*90*4-100)*4)"]
+					},
+					"position": {
+						"vector": [
+							"-(math.sin(q.anim_time*90*4-100)*0.25)",
+							"0.5+math.abs(math.sin(q.anim_time*90*4-100)*4)",
+							"-math.abs(math.sin(q.anim_time*90*4-100)*1.5)"
+						]
+					}
+				},
+				"egg5": {
+					"rotation": {
+						"vector": ["12.5-(math.sin(q.anim_time*90*8-60)*8)", 0, "-(math.sin(q.anim_time*90*4-60)*4)"]
+					},
+					"position": {
+						"vector": ["-(math.sin(q.anim_time*90*4-60)*0.25)", "0.5+math.abs(math.sin(q.anim_time*90*4-60)*4)", "-math.abs(math.sin(q.anim_time*90*4-60)*1.5)"]
+					}
+				},
+				"yoke": {
+					"position": {
+						"vector": [0, "-0.5+math.abs(math.sin(q.anim_time*90*4-130)*1.25)", 0]
+					}
+				}
+			}
+		}
+	}
+}

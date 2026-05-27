@@ -23,8 +23,12 @@ import com.jeff.pets.cobblepets.pets.gen1.diglett.Dugtrio;
 import com.jeff.pets.cobblepets.pets.gen1.ditto.Ditto;
 import com.jeff.pets.cobblepets.pets.gen1.doduo.Dodrio;
 import com.jeff.pets.cobblepets.pets.gen1.doduo.Doduo;
+import com.jeff.pets.cobblepets.pets.gen1.drowzee.Drowzee;
+import com.jeff.pets.cobblepets.pets.gen1.drowzee.Hypno;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Arbok;
 import com.jeff.pets.cobblepets.pets.gen1.ekans.Ekans;
+import com.jeff.pets.cobblepets.pets.gen1.exeggcute.Exeggcute;
+import com.jeff.pets.cobblepets.pets.gen1.exeggcute.Exeggutor;
 import com.jeff.pets.cobblepets.pets.gen1.farfetchd.Farfetchd;
 import com.jeff.pets.cobblepets.pets.gen1.gastly.Gastly;
 import com.jeff.pets.cobblepets.pets.gen1.gastly.Gengar;
@@ -38,6 +42,8 @@ import com.jeff.pets.cobblepets.pets.gen1.growlith.Arcanine;
 import com.jeff.pets.cobblepets.pets.gen1.growlith.Growlith;
 import com.jeff.pets.cobblepets.pets.gen1.jigglypuff.Jigglypuff;
 import com.jeff.pets.cobblepets.pets.gen1.jigglypuff.Wigglytuff;
+import com.jeff.pets.cobblepets.pets.gen1.krabby.Kingler;
+import com.jeff.pets.cobblepets.pets.gen1.krabby.Krabby;
 import com.jeff.pets.cobblepets.pets.gen1.machop.Machamp;
 import com.jeff.pets.cobblepets.pets.gen1.machop.Machoke;
 import com.jeff.pets.cobblepets.pets.gen1.machop.Machop;
@@ -58,6 +64,7 @@ import com.jeff.pets.cobblepets.pets.gen1.nidoranm.Nidorino;
 import com.jeff.pets.cobblepets.pets.gen1.oddish.Gloom;
 import com.jeff.pets.cobblepets.pets.gen1.oddish.Oddish;
 import com.jeff.pets.cobblepets.pets.gen1.oddish.Vileplume;
+import com.jeff.pets.cobblepets.pets.gen1.onix.Onix;
 import com.jeff.pets.cobblepets.pets.gen1.paras.Paras;
 import com.jeff.pets.cobblepets.pets.gen1.paras.Parasect;
 import com.jeff.pets.cobblepets.pets.gen1.pidgey.Pidgeot;
@@ -91,6 +98,8 @@ import com.jeff.pets.cobblepets.pets.gen1.tentacool.Tentacool;
 import com.jeff.pets.cobblepets.pets.gen1.tentacool.Tentacruel;
 import com.jeff.pets.cobblepets.pets.gen1.venonat.Venomoth;
 import com.jeff.pets.cobblepets.pets.gen1.venonat.Venonat;
+import com.jeff.pets.cobblepets.pets.gen1.voltorb.Electrode;
+import com.jeff.pets.cobblepets.pets.gen1.voltorb.Voltorb;
 import com.jeff.pets.cobblepets.pets.gen1.vulpix.Ninetales;
 import com.jeff.pets.cobblepets.pets.gen1.vulpix.Vulpix;
 import com.jeff.pets.cobblepets.pets.gen1.weedle.Beedrill;
@@ -1283,6 +1292,114 @@ public class Cobblepets implements ModInitializer {
                     .build(GENGAR_KEY)
     );
 
+    private static final ResourceKey<@NotNull EntityType<?>> ONIX_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "onix"));
+    public static final EntityType<@NotNull Onix> ONIX = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "onix"),
+            EntityType.Builder.of(Onix::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(3f, 3f)
+                    .eyeHeight(2f)
+                    .build(ONIX_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> DROWZEE_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "drowzee"));
+    public static final EntityType<@NotNull Drowzee> DROWZEE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "drowzee"),
+            EntityType.Builder.of(Drowzee::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(DROWZEE_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> HYPNO_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "hypno"));
+    public static final EntityType<@NotNull Hypno> HYPNO = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "hypno"),
+            EntityType.Builder.of(Hypno::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 2f)
+                    .eyeHeight(2f)
+                    .build(HYPNO_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> KRABBY_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "krabby"));
+    public static final EntityType<@NotNull Krabby> KRABBY = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "krabby"),
+            EntityType.Builder.of(Krabby::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(KRABBY_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> KINGLER_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "kingler"));
+    public static final EntityType<@NotNull Kingler> KINGLER = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "kingler"),
+            EntityType.Builder.of(Kingler::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(2f, 2f)
+                    .eyeHeight(2f)
+                    .build(KINGLER_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> VOLTORB_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "voltorb"));
+    public static final EntityType<@NotNull Voltorb> VOLTORB = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "voltorb"),
+            EntityType.Builder.of(Voltorb::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(VOLTORB_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> ELECTRODE_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "electrode"));
+    public static final EntityType<@NotNull Electrode> ELECTRODE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "electrode"),
+            EntityType.Builder.of(Electrode::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(2f, 2f)
+                    .eyeHeight(2f)
+                    .build(ELECTRODE_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> EXEGGCUTE_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "exeggcute"));
+    public static final EntityType<@NotNull Exeggcute> EXEGGCUTE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "exeggcute"),
+            EntityType.Builder.of(Exeggcute::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1.5f, 1f)
+                    .eyeHeight(1f)
+                    .build(EXEGGCUTE_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> EXEGGUTOR_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "exeggutor"));
+    public static final EntityType<@NotNull Exeggutor> EXEGGUTOR = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "exeggutor"),
+            EntityType.Builder.of(Exeggutor::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(3f, 4f)
+                    .eyeHeight(4f)
+                    .build(EXEGGUTOR_KEY)
+    );
+
     @Override
     public void onInitialize() {
         register(BULBASAUR);
@@ -1382,6 +1499,15 @@ public class Cobblepets implements ModInitializer {
         register(GASTLY);
         register(HAUNTER);
         register(GENGAR);
+        register(ONIX);
+        register(DROWZEE);
+        register(HYPNO);
+        register(KRABBY);
+        register(KINGLER);
+        register(VOLTORB);
+        register(ELECTRODE);
+        register(EXEGGCUTE);
+        register(EXEGGUTOR);
     }
     private static void register(EntityType<? extends @NotNull LivingEntity> type) {
         FabricDefaultAttributeRegistry.register(type, GroundCobblemon.createAttributes().build());
