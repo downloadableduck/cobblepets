@@ -3,7 +3,7 @@
   "package": "com.jeff.pets.cobblepets.client.mixin",
   "compatibilityLevel": "JAVA_25",
   "client": [
-    "CentralMixin"
+    "Gen1CentralMixin"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -12,6 +12,9 @@
     "requireAnnotations": true
   },
   "mixins": [
-    "ConfigScreenMixin"
+    "CentralMixin",
+    "ConfigScreenMixin",
+    "Gen4CentralMixin",
+    "Gen5CentralMixin"
   ]
 }

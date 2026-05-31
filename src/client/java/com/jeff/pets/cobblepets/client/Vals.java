@@ -112,6 +112,13 @@ public class Vals {
     public static final String ELECTRODE = "electrode";
     public static final String EXEGGCUTE = "exeggcute";
     public static final String EXEGGUTOR = "exeggutor";
+    public static final String RIOLU = "riolu";
+    public static final String LUCARIO = "lucario";
+    public static final String SNIVY = "snivy";
+    public static final String SERVINE = "servine";
+    public static final String SERPERIOR = "serperior";
+    public static final String CUBONE = "cubone";
+    public static final String MAROWAK = "marowak";
 
     public static String[] getVals() {
         List<String> vals = new ArrayList<>();

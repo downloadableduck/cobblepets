@@ -155,10 +155,21 @@ public class Utils extends com.jeff.pets.Utils {
             case ELECTRODE -> COBBLE_CONFIG.electrodeName = name;
             case EXEGGCUTE -> COBBLE_CONFIG.exeggcuteName = name;
             case EXEGGUTOR -> COBBLE_CONFIG.exeggutorName = name;
+            case RIOLU -> COBBLE_CONFIG.rioluName = name;
+            case LUCARIO -> COBBLE_CONFIG.lucarioName = name;
+            case SNIVY -> COBBLE_CONFIG.snivyName = name;
+            case SERVINE -> COBBLE_CONFIG.servineName = name;
+            case SERPERIOR -> COBBLE_CONFIG.serperiorName = name;
+            case CUBONE -> COBBLE_CONFIG.cuboneName = name;
+            case MAROWAK -> COBBLE_CONFIG.marowakName = name;
 
             case null, default -> {
             }
         }
         AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
+    }
+
+    public static boolean isShiny() {
+        return COBBLE_CONFIG.isShiny;
     }
 }

@@ -133,4 +133,12 @@ public class CobblepetsConfig implements ConfigData {
     public String exeggcuteSkin;
     public String exeggutorName;
     public String exeggutorSkin;
+    public String rioluName;
+    public String lucarioName;
+    public String snivyName;
+    public String servineName;
+    public String serperiorName;
+    public String cuboneName;
+    public String marowakName;
+    public String marowakSkin;
 }

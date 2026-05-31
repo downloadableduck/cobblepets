@@ -18,6 +18,8 @@ import com.jeff.pets.cobblepets.pets.gen1.charmander.Charmander;
 import com.jeff.pets.cobblepets.pets.gen1.charmander.Charmeleon;
 import com.jeff.pets.cobblepets.pets.gen1.clefairy.Clefable;
 import com.jeff.pets.cobblepets.pets.gen1.clefairy.Clefairy;
+import com.jeff.pets.cobblepets.pets.gen1.cubone.Cubone;
+import com.jeff.pets.cobblepets.pets.gen1.cubone.Marowak;
 import com.jeff.pets.cobblepets.pets.gen1.diglett.Diglett;
 import com.jeff.pets.cobblepets.pets.gen1.diglett.Dugtrio;
 import com.jeff.pets.cobblepets.pets.gen1.ditto.Ditto;
@@ -107,6 +109,11 @@ import com.jeff.pets.cobblepets.pets.gen1.weedle.Kakuna;
 import com.jeff.pets.cobblepets.pets.gen1.weedle.Weedle;
 import com.jeff.pets.cobblepets.pets.gen1.zubat.Golbat;
 import com.jeff.pets.cobblepets.pets.gen1.zubat.Zubat;
+import com.jeff.pets.cobblepets.pets.gen4.riolu.Lucario;
+import com.jeff.pets.cobblepets.pets.gen4.riolu.Riolu;
+import com.jeff.pets.cobblepets.pets.gen5.snivy.Serperior;
+import com.jeff.pets.cobblepets.pets.gen5.snivy.Servine;
+import com.jeff.pets.cobblepets.pets.gen5.snivy.Snivy;
 import dev.isxander.yacl3.dsl.RegisterableActionDelegateProvider;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -1400,6 +1407,90 @@ public class Cobblepets implements ModInitializer {
                     .build(EXEGGUTOR_KEY)
     );
 
+    private static final ResourceKey<@NotNull EntityType<?>> RIOLU_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "riolu"));
+    public static final EntityType<@NotNull Riolu> RIOLU = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "riolu"),
+            EntityType.Builder.of(Riolu::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(RIOLU_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> LUCARIO_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "lucario"));
+    public static final EntityType<@NotNull Lucario> LUCARIO = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "lucario"),
+            EntityType.Builder.of(Lucario::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 2.25f)
+                    .eyeHeight(2f)
+                    .build(LUCARIO_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> SNIVY_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "snivy"));
+    public static final EntityType<@NotNull Snivy> SNIVY = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "snivy"),
+            EntityType.Builder.of(Snivy::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(SNIVY_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> SERVINE_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "servine"));
+    public static final EntityType<@NotNull Servine> SERVINE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "servine"),
+            EntityType.Builder.of(Servine::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1.25f)
+                    .eyeHeight(1f)
+                    .build(SERVINE_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> SERPERIOR_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "serperior"));
+    public static final EntityType<@NotNull Serperior> SERPERIOR = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "serperior"),
+            EntityType.Builder.of(Serperior::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 2f)
+                    .eyeHeight(1f)
+                    .build(SERPERIOR_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> CUBONE_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "cubone"));
+    public static final EntityType<@NotNull Cubone> CUBONE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "cubone"),
+            EntityType.Builder.of(Cubone::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1f)
+                    .eyeHeight(1f)
+                    .build(CUBONE_KEY)
+    );
+
+    private static final ResourceKey<@NotNull EntityType<?>> MAROWAK_KEY =
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "marowak"));
+    public static final EntityType<@NotNull Marowak> MAROWAK = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(MOD_ID, "marowak"),
+            EntityType.Builder.of(Marowak::new, MobCategory.AMBIENT)
+                    .noSummon()
+                    .sized(1f, 1.5f)
+                    .eyeHeight(1f)
+                    .build(MAROWAK_KEY)
+    );
+
     @Override
     public void onInitialize() {
         register(BULBASAUR);
@@ -1508,6 +1599,13 @@ public class Cobblepets implements ModInitializer {
         register(ELECTRODE);
         register(EXEGGCUTE);
         register(EXEGGUTOR);
+        register(RIOLU);
+        register(LUCARIO);
+        register(SNIVY);
+        register(SERVINE);
+        register(SERPERIOR);
+        register(CUBONE);
+        register(MAROWAK);
     }
     private static void register(EntityType<? extends @NotNull LivingEntity> type) {
         FabricDefaultAttributeRegistry.register(type, GroundCobblemon.createAttributes().build());

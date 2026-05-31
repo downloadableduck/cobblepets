@@ -144,6 +144,13 @@ public class ConfigScreenMixin {
             case ELECTRODE -> cir.setReturnValue(COBBLE_CONFIG.electrodeName);
             case EXEGGCUTE -> cir.setReturnValue(COBBLE_CONFIG.exeggcuteName);
             case EXEGGUTOR -> cir.setReturnValue(COBBLE_CONFIG.exeggutorName);
+            case RIOLU -> cir.setReturnValue(COBBLE_CONFIG.rioluName);
+            case LUCARIO -> cir.setReturnValue(COBBLE_CONFIG.lucarioName);
+            case SNIVY -> cir.setReturnValue(COBBLE_CONFIG.snivyName);
+            case SERVINE -> cir.setReturnValue(COBBLE_CONFIG.servineName);
+            case SERPERIOR -> cir.setReturnValue(COBBLE_CONFIG.serperiorName);
+            case CUBONE -> cir.setReturnValue(COBBLE_CONFIG.cuboneName);
+            case MAROWAK -> cir.setReturnValue(COBBLE_CONFIG.marowakName);
         }
     }
 

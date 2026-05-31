@@ -6,6 +6,13 @@ import net.minecraft.network.chat.Component;
 @SuppressWarnings("SpellCheckingInspection")
 public enum CobblepetsPetList implements NameableEnum {
 
+    cubone,
+    marowak,
+    snivy,
+    servine,
+    serperior,
+    riolu,
+    lucario,
     exeggcute,
     exeggcutor,
     voltorb,

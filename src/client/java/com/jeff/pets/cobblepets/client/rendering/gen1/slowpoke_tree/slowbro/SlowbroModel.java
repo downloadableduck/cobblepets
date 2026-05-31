@@ -4,6 +4,7 @@ import com.geckolib.renderer.base.GeoRenderState;
 import com.jeff.pets.cobblepets.client.Utils;
 import com.jeff.pets.cobblepets.client.rendering.GeoModel;
 import com.jeff.pets.cobblepets.pets.gen1.slowpoke.Slowbro;
+import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.resources.Identifier;
 import org.jetbrains.annotations.NotNull;
 

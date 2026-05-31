@@ -21,6 +21,8 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.caterpie_tree.metapod.Meta
 import com.jeff.pets.cobblepets.client.rendering.gen1.charmander_tree.charizard.CharizardRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.charmander_tree.charmander.CharmanderRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.charmander_tree.charmeleon.CharmeleonRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.cubone_tree.cubone.CuboneRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen1.cubone_tree.marowak.MarowakRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.diglett_tree.diglett.DiglettRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.diglett_tree.dugtrio.DugtrioRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.ditto.DittoRenderer;
@@ -110,9 +112,15 @@ import com.jeff.pets.cobblepets.client.rendering.gen1.weedle_tree.kakuna.KakunaR
 import com.jeff.pets.cobblepets.client.rendering.gen1.weedle_tree.weedle.WeedleRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.zubat_tree.golbat.GolbatRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.zubat_tree.zubat.ZubatRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen4.riolu_tree.lucario.LucarioRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen4.riolu_tree.riolu.RioluRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen5.snivy_tree.serperior.SerperiorRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen5.snivy_tree.servine.ServineRenderer;
+import com.jeff.pets.cobblepets.client.rendering.gen5.snivy_tree.snivy.SnivyRenderer;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
+import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.ai.goal.CatLieOnBedGoal;
 
 import java.util.Arrays;
@@ -268,6 +276,14 @@ public class CobblepetsClient implements ClientModInitializer {
         COBBLE_CONFIG.exeggcuteSkin = Utils.checkNullString(COBBLE_CONFIG.exeggcuteSkin, "normal");
         COBBLE_CONFIG.exeggutorName = Utils.checkNullString(COBBLE_CONFIG.exeggutorName);
         COBBLE_CONFIG.exeggutorSkin = Utils.checkNullString(COBBLE_CONFIG.exeggutorSkin, "normal");
+        COBBLE_CONFIG.rioluName = Utils.checkNullString(COBBLE_CONFIG.rioluName);
+        COBBLE_CONFIG.lucarioName = Utils.checkNullString(COBBLE_CONFIG.lucarioName);
+        COBBLE_CONFIG.snivyName = Utils.checkNullString(COBBLE_CONFIG.snivyName);
+        COBBLE_CONFIG.servineName = Utils.checkNullString(COBBLE_CONFIG.servineName);
+        COBBLE_CONFIG.serperiorName = Utils.checkNullString(COBBLE_CONFIG.serperiorName);
+        COBBLE_CONFIG.cuboneName = Utils.checkNullString(COBBLE_CONFIG.cuboneName);
+        COBBLE_CONFIG.marowakName = Utils.checkNullString(COBBLE_CONFIG.marowakName);
+        COBBLE_CONFIG.marowakSkin = Utils.checkNullString(COBBLE_CONFIG.marowakSkin, "normal");
 
         AutoConfig.getConfigHolder(CobblepetsConfig.class).save();
     }
@@ -379,6 +395,13 @@ public class CobblepetsClient implements ClientModInitializer {
         register(ELECTRODE, ElectrodeRenderer::new);
         register(EXEGGCUTE, ExeggcuteRenderer::new);
         register(EXEGGUTOR, ExeggutorRenderer::new);
+        register(RIOLU, RioluRenderer::new);
+        register(LUCARIO, LucarioRenderer::new);
+        register(SNIVY, SnivyRenderer::new);
+        register(SERVINE, ServineRenderer::new);
+        register(SERPERIOR, SerperiorRenderer::new);
+        register(CUBONE, CuboneRenderer::new);
+        register(MAROWAK, MarowakRenderer::new);
     }
 
     private void addAllToPetList(String ... s) {
