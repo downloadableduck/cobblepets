@@ -1,7 +1,6 @@
 package com.jeff.pets.cobblepets.client.mixin;
 
-import com.jeff.pets.PetsConfig;
-import com.jeff.pets.PetsConfigScreen;
+import com.jeff.pets.client.PetsConfigScreen;
 import com.jeff.pets.cobblepets.client.CobblepetsConfig;
 import com.jeff.pets.cobblepets.client.CobblepetsPetList;
 import com.jeff.pets.cobblepets.client.Utils;
@@ -21,7 +20,7 @@ import static com.jeff.pets.cobblepets.client.Vals.*;
 @Mixin(PetsConfigScreen.class)
 public class ConfigScreenMixin {
 
-    @Inject(at = @At("HEAD"), method = "lambda$getModConfigScreenFactory$4", cancellable = true)
+    /*@Inject(at = @At("HEAD"), method = "lambda$getModConfigScreenFactory$4", cancellable = true)
     private static void addCustomEntitySpecies(PetsConfig CONFIG, CallbackInfoReturnable<Enum<?>> cir) {
         if (Arrays.stream(getVals()).anyMatch(Predicate.isEqual(CONFIG.activePet))) {
             cir.setReturnValue(CobblepetsPetList.valueOf(CONFIG.activePet));
@@ -157,5 +156,5 @@ public class ConfigScreenMixin {
     @Inject(at = @At("HEAD"), method = "lambda$getModConfigScreenFactory$7")
     private static void setCustomEntityName(String activePet, PetsConfig CONFIG, String name, CallbackInfo ci) {
         Utils.assignName(name);
-    }
+    }*/
 }

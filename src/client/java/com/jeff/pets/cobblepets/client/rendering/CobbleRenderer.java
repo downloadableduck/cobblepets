@@ -3,7 +3,7 @@ package com.jeff.pets.cobblepets.client.rendering;
 import com.geckolib.animatable.GeoAnimatable;
 import com.geckolib.model.GeoModel;
 import com.geckolib.renderer.GeoEntityRenderer;
-import com.jeff.pets.compat.ViaFabricPlusCompat;
+import com.jeff.pets.client.compat.ViaFabricPlusCompat;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.world.entity.Entity;

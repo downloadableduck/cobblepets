@@ -47,10 +47,10 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
     implementation("com.terraformersmc:modmenu:${project.modmenu_version}")
-    implementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
+    //implementation "dev.isxander:yet-another-config-lib:${project.yacl_version}"
     implementation "com.geckolib:geckolib-fabric-${project.minecraft_version}:${project.geckolibVersion}"
     implementation "maven.modrinth:pets-mod:${project.petsmod_version}"
-    implementation "maven.modrinth:pets-mod:${project.petsmod_version}:sources"
+    //implementation "maven.modrinth:pets-mod:${project.petsmod_version}:sources"
 }
 
 processResources {

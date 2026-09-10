@@ -3,12 +3,12 @@ package com.jeff.pets.cobblepets.client;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.resources.Identifier;
 
-import static com.jeff.pets.Central.CONFIG;
+import static com.jeff.pets.client.Central.CONFIG;
 import static com.jeff.pets.cobblepets.Cobblepets.MOD_ID;
 import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 import static com.jeff.pets.cobblepets.client.Vals.*;
 
-public class Utils extends com.jeff.pets.Utils {
+public class Utils extends com.jeff.pets.client.Utils {
     public static Identifier cobble(String path) {
         return Identifier.fromNamespaceAndPath(MOD_ID, path);
     }

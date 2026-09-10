@@ -1,7 +1,7 @@
 package com.jeff.pets.cobblepets.client;
 
-import com.jeff.pets.Central;
-import com.jeff.pets.PetsConfig;
+import com.jeff.pets.client.Central;
+import com.jeff.pets.client.PetsConfig;
 import com.mojang.brigadier.context.CommandContext;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.client.command.v2.FabricClientCommandSource;

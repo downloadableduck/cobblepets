@@ -1,8 +1,8 @@
 package com.jeff.pets.cobblepets.client;
 
-import com.jeff.pets.Central;
-import com.jeff.pets.PetsClientInitializer;
-import com.jeff.pets.Utils;
+import com.jeff.pets.client.Central;
+import com.jeff.pets.client.PetsClientInitializer;
+import com.jeff.pets.client.Utils;
 import com.jeff.pets.cobblepets.Cobblepets;
 import com.jeff.pets.cobblepets.client.rendering.gen1.abra_tree.abra.AbraRenderer;
 import com.jeff.pets.cobblepets.client.rendering.gen1.abra_tree.alakazam.AlakazamRenderer;

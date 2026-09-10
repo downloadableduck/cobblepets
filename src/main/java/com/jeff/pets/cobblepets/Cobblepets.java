@@ -114,7 +114,6 @@ import com.jeff.pets.cobblepets.pets.gen4.riolu.Riolu;
 import com.jeff.pets.cobblepets.pets.gen5.snivy.Serperior;
 import com.jeff.pets.cobblepets.pets.gen5.snivy.Servine;
 import com.jeff.pets.cobblepets.pets.gen5.snivy.Snivy;
-import dev.isxander.yacl3.dsl.RegisterableActionDelegateProvider;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.core.Registry;

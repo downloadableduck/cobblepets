@@ -1,6 +1,6 @@
 package com.jeff.pets.cobblepets.client.mixin;
 
-import com.jeff.pets.Central;
+import com.jeff.pets.client.Central;
 import com.jeff.pets.cobblepets.client.Utils;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.brigadier.arguments.StringArgumentType;
@@ -19,8 +19,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
-import static com.jeff.pets.Central.CONFIG;
-import static com.jeff.pets.Central.currentSuggestions;
+import static com.jeff.pets.client.Central.CONFIG;
+import static com.jeff.pets.client.Central.currentSuggestions;
 import static com.jeff.pets.cobblepets.client.Vals.getVals;
 
 @Mixin(Central.class)

@@ -1,6 +1,6 @@
 package com.jeff.pets.cobblepets.client.mixin;
 
-import com.jeff.pets.Central;
+import com.jeff.pets.client.Central;
 import com.jeff.pets.cobblepets.client.Utils;
 import com.jeff.pets.cobblepets.client.CobblepetsConfig;
 import com.jeff.pets.cobblepets.pets.gen1.abra.Abra;
@@ -137,7 +137,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Predicate;
 
-import static com.jeff.pets.Central.CONFIG;
+import static com.jeff.pets.client.Central.CONFIG;
 import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 import static com.jeff.pets.cobblepets.client.Vals.*;
 import static com.jeff.pets.cobblepets.client.StaticUtils.*;
