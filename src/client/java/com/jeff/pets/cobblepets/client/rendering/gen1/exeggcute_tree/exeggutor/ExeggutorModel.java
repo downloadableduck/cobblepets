@@ -7,6 +7,7 @@ import com.jeff.pets.cobblepets.pets.gen1.exeggcute.Exeggcute;
 import com.jeff.pets.cobblepets.pets.gen1.exeggcute.Exeggutor;
 import com.jeff.pets.cobblepets.pets.gen1.voltorb.Voltorb;
 import net.minecraft.resources.Identifier;
+import org.jetbrains.annotations.NotNull;
 
 import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
@@ -17,12 +18,12 @@ public class ExeggutorModel extends GeoModel<Exeggutor> {
     }
 
     @Override
-    public Identifier getModelResource(GeoRenderState state) {
+    public @NotNull Identifier getModelResource(@NotNull GeoRenderState state) {
         return COBBLE_CONFIG.exeggutorSkin.equals("alolan") ? Utils.cobble("exeggutor_alolan") : Utils.cobble("exeggutor");
     }
 
     @Override
-    public Identifier getAnimationResource(Exeggutor animateable) {
+    public @NotNull Identifier getAnimationResource(@NotNull Exeggutor animateable) {
         return COBBLE_CONFIG.exeggutorSkin.equals("alolan") ? Utils.cobble("exeggutor_alolan") : Utils.cobble("exeggutor");
     }
 

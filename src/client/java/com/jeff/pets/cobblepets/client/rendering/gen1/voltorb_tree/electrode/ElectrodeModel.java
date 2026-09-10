@@ -6,6 +6,7 @@ import com.jeff.pets.cobblepets.client.rendering.GeoModel;
 import com.jeff.pets.cobblepets.pets.gen1.voltorb.Electrode;
 import com.jeff.pets.cobblepets.pets.gen1.voltorb.Voltorb;
 import net.minecraft.resources.Identifier;
+import org.jetbrains.annotations.NotNull;
 
 import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
@@ -16,12 +17,12 @@ public class ElectrodeModel extends GeoModel<Electrode> {
     }
 
     @Override
-    public Identifier getModelResource(GeoRenderState state) {
+    public @NotNull Identifier getModelResource(@NotNull GeoRenderState state) {
         return COBBLE_CONFIG.electrodeSkin.equals("hisuian") ? Utils.cobble("electrode_hisuian") : Utils.cobble("electrode");
     }
 
     @Override
-    public Identifier getAnimationResource(Electrode animateable) {
+    public @NotNull Identifier getAnimationResource(@NotNull Electrode animateable) {
         return Utils.cobble("electrode");
     }
 

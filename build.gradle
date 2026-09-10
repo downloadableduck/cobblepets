@@ -51,7 +51,6 @@ dependencies {
     implementation "com.geckolib:geckolib-fabric-${project.minecraft_version}:${project.geckolibVersion}"
     implementation "maven.modrinth:pets-mod:${project.petsmod_version}"
     implementation "maven.modrinth:pets-mod:${project.petsmod_version}:sources"
-	
 }
 
 processResources {

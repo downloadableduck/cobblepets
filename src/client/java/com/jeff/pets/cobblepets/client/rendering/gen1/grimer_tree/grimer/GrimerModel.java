@@ -12,7 +12,7 @@ import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
 public class GrimerModel extends GeoModel<Grimer> {
     @Override
-    public Identifier getAnimationResource(@NotNull Grimer animateable) {
+    public @NotNull Identifier getAnimationResource(@NotNull Grimer animateable) {
         return Utils.cobble("grimer");
     }
 
@@ -22,7 +22,7 @@ public class GrimerModel extends GeoModel<Grimer> {
     }
 
     @Override
-    public Identifier getModelResource(GeoRenderState state) {
+    public @NotNull Identifier getModelResource(@NotNull GeoRenderState state) {
         return COBBLE_CONFIG.grimerSkin.equals("alolan") ? Utils.cobble("grimer_alolan") : Utils.cobble("grimer");
     }
 

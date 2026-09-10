@@ -6,12 +6,13 @@ import com.jeff.pets.cobblepets.client.Utils;
 import com.jeff.pets.cobblepets.client.rendering.GeoModel;
 import com.jeff.pets.cobblepets.pets.gen1.grimer.Muk;
 import net.minecraft.resources.Identifier;
+import org.jetbrains.annotations.NotNull;
 
 import static com.jeff.pets.cobblepets.client.CobblepetsClient.COBBLE_CONFIG;
 
 public class MukModel extends GeoModel<Muk> {
     @Override
-    public Identifier getAnimationResource(Muk animateable) {
+    public @NotNull Identifier getAnimationResource(@NotNull Muk animateable) {
         return Utils.cobble("muk");
     }
 
@@ -21,7 +22,7 @@ public class MukModel extends GeoModel<Muk> {
     }
 
     @Override
-    public Identifier getModelResource(GeoRenderState state) {
+    public @NotNull Identifier getModelResource(@NotNull GeoRenderState state) {
         return COBBLE_CONFIG.mukSkin.equals("alolan") ? Utils.cobble("muk_alolan") : Utils.cobble("muk");
     }
 

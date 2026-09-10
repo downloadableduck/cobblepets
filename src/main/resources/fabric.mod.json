@@ -9,12 +9,13 @@
     "downloadableduck"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://petsmod.com/",
+    "sources": "https://github.com/downloadableduck/cobblepets",
+    "issues": "https://github.com/downloadableduck/cobblepets/issues"
   },
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/cobblepets/icon.png",
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
     "main": [
       "com.jeff.pets.cobblepets.Cobblepets"
@@ -31,11 +32,18 @@
     }
   ],
   "depends": {
-    "fabricloader": ">=0.18.2",
-    "minecraft": ">=26.1",
+    "fabricloader": ">=0.18",
+    "minecraft": "~26.2",
     "java": ">=25",
-    "fabric-api": "*",
-    "pets-mod": ">=0.7.4",
-    "geckolib": "*"
+    "pets-mod": ">=0.7.8",
+    "geckolib": ">=5.5.1"
+  },
+  "custom": {
+    "modmenu": {
+      "parent": "pets-mod",
+      "links": {
+        "modmenu.modrinth": "https://modrinth.com/mod/cobblepets"
+      }
+    }
   }
 }
